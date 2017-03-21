@@ -61,9 +61,8 @@ jQuery(document).ready(function($) {
         $('.reviews-slider').smoothDivScroll({
             touchScrolling: true,
             hotSpotScrolling: true,
-            mousewheelScrolling: "allDirections",
-            hotSpotMouseDownSpeedBooster: 2,
-            manualContinuousScrolling: true,
+            mousewheelScrolling: "",
+            manualContinuousScrolling: false,
             autoScrollingMode: "onStart",
             countOnlyClass: ".review",
             setupComplete: function(){
