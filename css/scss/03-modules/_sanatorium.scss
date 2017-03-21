@@ -1,0 +1,140 @@
+.sanatorium {
+    @include flex($alignI: stretch);
+    background-color: #fff;
+
+    &__preview {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        width: 50%;
+    }
+
+    &__info {
+        width: 50%;
+        padding: 18px 20px;
+        text-align: left;
+
+        .title {
+            font-weight: normal;
+            font-size: 17px;
+            color: #2d2d2d;
+            margin-bottom: 7px;
+        }
+
+        .rating {
+            padding-bottom: 20px;
+            border-bottom: 1px solid #EEEEEE;
+        }
+
+        .rating-value {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            width: 67px;
+            &:after,
+            &:before {
+                content: "\f005\00a0\f005\00a0\f005\00a0\f005\00a0\f005";
+                font-family: FontAwesome;
+                font-size: 12px;
+                color: #DDDDDD;
+                display: block;
+            }
+
+            &:after {
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                overflow: hidden;
+                white-space: pre-wrap;
+                color: $yellow;
+            }
+
+            &.star-1:after {
+                width: 20%;
+            }
+            &.star-2:after {
+                width: 40%;
+            }
+            &.star-3:after {
+                width: 60%;
+            }
+            &.star-4:after {
+                width: 80%;
+            }
+            &.star-5:after {
+                width: 100%;
+            }
+        }
+
+        .rating-reviews {
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 5px;
+
+            a {
+                display: block;
+                border-bottom: 1px dashed $blue;
+                color: $blue;
+                font-size: 13px;
+                line-height: 13px;
+            }
+        }
+
+
+        .price {
+            padding-top: 12px;
+            font-size: 15px;
+            color: $text;
+
+            span {
+                color: $red;
+                font-size: 27px;
+                font-weight: 300;
+                margin: 0 3px;
+
+                .azn {
+                    margin-bottom: 4px;
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        .type {
+            color: #9a9a9a;
+            font-size: 13px;
+            padding-top: 5px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid #EEEEEE;
+        }
+
+
+        .general-rating {
+            padding-top: 18px;
+
+            img {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 15px;
+            }
+
+            .value {
+                color: $green;
+                font-size: 27px;
+                font-weight: 300;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .label {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 13px;
+                color: #9a9a9a;
+                line-height: 14px;
+                padding-left: 10px;
+            }
+        }
+
+    }
+}
