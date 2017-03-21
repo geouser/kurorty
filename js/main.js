@@ -59,12 +59,11 @@ jQuery(document).ready(function($) {
     ---------------------------*/
     if (exist('.reviews-slider')) {
         $('.reviews-slider').smoothDivScroll({
-            touchScrolling: true,
-            hotSpotScrolling: true,
-            mousewheelScrolling: "",
-            manualContinuousScrolling: false,
-            autoScrollingMode: "onStart",
+            manualContinuousScrolling: true,
+            autoScrollingMode: "always",
             countOnlyClass: ".review",
+            autoScrollingStep: 1,
+            autoScrollingInterval: 25,
             setupComplete: function(){
                 resize_slider();
             },
