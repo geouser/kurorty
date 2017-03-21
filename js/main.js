@@ -59,18 +59,26 @@ jQuery(document).ready(function($) {
     ---------------------------*/
     if (exist('.reviews-slider')) {
         $('.reviews-slider').smoothDivScroll({
-            touchScrolling: true,
-            hotSpotScrolling: true,
-            mousewheelScrolling: "",
-            manualContinuousScrolling: false,
-            autoScrollingMode: "onStart",
+            manualContinuousScrolling: true,
+            autoScrollingMode: "always",
             countOnlyClass: ".review",
+            autoScrollingStep: 1,
+            autoScrollingInterval: 25,
             setupComplete: function(){
                 resize_slider();
             },
             windowResized: function(){
                 resize_slider();
             }
+        });
+
+        $('.reviews-slider').on('mouseover', function(event) {
+            event.preventDefault();
+            $('.reviews-slider').smoothDivScroll("stopAutoScrolling");
+        });
+        $('.reviews-slider').on('mouseleave', function(event) {
+            event.preventDefault();
+            $('.reviews-slider').smoothDivScroll("startAutoScrolling");
         });
     }
 
