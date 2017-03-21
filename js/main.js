@@ -162,7 +162,9 @@ jQuery(document).ready(function($) {
     }
 
     if ( exist( '.tabs' ) ) {
-        $( ".tabs" ).tabs();
+        $( ".tabs" ).tabs({
+            active: 0
+        });
     }
 
     /*---------------------------

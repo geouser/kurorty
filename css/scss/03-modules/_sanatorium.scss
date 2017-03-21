@@ -18,14 +18,14 @@
         padding: 18px 20px;
         text-align: left;
 
-        .title {
+        &__title {
             font-weight: normal;
             font-size: 17px;
             color: #2d2d2d;
             margin-bottom: 7px;
         }
 
-        .rating {
+        &__rating {
             padding-bottom: 20px;
             border-bottom: 1px solid #EEEEEE;
         }
@@ -71,7 +71,7 @@
             }
         }
 
-        .rating-reviews {
+        &__rating-reviews {
             display: inline-block;
             vertical-align: middle;
             padding-left: 5px;
@@ -86,7 +86,7 @@
         }
 
 
-        .price {
+        &__price {
             padding-top: 12px;
             font-size: 15px;
             color: $text;
@@ -104,7 +104,7 @@
             }
         }
 
-        .type {
+        &__type {
             color: #9a9a9a;
             font-size: 13px;
             padding-top: 5px;
@@ -113,7 +113,7 @@
         }
 
 
-        .general-rating {
+        &__general-rating {
             padding-top: 18px;
 
             img {

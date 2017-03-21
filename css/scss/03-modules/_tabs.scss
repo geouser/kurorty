@@ -2,10 +2,13 @@
     padding-top: 10px;
 }
 
-.tabs {
+.tabs.ui-tabs.ui-widget-content {
+    font-family: 'Naste';
     background: transparent !important;
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
+    padding-bottom: 45px;
+    border-bottom: 1px solid #dddddd;
     .flex-row {
         @include flex($alignI: flex-start, $justify: flex-start);
         margin: 0 -10px;
@@ -21,6 +24,9 @@
     }
     .ui-tabs-panel {
         padding: 0;
+    }
+    .button {
+        margin-top: 45px;
     }
 }
 .tabs .ui-tabs-nav {

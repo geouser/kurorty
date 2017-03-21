@@ -37,7 +37,23 @@
             margin: 0 12px;
             a {
                 color: $text;
+                position: relative;
                 font-size: 15px;
+                &:after {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    left: 0; right: 0;
+                    bottom: -2px;
+                    margin: auto;
+                    max-width: 0;
+                    height: 1.5px;
+                    background-color: $text;
+                    @include transition(all,.1s);
+                }
+                &:hover:after {
+                    max-width: 100%;
+                }
             }
         }
     }
