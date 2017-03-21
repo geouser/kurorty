@@ -2,16 +2,27 @@
     padding-top: 120px;
 
     .reviews-slider {
-        @extend %clearfix;
         position: relative;
         width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+
+        .scrollableArea {
+            @include flex($alignI: stretch, $wrap: nowrap);
+        }
+
+        .scrollingHotSpotLeft,
+        .scrollingHotSpotRight {
+            display: block!important;
+        }
     }
 
     .review {
-        float: left;
         padding: 0 50px;
         color: #797979;
         font-size: 15px;
+        position: relative;
 
         &__content {
             &:before {
