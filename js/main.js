@@ -71,6 +71,15 @@ jQuery(document).ready(function($) {
                 resize_slider();
             }
         });
+
+        $('.reviews-slider').on('mouseover', function(event) {
+            event.preventDefault();
+            $('.reviews-slider').smoothDivScroll("stopAutoScrolling");
+        });
+        $('.reviews-slider').on('mouseleave', function(event) {
+            event.preventDefault();
+            $('.reviews-slider').smoothDivScroll("startAutoScrolling");
+        });
     }
 
     function resize_slider() {    
