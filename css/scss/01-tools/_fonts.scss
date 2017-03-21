@@ -32,3 +32,14 @@
     font-weight: bold;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Naste';
+    src: url('../fonts/Naste-Light.eot');
+    src: url('../fonts/Naste-Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Naste-Light.woff') format('woff'),
+         url('../fonts/Naste-Light.ttf') format('truetype'),
+         url('../fonts/Naste-Light.svg#Naste-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
