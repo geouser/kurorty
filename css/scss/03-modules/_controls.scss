@@ -162,6 +162,21 @@
         border: none;
         font-size: 15px;
         color: #9a9a9a;
+        background-repeat: no-repeat;
+        background-position: 95% 50%;
+        &[name="in"],
+        &[name="out"] {
+            background-image: url("../images/calendar.svg");
+            -webkit-background-size: 18px 16px;
+                 -o-background-size: 18px 16px;
+                    background-size: 18px 16px;
+        }
+        &[name="place"] {
+            background-image: url("../images/pin.svg");
+            -webkit-background-size: 13px 20px;
+                 -o-background-size: 13px 20px;
+                    background-size: 13px 20px;
+        }
     }
     select {
         position: absolute;
@@ -173,11 +188,18 @@
         border: none;
         font-size: 15px;
         color: #9a9a9a;
+        appearance:none;
+       -moz-appearance:none; /* Firefox */
+       -webkit-appearance:none; /* Safari and Chrome */
+        background-repeat: no-repeat;
+        background-position: 97% 50%;
+        background-image: url("../images/select-down.png");
     }
     &--two {
         @include flex();
         input {
             width: 50%;
+            background-position: 91% 50%;
             &:first-of-type {
                 border-right: 1px solid #EEE;
             }
