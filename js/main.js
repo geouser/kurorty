@@ -161,6 +161,10 @@ jQuery(document).ready(function($) {
         $( ".datepicker" ).datepicker();
     }
 
+    if ( exist( '.tabs' ) ) {
+        $( ".tabs" ).tabs();
+    }
+
     /*---------------------------
                                   Fancybox
     ---------------------------*/

@@ -1,0 +1,116 @@
+.tabs {
+    background: transparent !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+}
+.tabs .ui-tabs-nav {
+    margin-bottom: 40px;
+    padding: 4px;
+    background-color: $blue;
+    -webkit-border-radius: 4px;
+            border-radius: 4px;
+    .ui-tabs-tab {
+        width: 25%;
+        margin: 0;
+        background: #FFF;
+        -webkit-border-radius: 0;
+                border-radius: 0;
+        a {
+            line-height: 65px;
+            padding: 0 10px;
+            display: block;
+            text-align: center;
+            width: 100%;
+            font-size: 17px;
+            color: $text;
+            font-family: 'Naste';
+            span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            &:before {
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 14px;
+                -webkit-background-size: 100% 100%;
+                     -o-background-size: 100% 100%;
+                        background-size: 100% 100%;
+            }
+            &.recommendedTours:before {
+                width: 33px;
+                height: 35px;
+                background-image: url("../images/recommend.svg");
+            }
+            &.newTours:before {
+                width: 37px;
+                height: 37px;
+                background-image: url("../images/new.svg");
+            }
+            &.hotTours:before {
+                width: 37px;
+                height: 37px;
+                background-image: url("../images/hot.svg");
+            }
+            &.popularTours:before {
+                width: 36px;
+                height: 36px;
+                background-image: url("../images/popular.png");
+            }
+        }
+        &.ui-tabs-active {
+            padding: 0;
+            margin: 0;
+            border: none;
+            position: relative;
+            background-color: $blue;
+            a {
+                color: #FFF;
+                &.recommendedTours:before {
+                    background-image: url("../images/recommend-w.svg");
+                }
+                &.newTours:before {
+                    background-image: url("../images/new-w.svg");
+                }
+                &.hotTours:before {
+                    background-image: url("../images/hot-w.svg");
+                }
+                &.popularTours:before {
+                    background-image: url("../images/popular-w.png");
+                }
+            }
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: -12px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-top: 10px solid $blue;
+            }
+        }
+        &:first-of-type {
+            -webkit-border-top-left-radius: 4px;
+            border-top-left-radius: 4px;
+            -webkit-border-bottom-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+        &:last-of-type,
+        &:nth-of-type(4n) {
+            border: none;
+            -webkit-border-top-right-radius: 4px;
+            border-top-right-radius: 4px;
+            -webkit-border-bottom-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+    }
+}
+.ui-widget.ui-widget-content {
+    border: none;
+    padding: 0;
+}
