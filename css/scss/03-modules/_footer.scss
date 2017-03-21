@@ -38,11 +38,24 @@
 
                 a {
                     color: inherit;
+                    position: relative;
+                    &:after {
+                        display: block;
+                        content: "";
+                        position: absolute;
+                        left: 0; right: 0;
+                        bottom: -2px;
+                        margin: auto;
+                        max-width: 0;
+                        height: 1.5px;
+                        background-color: #797979;
+                        @include transition(all,.1s);
+                    }
                 }
 
-                &.active a,
-                a:hover {
-                    text-decoration: underline;
+                &.active a:after,
+                a:hover:after {
+                    max-width: 100%;
                 }
             }
 
@@ -98,9 +111,21 @@
 
             a {
                 color: inherit;
-
-                &:hover {
-                    text-decoration: underline;
+                position: relative;
+                &:after {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    left: 0; right: 0;
+                    bottom: -2px;
+                    margin: auto;
+                    max-width: 0;
+                    height: 1.5px;
+                    background-color: #fff;
+                    @include transition(all,.1s);
+                }
+                &:hover:after {
+                    max-width: 100%;
                 }
             }
         }

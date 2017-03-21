@@ -55,6 +55,11 @@
                     max-width: 100%;
                 }
             }
+            &.active {
+                a:after {
+                    max-width: 100%;
+                }
+            }
         }
     }
 }
