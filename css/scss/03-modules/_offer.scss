@@ -1,25 +1,47 @@
 .offer {
-    height: 800px;
+    height: 600px;
     max-height: 100%;
-    @include flex($direction: column, $alignI: center, $justify: center);
+    position: relative;
+    @include flex($direction:column,$alignI:center, $justify:center);
+
+    .wrapper {
+        @include flex();
+        position: relative;
+        z-index: 10;
+        text-align: left;
+    }
+
+    &--text {
+        width: 550px;
+        color: #FFF;
+    }
     
-    background-image: url("../images/offer-main.jpg");
-    background-position: 50% 50%;
-    -webkit-background-size: cover;
-         -o-background-size: cover;
-            background-size: cover;
-    
-    h1 {
-        margin-bottom: 40px;
-        text-transform: uppercase;
+    h1,
+    h2 {
+        color: #fff;
+        font-size: 40px;
+        font-weight: 700;
+        @media (max-width: 1200px) {
+            font-size: 40px;
+        }
+        @media (max-width: 800px) {
+            font-size: 32px;
+        }
+        @media (max-width: 600px) {
+            font-size: 30px;
+        }
     }
 }
 
-/*
+
 .offer--slider {
-    height: 590px;
-    position: relative;
-    background: #3D8EB9;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: $green;
     @media (max-width: 600px) {
         height: 500px;
     }
@@ -28,7 +50,6 @@
         height: 100%;
     }
     .slide {
-        @include flex($direction:column,$alignI:center, $justify:center);
         position: absolute;
         left: 0;
         top: 0;
@@ -42,25 +63,8 @@
         @media (max-width: 800px) {
             padding: 0 30px;
         }
-        h1,
-        h2 {
-            color: #fff;
-            font-size: 50px;
-            font-weight: 700;
-             text-align: center;
-            @media (max-width: 1200px) {
-                font-size: 40px;
-            }
-            @media (max-width: 800px) {
-                font-size: 32px;
-            }
-            @media (max-width: 600px) {
-                font-size: 30px;
-            }
-        }
         .button {
             margin-top: 16px;
         }
     }
 }
-*/
