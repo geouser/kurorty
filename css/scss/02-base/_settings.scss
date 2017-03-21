@@ -8,6 +8,7 @@ body {
 }
 body {
     padding-top: 90px;
+    font-family: 'Naste';
 }
 
 .yellow {
@@ -22,10 +23,13 @@ body {
 .green {
   color: #82c363;
 }
+
 // lAYOUT
 // ---------------------------
 .wrapper {
-	width: 1420px;
+	width: 1450px;
+  padding: 0 15px;
+  max-width: 100%;
 	margin: 0 auto;
 	text-align: center;
 }
