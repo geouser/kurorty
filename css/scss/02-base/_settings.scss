@@ -6,8 +6,22 @@ body {
 	height: 100%;
   background: url('../images/pattern_.png');
 }
+body {
+    padding-top: 90px;
+}
 
-
+.yellow {
+  color: #ffa400;
+}
+.red {
+  color: #ff7753;
+}
+.blue {
+  color: #3d8eb9;
+}
+.green {
+  color: #82c363;
+}
 // lAYOUT
 // ---------------------------
 .wrapper {

@@ -1,18 +1,27 @@
          
 .mainHeader {
     @include position(absolute, 0, 0, auto, 0);
-    /*@include transition(all, .4s);*/
+    @include transition(all, .4s);
     height: 100px;
-    
-    background: #2C3840;
+    z-index: 100;
+    background: #fff;
     
     .wrapper {
         height: 100%;
         @include flex();
     }
 
-    &__info {
-        color: #fff;
+    &__left,
+    &__right {
+        min-width: 250px;
+        height: 100%;
+    }
+    &__left {
+        text-align: left;
+    }
+    &__right {
+        text-align: right;
+        @include flex();
     }
 }
 
@@ -25,9 +34,10 @@
         li {
             display: inline-block;
             vertical-align: middle;
-            margin: 0 10px;
+            margin: 0 12px;
             a {
-                color: #fff;
+                color: $text;
+                font-size: 15px;
             }
         }
     }
@@ -44,6 +54,14 @@
     }
 }
 
+.logo {
+    display: block;
+    img {
+        display: block;
+        max-width: 100%;
+    }
+}
+
 .mail,
 .tel {
     display: inline-block;
@@ -51,6 +69,71 @@
     color: #fff;
 }
 
+.languages {
+    list-style-type: none;
+    li {
+        display: none;
+        a {
+            display: block;
+            width: 42px;
+            height: 42px;
+            border: 1px solid #e0e0e0;
+            -webkit-border-radius: 50%;
+                    border-radius: 50%;
+            text-align: center;
+            img {
+                display: inline-block;
+                vertical-align: middle;
+                max-width: 90%;
+                max-height: 90%;
+                margin-top: 2px;
+            }
+            &:before {
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                height: 100%;
+            }
+        }
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.log-in {
+    height: 100%;
+    padding: 0 30px;
+    margin-left: 25px;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    text-align: left;
+    i {
+        display: inline-block;
+        vertical-align: middle;
+        width: 42px;
+        height: 42px;
+        background-image: url("../images/user.svg");
+        -webkit-background-size: 100% 100%;
+             -o-background-size: 100% 100%;
+                background-size: 100% 100%;
+    }
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 10px;
+        color: $blue;
+        font-size: 15px;
+        width: 80px;
+    }
+    &:before {
+        content: '';
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: -2px;
+    }
+}
 
 /* ------------------------------------ */
 /*  MENU BUTTON  */
