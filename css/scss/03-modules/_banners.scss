@@ -17,7 +17,6 @@
             background-size: cover;
     
     padding: 30px;
-    padding-left: 50%;
     
     color: #FFF;
     text-align: right;
@@ -30,8 +29,9 @@
         margin-bottom: 35px;
     }
     &__des {
-        margin-bottom: 35px;
+        margin: 0 0 35px auto;
         line-height: 1.4;
+        max-width: 360px;
     }
     &__price {
         display: inline-block;
