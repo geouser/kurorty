@@ -85,7 +85,9 @@ jQuery(document).ready(function($) {
             }
     });
 
-
+    if ( exist( '.datepicker' ) ) {
+        $( ".datepicker" ).datepicker();
+    }
 
     /*---------------------------
                                   Fancybox
@@ -94,7 +96,12 @@ jQuery(document).ready(function($) {
         
     });
 
-
+    $('.offer__slider').slick({
+        dots: true,
+        arrows: false,
+        fade: true,
+        speed: 900
+    });
 
     /*----------------------------
                               SEND FORM

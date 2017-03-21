@@ -16,6 +16,7 @@
         <meta name="google-site-verification" content="">
         <!--<link rel="shortcut icon" href="images/favicon.ico">-->
         
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="css/general.css">
     </head>
     <body>
@@ -64,18 +65,48 @@
         <!--=================================================================================================-->
                                                     <!-- OFFER SECTION -->
 
-        <section class="offer">
+        <section class="offer offer--slider">
             <div class="wrapper">
                 <div class="offer--text">
                     <h1>Приветствуем Вас в новом туристическом сезоне!</h1>
                     <p>Мы рады предоставить Вам проект в области лечебного туризма - корпоративную систему, предназначенную для резервации и реализации номеров в санаториях стран СНГ.</p>
                     <p>Более <span class="yellow">2000</span> Лучших Предложений!</p>
                 </div>
-                <div class="filter-form">
-                    dcsdcdsd
-                </div>
+                <form class="form form--filter">
+                    <div class="input-group">
+                        <input type="text" name="place" placeholder="Куда вы планируете поехать?">
+                    </div>
+                    <div class="input-group input-group--two">
+                        <input type="text" name="place" placeholder="Въезд" class="datepicker">
+                        <input type="text" name="place" placeholder="Выезд" class="datepicker">
+                    </div>
+                    <div class="input-group input-group--two">
+                        <select name="treatment" id="">
+                            <option value="" disabled selected="selected">Профиль лечения</option>
+                            <option value="Курорты">Курорты</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-rating">
+                            <span>Выбрать рейтинг</span>
+                            <input type="radio" name="group-1" id="group-1-0" value="5" /><label for="group-1-0"></label>
+                            <input type="radio" name="group-1" id="group-1-1" value="4" /><label for="group-1-1"></label>
+                            <input type="radio" name="group-1" id="group-1-2" value="3" /><label for="group-1-2"></label>
+                            <input type="radio" name="group-1" id="group-1-3" value="2" /><label for="group-1-3"></label>
+                            <input type="radio" name="group-1" id="group-1-4" value="1" /><label for="group-1-4"></label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <select name="treatment" id="">
+                            <option value="" disabled selected="selected">Тип номера</option>
+                            <option value="Люкс">Люкс</option>
+                            <option value="Люкс">Эконом</option>
+                        </select>
+                    </div>
+                    <button>Найти</button>
+                </form>
             </div>
-            <div class="offer--slider">
+            <div class="offer__slider">
                 <div class="slide" style="background-image: url(images/offer-slide-1.jpg);"></div>
                 <div class="slide" style="background-image: url(images/offer-slide-1.jpg);"></div>
             </div>
@@ -97,6 +128,7 @@
         </div>
 
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
         <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB8OI63bD1KAI4MAo0yz7p0Fj-RiPEZYPk"></script>
 
         <script src="js/slick.min.js"></script>
