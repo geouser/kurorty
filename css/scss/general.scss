@@ -6,6 +6,7 @@
 @import '01-tools/slick-theme';
 @import '01-tools/font-awesome';
 @import '01-tools/fancybox';
+@import '01-tools/smoothDivScroll';
 
 /*Base styles*/
 @import '02-base/mixins';
@@ -21,5 +22,5 @@
 @import '03-modules/footer';
 @import '03-modules/popup';
 @import '03-modules/top-directions';
-
+@import '03-modules/reviews';
 /*Pages styles*/
