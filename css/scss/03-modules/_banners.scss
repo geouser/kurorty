@@ -1,0 +1,104 @@
+.banners {
+    -webkit-align-items: stretch;
+            align-items: stretch;
+    .banner,
+    .tags-block {
+        min-height: 260px;
+        height: 100%;
+    }
+}
+
+.banner {
+    background-image: url("../images/tags-bg.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    
+    padding: 30px;
+    
+    color: #FFF;
+    text-align: right;
+    
+    &__title {
+        padding: 8px 12px 10px;
+        background-color: rgba(255,255,255,.2);
+        font-size: 17px;
+        display: inline-block;
+        margin-bottom: 35px;
+    }
+    &__des {
+        margin: 0 0 35px auto;
+        line-height: 1.4;
+        max-width: 360px;
+    }
+    &__price {
+        display: inline-block;
+        padding: 6px 12px 8px;
+        background-color: rgba(255,255,255,.2);
+        span {
+            font-size: 27px;
+            font-weight: 100;
+        }
+    }
+}
+
+.tags-block {
+    padding: 30px;
+    overflow: hidden;
+    background-image: url("../images/tags-bg.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    ul {
+        -webkit-column-count: 2;
+        column-count: 2;
+        -webkit-column-gap: 25px;
+           -moz-column-gap: 25px;
+                column-gap: 25px;
+        list-style-type: none;
+        padding: 25px 32px 10px 32px;
+        width: 370px;
+        position: relative;
+        background-color: #FFF;
+        height: 175px;
+        margin-left: 29%;
+        text-align: left;
+        -webkit-border-radius: 16px;
+                border-radius: 16px;
+        li {
+            margin-bottom: 6px;
+            a {
+                color: $blue;
+                font-size: 15px;
+                display: block;
+                @include transition(all,.2s);
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        > img {
+            position: absolute;
+            right: 92%;
+            top: -20px;
+            width: auto;
+        }
+        &:after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 35px;
+            position: absolute;
+            bottom: -34px;
+            right: 55px;
+            background-image: url("../images/triangle.png");
+            -webkit-background-size: 100% 100%;
+                 -o-background-size: 100% 100%;
+                    background-size: 100% 100%;
+        }
+    }
+}

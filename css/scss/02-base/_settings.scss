@@ -9,6 +9,7 @@ body {
 body {
     padding-top: 90px;
     font-family: 'Naste';
+    font-size: 15px;
 }
 
 .yellow {
@@ -23,12 +24,14 @@ body {
 .green {
   color: #82c363;
 }
-
+.section {
+  padding: 75px 0;
+}
 // lAYOUT
 // ---------------------------
 .wrapper {
-	width: 1450px;
-  padding: 0 15px;
+	width: 1440px;
+  padding: 0 10px;
   max-width: 100%;
 	margin: 0 auto;
 	text-align: center;
@@ -37,7 +40,7 @@ body {
 
 .flex-row {
     @include flex($alignI: flex-start, $justify: flex-start);
-    margin: 0 -15px;
+    margin: 0 -10px;
 
     &.flex-row-middle {
         -webkit-align-items: center;
@@ -46,7 +49,7 @@ body {
     }
 }
 [class*='col-'] {
-    padding: 0 15px;
+    padding: 0 10px;
 }
 
 .col-1  { width: 8.33%; }
@@ -76,4 +79,21 @@ body {
 }
 :-moz-placeholder {
   opacity: 1;
+}
+
+.azn {
+  display: inline-block;
+  vertical-align: text-bottom;
+  line-height: inherit;
+  width: 21px;
+  height: 20px;
+  position: relative;
+  top: -2px;
+  background-image: url("../images/azn.svg");
+  -webkit-background-size: 100% 100%;
+       -o-background-size: 100% 100%;
+          background-size: 100% 100%;
+  &--red {
+    background-image: url("../images/azn-red.svg");
+  }
 }
