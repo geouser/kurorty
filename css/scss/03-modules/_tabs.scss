@@ -1,5 +1,8 @@
 .sanatoriums {
     padding-top: 10px;
+    @media (max-width: 600px) {
+        padding-top: 0;
+    }
 }
 
 .tabs.ui-tabs.ui-widget-content {
@@ -8,6 +11,9 @@
     -webkit-box-shadow: none !important;
             box-shadow: none !important;
     padding-bottom: 45px;
+    @media (max-width: 600px) {
+        padding-bottom: 25px;
+    }
     border-bottom: 1px solid #dddddd;
     .flex-row {
         @include flex($alignI: flex-start, $justify: flex-start);
@@ -27,6 +33,9 @@
     }
     .button {
         margin-top: 45px;
+        @media (max-width: 600px) {
+            margin-top: 25px;
+        }
     }
 }
 .tabs .ui-tabs-nav {
