@@ -13,6 +13,9 @@ body {
     @media (max-width: 1200px) {
       padding-top: 70px;
     }
+    @media (max-width: 760px) {
+      padding-top: 0;
+    }
 }
 
 .yellow {
