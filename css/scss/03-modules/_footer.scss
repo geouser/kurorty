@@ -16,6 +16,10 @@
         .footer-menu,
         .footer-address {
             padding: 50px 0;
+
+            @media (max-width: 600px) {
+                padding: 25px 0;
+            }
         }
 
         .footer-menu,
@@ -103,6 +107,10 @@
 
             .footer-socials {
                 padding-top: 50px;
+
+                @media (max-width: 600px) {
+                    padding-top: 25px;
+                }
 
                 a {
                     display: inline-block;
