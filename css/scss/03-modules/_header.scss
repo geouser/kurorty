@@ -156,6 +156,18 @@
     @media (max-width: 1200px) {
         width: 120px;
     }
+    &--mobile {
+        display: none;
+        @media (max-width: 760px) {
+            display: block;
+            width: 80px;
+            margin: 0 auto;
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            margin: auto;
+            z-index: 100;
+        }
+    }
 }
 
 .mail,
