@@ -4,9 +4,7 @@
 @import '01-tools/fonts';
 @import '01-tools/slick';
 @import '01-tools/slick-theme';
-@import '01-tools/ui';
-@import '01-tools/fancybox';
-@import '01-tools/smoothDivScroll';
+
 
 /*Base styles*/
 @import '02-base/mixins';
@@ -16,9 +14,10 @@
 
 
 /*Modules styles*/
-@import '03-modules/controls';
 @import '03-modules/header';
 @import '03-modules/offer';
+
+@import '03-modules/controls';
 @import '03-modules/footer';
 @import '03-modules/popup';
 @import '03-modules/banners';
@@ -28,3 +27,8 @@
 @import '03-modules/numbers';
 @import '03-modules/sanatorium';
 /*Pages styles*/
+
+/* Tools styles */
+@import '01-tools/ui';
+@import '01-tools/fancybox';
+@import '01-tools/smoothDivScroll';
