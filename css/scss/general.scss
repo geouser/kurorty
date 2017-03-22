@@ -4,6 +4,9 @@
 @import '01-tools/fonts';
 @import '01-tools/slick';
 @import '01-tools/slick-theme';
+@import '01-tools/ui';
+@import '01-tools/fancybox';
+@import '01-tools/smoothDivScroll';
 
 
 /*Base styles*/
@@ -27,8 +30,3 @@
 @import '03-modules/numbers';
 @import '03-modules/sanatorium';
 /*Pages styles*/
-
-/* Tools styles */
-@import '01-tools/ui';
-@import '01-tools/fancybox';
-@import '01-tools/smoothDivScroll';
