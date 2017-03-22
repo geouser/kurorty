@@ -11,6 +11,10 @@
         background-repeat: no-repeat;
         background-position: 50% 50%;
         width: 50%;
+        
+        @media (max-width: 1200px) {
+            width: 100%;
+        }
     }
 
     &__info {
