@@ -5,6 +5,9 @@
     height: 100px;
     z-index: 100;
     background: #fff;
+    @media (max-width: 1200px) {
+        height: 70px;
+    }
     
     .wrapper {
         height: 100%;
@@ -15,13 +18,19 @@
     &__right {
         min-width: 250px;
         height: 100%;
+        @media (max-width: 1200px) {
+            min-width: 200px;
+        }
+        @media (max-width: 900px) {
+            min-width: 180px;
+        }
     }
     &__left {
         text-align: left;
     }
     &__right {
         text-align: right;
-        @include flex();
+        @include flex($justify: flex-end);
     }
 }
 
@@ -35,6 +44,9 @@
             display: inline-block;
             vertical-align: middle;
             margin: 0 12px;
+            @media (max-width: 1200px) {
+                margin: 0 6px;
+            }
             a {
                 color: $text;
                 position: relative;
@@ -53,6 +65,9 @@
                 }
                 &:hover:after {
                     max-width: 100%;
+                }
+                @media (max-width: 1200px) {
+                    font-size: 13px;
                 }
             }
             &.active {
@@ -82,6 +97,9 @@
         display: block;
         max-width: 100%;
     }
+    @media (max-width: 1200px) {
+        width: 120px;
+    }
 }
 
 .mail,
@@ -103,12 +121,15 @@
             -webkit-border-radius: 50%;
                     border-radius: 50%;
             text-align: center;
+            @media (max-width: 1200px) {
+                width: 36px;
+                height: 36px;
+            }
             img {
                 display: inline-block;
                 vertical-align: middle;
                 max-width: 90%;
                 max-height: 90%;
-                margin-top: 2px;
             }
             &:before {
                 content: "";
@@ -130,6 +151,14 @@
     border-left: 1px solid #e0e0e0;
     border-right: 1px solid #e0e0e0;
     text-align: left;
+    @media (max-width: 1200px) {
+        padding: 0 20px;
+        margin-left: 10px;
+        border:none;
+    }
+    @media (max-width: 900px) {
+        padding: 0 0px;
+    }
     i {
         display: inline-block;
         vertical-align: middle;
@@ -139,6 +168,10 @@
         -webkit-background-size: 100% 100%;
              -o-background-size: 100% 100%;
                 background-size: 100% 100%;
+        @media (max-width: 1200px) {
+                width: 36px;
+                height: 36px;
+            }
     }
     span {
         display: inline-block;
@@ -147,6 +180,12 @@
         color: $blue;
         font-size: 15px;
         width: 80px;
+        @media (max-width: 1200px) {
+           font-size: 13px;
+        }
+        @media (max-width: 900px) {
+            padding-left: 4px;
+        }
     }
     &:before {
         content: '';
@@ -168,7 +207,7 @@
     margin: auto; 
     cursor: pointer;
     z-index: 100;
-    background-color: peru;
+    background-color: $blue;
     border: none;
     -webkit-border-radius: 4px;
             border-radius: 4px;
@@ -199,7 +238,7 @@
     &.active .middle_line  {   width: 0; left: 50%;}
 
 
-        @media (max-width: 1200px) {
+        @media (max-width: 760px) {
             display: block;
         }
 
