@@ -65,14 +65,16 @@
             position: relative;
             display: inline-block;
             vertical-align: middle;
-            width: 67px;
+            width: 55px;
             &:after,
             &:before {
-                content: "\f005\00a0\f005\00a0\f005\00a0\f005\00a0\f005";
-                font-family: FontAwesome;
-                font-size: 12px;
-                color: #DDDDDD;
+                content: "";
                 display: block;
+                background-image: url(../images/star.svg);
+                background-repeat: repeat-x;
+                background-position: left top;
+                background-size: auto 100%;
+                height: 11px;
             }
 
             &:after {
@@ -80,9 +82,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                overflow: hidden;
-                white-space: pre-wrap;
-                color: $yellow;
+                background-image: url(../images/star-gold.svg);
             }
 
             &.star-1:after {
