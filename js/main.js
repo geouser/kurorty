@@ -85,12 +85,14 @@ jQuery(document).ready(function($) {
     function resize_slider() {    
         var wv = $(window).width();
 
-        if ( wv > 700 ) {
-            var reviewWidth = ($('.wrapper').width()-30)/3;
-        } else if ( (wv <= 700) && (wv > 500 ) ) {
-            var reviewWidth = ($('.wrapper').width()-30)/2;
-        } else if ( wv <= 500 ) {
-            var reviewWidth = ($('.wrapper').width()-30);
+        if ( wv > 970 ) {
+            var reviewWidth = ($('.wrapper').width()-20)/3;
+        } else if ( (wv <= 970) && (wv > 700 ) ) {
+            var reviewWidth = ($('.wrapper').width()-20)/2;
+        } else if ( (wv <= 700)  && (wv > 500 ) ) {
+            var reviewWidth = ($('.wrapper').width()-20)/1.5;
+        } else if ( (wv <= 500) ) {
+            var reviewWidth = ($('.wrapper').width()-20);
         }
 
         $('.reviews-slider').find('.review').outerWidth( reviewWidth );
