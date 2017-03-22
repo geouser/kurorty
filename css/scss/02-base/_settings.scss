@@ -13,6 +13,12 @@ body {
     @media (max-width: 1200px) {
       padding-top: 70px;
     }
+    @media (max-width: 760px) {
+      padding-top: 0;
+    }
+    @media (max-width: 600px) {
+      font-size: 14px;
+    }
 }
 
 .yellow {
@@ -29,6 +35,9 @@ body {
 }
 .section {
   padding: 75px 0;
+  @media (max-width: 600px) {
+      padding: 45px 0;
+  }
 }
 // lAYOUT
 // ---------------------------

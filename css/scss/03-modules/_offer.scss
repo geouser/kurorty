@@ -2,23 +2,43 @@
     height: 600px;
     position: relative;
     @include flex($direction:column,$alignI:center, $justify:center);
-
+    @media (max-width: 1000px) {
+        height: auto;
+        padding: 80px 0 80px;
+        min-height: 480px;
+    }
     .wrapper {
         @include flex();
         position: relative;
         z-index: 10;
         text-align: left;
+        @media (max-width: 1200px) {
+            padding: 0 15px;
+        }
     }
 
     &--slider {
         .offer--text {
             padding-bottom: 60px;
+            @media (max-width: 1200px) {
+                text-align: center;
+                padding-bottom: 0;
+            }
         }
     }
 
     &--text {
         width: 550px;
         color: #FFF;
+        @media (max-width: 1200px) {
+            width: calc(100% - 400px);
+        }
+        @media (max-width: 760px) {
+            width: 100%;
+            & + .form {
+                margin-top: 20px;
+            }
+        }
     }
     
     h1,
@@ -31,6 +51,14 @@
         @media (max-width: 1500px) {
             font-size: 36px;
         }
+        @media (max-width: 1000px) {
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 600px) {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
         &:after {
             content: "";
             display: block;
@@ -38,15 +66,12 @@
             width: 100%;
             background-color: rgba(255,255,255,.3);
             margin-top: 25px;
-        }
-        @media (max-width: 1200px) {
-            font-size: 40px;
-        }
-        @media (max-width: 800px) {
-            font-size: 32px;
-        }
-        @media (max-width: 600px) {
-            font-size: 30px;
+             @media (max-width: 1000px) {
+                 margin-top: 20px;
+             }
+             @media (max-width: 600px) {
+                 margin-top: 15px;
+             }
         }
     }
     p {
@@ -57,6 +82,14 @@
         }
         @media (max-width: 1500px) {
             font-size: 15px;
+        }
+        @media (max-width: 1000px) {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        @media (max-width: 600px) {
+            font-size: 13px;
+            margin-top: 10px;
         }
     }
 }
@@ -70,9 +103,6 @@
     left: 0;
     top: 0;
     background: $grey;
-    @media (max-width: 600px) {
-        height: 500px;
-    }
     .slick-track,
     .slick-list {
         height: 100%;
@@ -88,8 +118,8 @@
         -webkit-background-size: cover;
              -o-background-size: cover;
                 background-size: cover;
-        @media (max-width: 800px) {
-            padding: 0 30px;
+        @media (max-width: 1000px) {
+         padding: 100px 0;   
         }
         .button {
             margin-top: 16px;

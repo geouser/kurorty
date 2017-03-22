@@ -1,10 +1,21 @@
 .banners {
     -webkit-align-items: stretch;
             align-items: stretch;
+    @media (max-width: 1000px) {
+        -webkit-align-items: flex-start;
+                align-items: flex-start;
+        .col-6 {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
     .banner,
     .tags-block {
         min-height: 260px;
         height: 100%;
+        @media (max-width: 600px) {
+            min-height: 0px;
+        }
     }
 }
 
@@ -17,6 +28,9 @@
             background-size: cover;
     
     padding: 30px;
+    @media (max-width: 600px) {
+        padding: 20px;
+    }
     
     color: #FFF;
     text-align: right;
@@ -27,6 +41,9 @@
         font-size: 17px;
         display: inline-block;
         margin-bottom: 35px;
+        @media (max-width: 600px) {
+            font-size: 16px;
+        }
     }
     &__des {
         margin: 0 0 35px auto;
@@ -40,6 +57,9 @@
         span {
             font-size: 27px;
             font-weight: 100;
+            @media (max-width: 600px) {
+                font-size: 22px;
+            }
         }
     }
 }
@@ -53,6 +73,9 @@
     -webkit-background-size: cover;
          -o-background-size: cover;
             background-size: cover;
+    @media (max-width: 600px) {
+        padding: 20px;
+    }
     ul {
         -webkit-column-count: 2;
         column-count: 2;
@@ -69,6 +92,10 @@
         text-align: left;
         -webkit-border-radius: 16px;
                 border-radius: 16px;
+        @media (max-width: 1200px) {
+            display: block;
+            margin: 0 auto;
+        }
         li {
             margin-bottom: 6px;
             a {
@@ -98,6 +125,9 @@
             right: 92%;
             top: -20px;
             width: auto;
+            @media (max-width: 1200px) {
+                display: none;
+            }
         }
         &:after {
             content: "";
@@ -111,6 +141,9 @@
             -webkit-background-size: 100% 100%;
                  -o-background-size: 100% 100%;
                     background-size: 100% 100%;
+            @media (max-width: 600px) {
+                display: none;
+            }
         }
     }
 }
