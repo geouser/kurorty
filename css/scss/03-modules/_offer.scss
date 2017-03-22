@@ -28,6 +28,9 @@
         font-weight: 600;
         line-height: 1;
         margin-bottom: 25px;
+        @media (max-width: 1500px) {
+            font-size: 36px;
+        }
         &:after {
             content: "";
             display: block;
@@ -51,6 +54,9 @@
         margin-bottom: 20px;
         &:last-of-type {
             margin-bottom: 0;
+        }
+        @media (max-width: 1500px) {
+            font-size: 15px;
         }
     }
 }
