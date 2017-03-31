@@ -298,6 +298,8 @@
         border: 0;
         font-size: 13px;
         color: $text;
+        background-color: #fff;
+        box-shadow: none;
 
         @media (max-width: 991px) {
             height: 40px;

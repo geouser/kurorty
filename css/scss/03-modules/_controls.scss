@@ -1,23 +1,25 @@
 .button {
-    background-color: $blue;
-    width: 180px;
-    height: 60px;
-    line-height: 60px;
-    
-    text-align: center;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 500;
-    font-size: 16px;
-    
     display: inline-block;
-    border: none;
+    width: 160px;
+    max-width: 100%;
+    border-radius: 25px;
+    font-size: 12px;
+    height: 50px;
+    line-height: 48px;
+    font-weight: 600;
+    background-color: #7CC990;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    border: 0;
+    color: #fff;
+    text-transform: uppercase;
     cursor: pointer;
-    @media (max-width: 1500px) {
-        width: 160px;
-        height: 50px;
-        line-height: 50px;
+
+    &:hover {
+        background-color: #71BA51;
     }
+
     &--img {
         background: transparent;
         height: auto;
@@ -25,6 +27,11 @@
         color: $blue;
         padding: 0;
         line-height: normal;
+        border-radius: 0;
+        &:hover {
+            background-color: transparent;
+        }
+
         img {
             display: block;
             margin: 0 auto 2px;
@@ -41,7 +48,7 @@
         }
         &:hover {
             span {
-                border: none;
+                border-color: transparent;
             }
         }
     }
@@ -143,15 +150,40 @@
 }
 
 
-.ui-widget-header,
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
-    border: 1px solid $grey;
-    background: $grey;
-    color: $text;
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    background-color: #F5F5F5;
+    border: 0;
+    height: 50px;
+    text-align: left;
+    -webkit-box-shadow: inset 0px 2px 3px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0px 2px 3px 0px rgba(0,0,0,0.2);
+    box-shadow: inset 0px 2px 3px 0px rgba(0,0,0,0.2);
+    color: #9a9a9a;
 }
-.ui-widget.ui-widget-content {
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.07);border: 1px solid $grey;
+.form-group {
+    margin-bottom: 20px;
 }
+textarea {
+    resize: none;
+    height: 190px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+
+
+
+
+
+
+
+
 
 
 .form {
@@ -215,6 +247,8 @@
         color: #9a9a9a;
         background-repeat: no-repeat;
         background-position: 95% 50%;
+        background-color: #fff;
+        box-shadow: none;
         @media (max-width: 760px) {
             font-size: 14px;
         }
@@ -350,5 +384,72 @@
 .input-rating input:checked ~ label:before
 {
     background-image: url("../images/star-gold.svg");
+}
+
+
+
+
+.ui-datepicker {
+    background-color: #fff;
+    border: 1px solid $yellow;
+    padding: 5px;
+    z-index: 200!important;
+    display: none;
+
+    .ui-datepicker-header {
+        position: relative;
+        padding: 6px 15px;
+        text-align: center;
+    }
+
+    .ui-datepicker-next,
+    .ui-datepicker-prev {
+        position: absolute;
+        top: 50%;
+        color: #fff;
+        width: 15px;
+        height: 15px;
+        background-color: $yellow;
+        font-size: 0;
+        color: transparent;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        background-size: 8px;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        cursor: pointer;
+    }
+
+    .ui-datepicker-prev {
+        left: 0;
+        background-image: url(../images/left-arrow.svg);
+    }
+    .ui-datepicker-next {
+        right: 0;
+        background-image: url(../images/right-arrow.svg);
+    }
+
+    .ui-datepicker-calendar {
+        text-align: center;
+        color: $text;
+        width: 240px;
+
+        a {
+            color: $text;
+            display: block;
+        }
+        
+        td:not(.ui-state-disabled):hover,
+        .ui-datepicker-current-day {
+            background-color: $yellow;
+
+            a {
+                color: #fff;
+            }
+        }
+    }
+
 }
 

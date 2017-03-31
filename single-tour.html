@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Kurorty</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><!--[if IE]>
+        <meta http-equiv="ImageResize" content="no">
+        <meta http-equiv="ImageToolbar" content="no">
+        <meta name="MSSmartTagsPreventParsing" content="true">
+        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><![endif]-->
+        <meta property="og:url" content="">
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:image" content="">
+        <meta name="google-site-verification" content="">
+        <!--<link rel="shortcut icon" href="images/favicon.ico">-->
+         
+        <link rel="stylesheet" href="css/general.css">
+    </head>
+    <body>
+
+        <!--=================================================================================================-->
+                                                    <!-- HEADER -->
+        <header class="mainHeader compensate-for-scrollbar">
+            <div class="wrapper">
+                <div class="mainHeader__left">
+                    <a href="index.html" class="logo"><img src="images/logo.png" alt=""></a>
+                </div>
+
+                <nav class="mainNav"><!-- start navigation -->
+                    <ul>
+                        <li class="active"><a href="index.html">О Нас</a></li>
+                        <li><a href="sanatorium.html">Санатории</a></li>
+                        <li><a href="visa.html">Виза</a></li>
+                        <li><a href="partners.html">Партнерам</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </nav><!-- end nav -->
+
+                <div class="mainHeader__right">
+                    <ul class="languages">
+                        <li class="en active"><a href=""><img src="images/en.jpg" alt=""></a></li>
+                        <li class="az"><a href=""><img src="images/az.png" alt=""></a></li>
+                    </ul>
+                    <a href="" class="log-in">
+                        <i></i>
+                        <span>Личный кабинет</span>
+                    </a>
+                </div><!-- end mainHeader__info -->
+
+            </div><!-- end wrapper -->
+        </header><!-- end header -->
+        
+        <button class="menu-button"> 
+            <span class="menu-line top_line"></span>
+            <span class="menu-line middle_line"></span>
+            <span class="menu-line bottom_line"></span>
+        </button><!-- end toggle mobile menu -->
+
+        <a href="index.html" class="logo logo--mobile"><img src="images/logo.png" alt=""></a>
+
+        <!--=================================================================================================-->
+                                                    <!-- OFFER SECTION -->
+
+        <section class="offer offer--slider">
+            <div class="wrapper">
+            
+                <div class="offer--text">
+                    <h1>Приветствуем Вас в новом туристическом сезоне!</h1>
+                    <p>Мы рады предоставить Вам проект в области лечебного туризма - корпоративную систему, предназначенную для резервации и реализации номеров в санаториях стран СНГ.</p>
+                    <p>Более <span class="yellow">2000</span> Лучших Предложений!</p>
+                </div>
+
+                <!-- start form filter -->
+                <form class="form form--filter">
+                    <div class="input-group">
+                        <input type="text" name="place" placeholder="Куда вы планируете поехать?">
+                    </div>
+                    <div class="input-group input-group--two">
+                        <input type="text" name="in" placeholder="Въезд" class="datepicker">
+                        <input type="text" name="out" placeholder="Выезд" class="datepicker">
+                    </div>
+                    <div class="input-group">
+                        <select name="treatment" id="">
+                            <option value="" disabled selected="selected">Профиль лечения</option>
+                            <option value="Курорты">Курорты</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-rating">
+                            <span>Выбрать рейтинг</span>
+                            <input type="radio" name="group-1" id="group-1-0" value="5" /><label for="group-1-0"></label>
+                            <input type="radio" name="group-1" id="group-1-1" value="4" /><label for="group-1-1"></label>
+                            <input type="radio" name="group-1" id="group-1-2" value="3" /><label for="group-1-2"></label>
+                            <input type="radio" name="group-1" id="group-1-3" value="2" /><label for="group-1-3"></label>
+                            <input type="radio" name="group-1" id="group-1-4" value="1" /><label for="group-1-4"></label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <select name="rooms" id="">
+                            <option value="" disabled selected="selected">Тип номера</option>
+                            <option value="Люкс">Люкс</option>
+                            <option value="Люкс">Эконом</option>
+                        </select>
+                    </div>
+                    <button>Найти</button>
+                </form>
+                <!-- end form filter -->
+
+            </div><!-- end wrapper -->
+
+            <div class="offer__slider">
+                <div class="slide" style="background-image: url(images/offer-slide-1.jpg);"></div>
+                <div class="slide" style="background-image: url(images/offer-slide-1.jpg);"></div>
+            </div>
+
+        </section><!-- end offer -->
+
+
+        <div class="sticky-menu-holder">
+            <nav class="sticky-menu">
+                <ul>
+                    <li class="sticky-menu-item col-2 active"><a href="#description"><span>Описание и Условия</span></a></li>
+                    <li class="sticky-menu-item col-2"><a href="#rooms"><span>Категории номеров</span></a></li>
+                    <li class="sticky-menu-item col-2"><a href="#profile"><span>Профиль лечения</span></a></li>
+                    <li class="sticky-menu-item col-2"><a href="#services"><span>Услуги санатория</span></a></li>
+                    <li class="sticky-menu-item col-2"><a href="#gallery"><span>Галерея</span></a></li>
+                    <li class="sticky-menu-item col-2"><a href="#reviews"><span>Отзывы</span></a></li>
+                </ul>    
+            </nav>
+        </div>
+
+
+        <section id="description" class="description">
+            <div class="wrapper">
+                <div class="content-block">
+                    <div class="flex-row">
+
+                        <div class="main-content-column">
+                            <div class="flex-row">
+                                <div class="col-7 tour-slider-column">
+                                    <div class="tour-slider-main">
+                                        <div class="slide" data-fancybox="gallery" href="https://farm9.staticflickr.com/8389/29609788601_50dddcf435_k_d.jpg" data-type="image">
+                                            <img src="http://placehold.it/460x280" alt="">
+                                        </div>
+                                        <div class="slide" data-fancybox="gallery" href="https://farm9.staticflickr.com/8389/29609788601_50dddcf435_k_d.jpg" data-type="image">
+                                            <img src="http://placehold.it/460x280" alt="">
+                                        </div>
+                                        <div class="slide" data-fancybox="gallery" href="https://farm9.staticflickr.com/8389/29609788601_50dddcf435_k_d.jpg" data-type="image">
+                                            <img src="http://placehold.it/460x280" alt="">
+                                        </div>
+                                        <div class="slide" data-fancybox="gallery" href="https://farm9.staticflickr.com/8389/29609788601_50dddcf435_k_d.jpg" data-type="image">
+                                            <img src="http://placehold.it/460x280" alt="">
+                                        </div>
+                                        <div class="slide" data-fancybox="gallery" href="https://farm9.staticflickr.com/8389/29609788601_50dddcf435_k_d.jpg" data-type="image">
+                                            <img src="http://placehold.it/460x280" alt="">
+                                        </div>
+                                        <div class="slide" data-fancybox="gallery" href="https://farm9.staticflickr.com/8389/29609788601_50dddcf435_k_d.jpg" data-type="image">
+                                            <img src="http://placehold.it/460x280" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="tour-slider-thumbnails">
+                                        <div class="slide"><img src="http://placehold.it/85x60" alt=""></div>
+                                        <div class="slide"><img src="http://placehold.it/85x60" alt=""></div>
+                                        <div class="slide"><img src="http://placehold.it/85x60" alt=""></div>
+                                        <div class="slide"><img src="http://placehold.it/85x60" alt=""></div>
+                                        <div class="slide"><img src="http://placehold.it/85x60" alt=""></div>
+                                        <div class="slide"><img src="http://placehold.it/85x60" alt=""></div>
+                                    </div>
+                                </div>
+                                <div class="col-5 tour-features-column">
+                                    <div class="tour-features">
+                                        <table>
+                                            <tr>
+                                                <td><span>Страна:</span></td>
+                                                <td>Россия</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span>Город:</span></td>
+                                                <td>Ессентуки</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span>Язык:</span></td>
+                                                <td>Русский</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span>Кол-во мест:</span></td>
+                                                <td>400</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span>Территория:</span></td>
+                                                <td>64 000 м<sup>2</sup></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span>Цена от:</span></td>
+                                                <td><span class="price red">500 <i class="azn azn--red azn--small"></i></span></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="bordered-block tour-rating">
+                                        <div class="inner">
+                                            <div class="rating-value star-3"></div>
+                                            <div class="rating-reviews"><a href="#">36 отзывов</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+
+                        <div class="aside-column">
+                            <div class="bordered-block order-tour">
+                                <div class="inner">
+                                    <div class="order-tour-item">
+                                        <img src="images/support-icon.png" alt="">
+                                        <div class="text">
+                                            <span>Бронируйте путевки по телефону</span>
+                                            <p><a href="tel:+7 (915) 450 01 88">+7 (915) 450 01 88</a></p>
+                                            <p><a href="tel:+7 (915) 800 00 08">+7 (915) 800 00 08</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="order-tour-item">
+                                        <img src="images/support-icon.png" alt="">
+                                        <div class="text">
+                                            <p>20% скидки на все санатории только Нашим Партнерам</p>
+                                        </div>
+                                    </div>
+                                    <div class="order-tour-item">
+                                        <img src="images/support-icon.png" alt="">
+                                        <div class="text">
+                                            <p>Бронирование без предоплаты на kurorti.ru</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+
+                    </div>
+
+                    <hr class="devider">
+                    
+                    <div class="flex-row">
+                        <div class="main-content-column">
+                            <div class="tabs content-tabs">
+                                <ul class="content-tabs-controls">
+                                    <li><a href="#tab-1">Санаторий</a></li>
+                                    <li><a href="#tab-2">Питание</a></li>
+                                    <li><a href="#tab-3">Заезд</a></li>
+                                    <li><a href="#tab-4">Проезд</a></li>
+                                </ul>
+                                <div id="tab-1" class="content-tabs-content">
+                                    <article>
+                                        <p>Санаторно-курортный комплекс европейского уровня расположен в тихом районе города-курорта Ессентуки, неподалеку от парка «Победы». Комплекс поражает своих гостей великолепием современной архитектуры и концептуально выверенным ландшафтом. Хвойные и лиственные деревья собственного парка, аллеи и фонтаны, шезлонги для отдыха на открытом воздухе всё это единый рекреационный центр. Комплекс позволяет гостям пользоваться услугой бесплатного Wi-Fi интернета на всей территории.</p>
+                                        <p>Номерной фонд комплекса оснащен по последнему слову дизайнерского искусства, технологичности и эргономики.</p>
+                                    </article>
+                                    <hr class="devider">
+                                    <address class="tour-address">
+                                        <img src="images/support-icon.png" alt="">
+                                        <span>Ставропольский край, 357600 г. Ессентуки, улица Разумовского 7.</span>
+                                    </address>
+                                </div>
+                                <div id="tab-2" class="content-tabs-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae expedita, quas ut ad deleniti dolorum veniam omnis in, aspernatur mollitia illum fugiat beatae nostrum, ipsum tenetur minima laborum dolorem reprehenderit!</p>
+                                </div>
+                                <div id="tab-3" class="content-tabs-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur facere voluptas maxime in inventore nulla sunt dignissimos? Deserunt, explicabo. Neque quis reiciendis labore porro deleniti quo in sequi, minus incidunt.</p>
+                                </div>
+                                <div id="tab-4" class="content-tabs-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem porro dolorum accusantium, perferendis, fuga labore qui aliquid. Magnam iste, obcaecati nesciunt excepturi corporis quisquam minus. Dignissimos, veniam laboriosam dolorum!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aside-column">
+                            <div class="map tour-map" id="map_canvas" data-lat="44.0413" data-lng="42.8499" data-zoom="13"></div>
+                        </div>
+                    </div>
+                    
+                </div> <!-- end content-block -->
+            </div>
+        </section> <!-- end description section -->
+
+
+        <section id="rooms" class="rooms">
+            <div class="wrapper">
+
+                <div class="room">
+                    <div class="room__photo">
+                        <img src="images/room.jpg" alt="">
+                    </div>
+                    <div class="room__info">
+                        <a href="#" class="title">Двухкомнатный номер "Люкс Семейный"</a>
+                        <p class="desc">(максимальная вместимость номера: 4 человека)</p>
+                    </div>
+                    <div class="room__capacity">
+                        <div class="capacity man-2"></div>
+                    </div>
+                    <div class="room__price">
+                        <p><span class="price red">50 <i class="azn azn--red"></i></span> за день</p>
+                    </div>
+                    <div class="room__order">
+                        <button class="button green">Заказать</button>
+                    </div>
+                </div> <!-- end room -->
+                <div class="room">
+                    <div class="room__photo">
+                        <img src="images/room.jpg" alt="">
+                    </div>
+                    <div class="room__info">
+                        <a href="#" class="title">Двухкомнатный номер "Люкс Семейный"</a>
+                        <p class="desc">(максимальная вместимость номера: 4 человека)</p>
+                    </div>
+                    <div class="room__capacity">
+                        <div class="capacity man-3"></div>
+                    </div>
+                    <div class="room__price">
+                        <p><span class="price red">50 <i class="azn azn--red"></i></span> за день</p>
+                    </div>
+                    <div class="room__order">
+                        <button class="button green">Заказать</button>
+                    </div>
+                </div> <!-- end room -->
+                <div class="room">
+                    <div class="room__photo">
+                        <img src="images/room.jpg" alt="">
+                    </div>
+                    <div class="room__info">
+                        <a href="#" class="title">Двухкомнатный номер "Люкс Семейный"</a>
+                        <p class="desc">(максимальная вместимость номера: 4 человека)</p>
+                    </div>
+                    <div class="room__capacity">
+                        <div class="capacity man-1"></div>
+                    </div>
+                    <div class="room__price">
+                        <p><span class="price red">50 <i class="azn azn--red"></i></span> за день</p>
+                    </div>
+                    <div class="room__order">
+                        <button class="button green">Заказать</button>
+                    </div>
+                </div> <!-- end room -->
+                <div class="room">
+                    <div class="room__photo">
+                        <img src="images/room.jpg" alt="">
+                    </div>
+                    <div class="room__info">
+                        <a href="#" class="title">Двухкомнатный номер "Люкс Семейный"</a>
+                        <p class="desc">(максимальная вместимость номера: 4 человека)</p>
+                    </div>
+                    <div class="room__capacity">
+                        <div class="capacity man-4"></div>
+                    </div>
+                    <div class="room__price">
+                        <p><span class="price red">50 <i class="azn azn--red"></i></span> за день</p>
+                    </div>
+                    <div class="room__order">
+                        <button class="button green">Заказать</button>
+                    </div>
+                </div> <!-- end room -->
+                <div class="room">
+                    <div class="room__photo">
+                        <img src="images/room.jpg" alt="">
+                    </div>
+                    <div class="room__info">
+                        <a href="#" class="title">Двухкомнатный номер "Люкс Семейный"</a>
+                        <p class="desc">(максимальная вместимость номера: 4 человека)</p>
+                    </div>
+                    <div class="room__capacity">
+                        <div class="capacity man-2"></div>
+                    </div>
+                    <div class="room__price">
+                        <p><span class="price red">50 <i class="azn azn--red"></i></span> за день</p>
+                    </div>
+                    <div class="room__order">
+                        <button class="button green">Заказать</button>
+                    </div>
+                </div> <!-- end room -->
+
+            </div>
+        </section> <!-- end rooms section -->
+
+
+        <section class="profile" id="profile">
+            <div class="wrapper">
+
+                <div class="content-block small-offset-bottom">
+                    <h2 class="content-block-title green">Основные медицинские профили</h2>
+
+                    <ul class="list column-list list-green">
+                        <li>Лечение заболеваний желудочно-кишечного тракта,</li>
+                        <li>Нарушения обмена веществ,</li>
+                        <li>Заболевания опорно-двигательного аппарата,</li>
+                        <li>Заболевания верхних дыхательных путей и органов дыхания,</li>
+                        <li>Заболевания сердечно-сосудистой системы,</li>
+                        <li>Заболевания нервной системы,</li>
+                        <li>Заболевания кожи,</li>
+                        <li>Заболевания гинекологического и урологического характера,</li>
+                        <li>Заболевания ЛОР-органов.</li>
+                    </ul>
+                </div>
+
+                <div class="content-block small-offset-bottom">
+                    <h2 class="content-block-title green">Диагностическая база</h2>
+                    
+                    <div class="flex-row diagnostic-base">
+                        <div class="col-3">
+                            <div class="diagnostic-base-item">
+                                <div class="diagnostic-base-item__image" style="background-image: url(images/diagnostics-base-item.jpg);"></div>
+                                <div class="diagnostic-base-item__caption">
+                                    <span>Кабинет Эндоскопии</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="diagnostic-base-item">
+                                <div class="diagnostic-base-item__image" style="background-image: url(images/diagnostics-base-item.jpg);"></div>
+                                <div class="diagnostic-base-item__caption">
+                                    <span>Колоноскопия ректороманоскопия</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="diagnostic-base-item">
+                                <div class="diagnostic-base-item__image" style="background-image: url(images/diagnostics-base-item.jpg);"></div>
+                                <div class="diagnostic-base-item__caption">
+                                    <span>УЗИ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="diagnostic-base-item">
+                                <div class="diagnostic-base-item__image" style="background-image: url(images/diagnostics-base-item.jpg);"></div>
+                                <div class="diagnostic-base-item__caption">
+                                    <span>Функциональная диагностика</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h2 class="content-block-title green">Лечебные процедуры</h2>
+                    
+                    <article>
+                        <p>Углекисломинеральные, углекислосероводородные, радоновые ванны, грязевое отделение, лечебный массаж, кишечные промывания, лечебные души (Шарко и др.), УЗТ-, УВЧ-, КВЧ-терапия, светолечение, индуктотермия, гипнотерапия, электросон, иглорефлексотерапия, терапевтическая стоматология, ингаляции, мануальная терапия. За дополнительную плату: барокамера.</p>
+                    </article>
+                </div>
+
+            </div>
+        </section> <!-- end profile section -->
+
+
+        <section class="services" id="services">
+            <div class="wrapper">
+
+                <div class="content-block">
+                    <h2 class="content-block-title blue">Что входит в услуги?</h2>
+                    
+                    <div class="flex-row services-list">
+                        <div class="col-3">
+                            <div class="bordered-block services-list-item">
+                                <div class="inner">
+                                    <div class="services-list-item__icon">
+                                        <img src="images/services-1.png" alt="">
+                                    </div>
+                                    <div class="services-list-item__caption">
+                                        <p>Диетические блюда, завтрак <br>“шведский стол”, обед, ужин.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="bordered-block services-list-item">
+                                <div class="inner">
+                                    <div class="services-list-item__icon">
+                                        <img src="images/services-2.png" alt="">
+                                    </div>
+                                    <div class="services-list-item__caption">
+                                        <p>1 закрытый бассейн <br>Длина 25 м.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="bordered-block services-list-item">
+                                <div class="inner">
+                                    <div class="services-list-item__icon">
+                                        <img src="images/services-1.png" alt="">
+                                    </div>
+                                    <div class="services-list-item__caption">
+                                        <p>Интернет <br>wi-fi (БЕСПЛАТНО)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="bordered-block services-list-item">
+                                <div class="inner">
+                                    <div class="services-list-item__icon">
+                                        <img src="images/services-4.png" alt="">
+                                    </div>
+                                    <div class="services-list-item__caption">
+                                        <p>Стоянка. <br>Бесплатная охраняемая</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="bordered-block services-list-item">
+                                <div class="inner">
+                                    <div class="services-list-item__icon">
+                                        <img src="images/services-1.png" alt="">
+                                    </div>
+                                    <div class="services-list-item__caption">
+                                        <p>От ж/д вокзала 2 км <br>От Аэропорта 30 км</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="bordered-block services-list-item">
+                                <div class="inner">
+                                    <div class="services-list-item__icon">
+                                        <img src="images/services-2.png" alt="">
+                                    </div>
+                                    <div class="services-list-item__caption">
+                                        <p>фитнесс, тенистный корт, <br>футбол, баскетбол</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="bordered-block services-list-item">
+                                <div class="inner">
+                                    <div class="services-list-item__icon">
+                                        <img src="images/services-1.png" alt="">
+                                    </div>
+                                    <div class="services-list-item__caption">
+                                        <p>Лечебное отделение <br>24/7 работает</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="bordered-block services-list-item">
+                                <div class="inner">
+                                    <div class="services-list-item__icon">
+                                        <img src="images/services-4.png" alt="">
+                                    </div>
+                                    <div class="services-list-item__caption">
+                                        <p>Обмен валют, присмотр за детьми, <br>гостиничные услуги</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end content-block -->
+
+
+                <div class="content-block">
+                    <div class="tabs content-tabs">
+                        <ul class="content-tabs-controls has-border">
+                            <li><a href="#service-tab-1">Описание услуг входящих в стоимость</a></li>
+                            <li><a href="#service-tab-2">За дополнительную плату</a></li>
+                        </ul>
+                        <div id="service-tab-1" class="content-tabs-content">
+                            <ul class="list column-list list-blue">
+                                <li>Сбор анамнеза и жалоб общетерапевтический</li>
+                                <li>Визуальный осмотр общетерапевтический</li>
+                                <li>Пальпация общетерапевтическая</li>
+                                <li>Аускультация общетерапевтическая</li>
+                                <li>Перкуссия общетерапевтическая</li>
+                                <li>Термометрия общая</li>
+                                <li>Измерение роста</li>
+                                <li>Измерение массы тела</li>
+                                <li>Измерение частоты дыхания</li>
+                                <li>Измерение частоты сердцебиения</li>
+                                <li>Исследование пульса</li>
+                                <li>Измерение артериального давления на периферических артериях</li>
+                                <li>Консультация зав.отделением</li>
+                                <li>Осмотр на консультационном Совете</li>
+                                <li>Регистрация электрокардиограммы</li>
+                                <li>Расшифровка, описание и интерпретация</li>
+                                <li>Электрокардиографических данных</li>
+                                <li>Эзофагогастродуоденоскопия</li>
+                                <li>Ультразвуковое исследование органов брюшной полости</li>
+                                <li>Общий (клинический) анализ крови</li>
+                                <li>Анализ мочи общий</li>
+                                <li>Анализ мочи по Нечипоренко</li>
+                                <li>Ректороманоскопия</li>
+                            </ul>
+                        </div>
+                        <div id="service-tab-2" class="content-tabs-content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae expedita, quas ut ad deleniti dolorum veniam omnis in, aspernatur mollitia illum fugiat beatae nostrum, ipsum tenetur minima laborum dolorem reprehenderit!</p>
+                        </div>
+                    </div>
+                </div> <!-- end content-block -->
+
+            </div>
+        </section> <!-- end services section -->
+
+
+        <section class="gallery" id="gallery">
+            <div class="wrapper">
+                <div class="content-block"></div>
+            </div>
+        </section> <!-- end gallery section -->
+
+
+
+        <section class="reviews-section" id="reviews">
+            <div class="wrapper">
+                <div class="content-block">
+                    <h2 class="content-block-title green">Отзывы отдыхающих</h2>
+
+                    <div class="total-reviews">
+                        <a href="#">Читать все 80 отзывов</a>
+                    </div>
+
+                    <div class="flex-row">
+                        <div class="col-6 review-column">
+                            <div class="full-review">
+                                <div class="full-review__person">
+                                    <figure class="full-review__person__image"><img src="images/person.png" alt=""></figure>
+                                    <div class="full-review__person__name">
+                                        <p class="name">Марк Вельмискин</p>
+                                        <span class="position">UI/UX дизайнер</span>
+                                    </div>
+                                </div>
+                                <div class="full-review__content">
+                                    <p>Все было хорошо. Хороший номер с балконом. Балкон выходил прямо в лес. В комнате было очень чисто, уютно и тепло. Процедуры проводились вовремя. Персонал доброжелательный. Питание тоже хорошее, насыщенное. Особенно хочу отметить большой бассейне и турецкую баню которую можно посещать весь день, очень удобно. Очень хорошо отдохнули и подлечились. Планируем приехать еще раз и на две недели.</p>
+                                </div>
+                                <div class="full-review__footer">
+                                    <div class="full-review__footer__rating">
+                                        <p>Оценка санатория:</p>
+                                        <div class="rating-value star-4"></div>
+                                    </div>
+                                    <div class="full-review__footer__date">
+                                        <p>27 Февраля 2017</p>
+                                    </div>
+                                </div>
+                            </div> <!-- end full review -->
+                        </div>
+
+                        <div class="col-6 form-column">
+                            <form class="review-form" action="">
+                                <div class="flex-row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <input type="text" name="name" placeholder="Имя" required="">
+                                        </div>    
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <input type="email" name="email" placeholder="e-mail" required="">
+                                        </div>    
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <textarea name="message" placeholder="Сообщение" required=""></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group rating-group">
+                                            <div class="input-rating">
+                                                <span>Выбрать рейтинг </span>
+                                                <input type="radio" name="review-rating" id="review-rating-1-0" value="5" /><label for="review-rating-1-0"></label>
+                                                <input type="radio" name="review-rating" id="review-rating-1-1" value="4" /><label for="review-rating-1-1"></label>
+                                                <input type="radio" name="review-rating" id="review-rating-1-2" value="3" /><label for="review-rating-1-2"></label>
+                                                <input type="radio" name="review-rating" id="review-rating-1-3" value="2" /><label for="review-rating-1-3"></label>
+                                                <input type="radio" name="review-rating" id="review-rating-1-4" value="1" /><label for="review-rating-1-4"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group button-group">
+                                            <button class="button">Добавить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div> <!-- end flex-row -->
+                </div> <!-- end content-block -->
+            </div>
+        </section> <!-- end reviews section -->
+
+
+        <section class="related-sanatoriums">
+            <div class="wrapper">
+                <div class="flex-row">
+                    <div class="col-6">
+                        <!-- start sanatorium -->
+                        <div class="sanatorium">
+                            <div class="sanatorium__preview" style="background-image: url(images/sanatorium.jpg);"></div>
+                            <div class="sanatorium__info">
+                                <h3 class="sanatorium__info__title">Санаторий "им. М. Ю. Лермонтова"</h3>
+                                <div class="sanatorium__info__rating">
+                                    <div class="rating-value star-2"></div>
+                                    <div class="rating-reviews"><a href="#">36 отзывов</a></div>
+                                </div>
+                                <div class="sanatorium__info__price">От <span>500<i class="azn azn--red"></i></span> за 1 день</div>
+                                <div class="sanatorium__info__type">(профиль: Гастроэнтерелогия)</div>
+                                <div class="sanatorium__info__general-rating">
+                                    <img src="images/raiting.svg" alt="">
+                                    <span class="value">8.4</span>
+                                    <span class="label">Общий<br>рейтинг</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end sanatorium -->
+                    </div>
+                    <div class="col-6">
+                        <!-- start sanatorium -->
+                        <div class="sanatorium">
+                            <div class="sanatorium__preview" style="background-image: url(images/sanatorium.jpg);"></div>
+                            <div class="sanatorium__info">
+                                <h3 class="sanatorium__info__title">Санаторий "им. М. Ю. Лермонтова"</h3>
+                                <div class="sanatorium__info__rating">
+                                    <div class="rating-value star-2"></div>
+                                    <div class="rating-reviews"><a href="#">36 отзывов</a></div>
+                                </div>
+                                <div class="sanatorium__info__price">От <span>500<i class="azn azn--red"></i></span> за 1 день</div>
+                                <div class="sanatorium__info__type">(профиль: Гастроэнтерелогия)</div>
+                                <div class="sanatorium__info__general-rating">
+                                    <img src="images/raiting.svg" alt="">
+                                    <span class="value">8.4</span>
+                                    <span class="label">Общий<br>рейтинг</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end sanatorium -->
+                    </div>
+                    <div class="col-6">
+                        <!-- start sanatorium -->
+                        <div class="sanatorium">
+                            <div class="sanatorium__preview" style="background-image: url(images/sanatorium.jpg);"></div>
+                            <div class="sanatorium__info">
+                                <h3 class="sanatorium__info__title">Санаторий "им. М. Ю. Лермонтова"</h3>
+                                <div class="sanatorium__info__rating">
+                                    <div class="rating-value star-2"></div>
+                                    <div class="rating-reviews"><a href="#">36 отзывов</a></div>
+                                </div>
+                                <div class="sanatorium__info__price">От <span>500<i class="azn azn--red"></i></span> за 1 день</div>
+                                <div class="sanatorium__info__type">(профиль: Гастроэнтерелогия)</div>
+                                <div class="sanatorium__info__general-rating">
+                                    <img src="images/raiting.svg" alt="">
+                                    <span class="value">8.4</span>
+                                    <span class="label">Общий<br>рейтинг</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end sanatorium -->
+                    </div>
+                    <div class="col-6">
+                        <!-- start sanatorium -->
+                        <div class="sanatorium">
+                            <div class="sanatorium__preview" style="background-image: url(images/sanatorium.jpg);"></div>
+                            <div class="sanatorium__info">
+                                <h3 class="sanatorium__info__title">Санаторий "им. М. Ю. Лермонтова"</h3>
+                                <div class="sanatorium__info__rating">
+                                    <div class="rating-value star-2"></div>
+                                    <div class="rating-reviews"><a href="#">36 отзывов</a></div>
+                                </div>
+                                <div class="sanatorium__info__price">От <span>500<i class="azn azn--red"></i></span> за 1 день</div>
+                                <div class="sanatorium__info__type">(профиль: Гастроэнтерелогия)</div>
+                                <div class="sanatorium__info__general-rating">
+                                    <img src="images/raiting.svg" alt="">
+                                    <span class="value">8.4</span>
+                                    <span class="label">Общий<br>рейтинг</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end sanatorium -->
+                    </div>
+                </div> <!-- end flex-row -->
+                <a href="" class="button button--img"><img src="images/sanatoriums.svg" alt=""><span>Показать все Санатории</span></a>
+                <hr class="devider">
+            </div>
+        </section> <!-- end related sanatoriums section -->
+        
+
+        <!-- Footer start -->
+        <footer class="footer">
+
+            <div class="footer-top">
+                <div class="wrapper">
+                    <div class="flex-row">
+                        <div class="footer-menu">
+                            <nav>
+                                <ul>
+                                    <li><a href="#">О Нас</a></li>
+                                    <li><a href="#">Лечения</a></li>
+                                    <li><a href="#">Виза</a></li>
+                                    <li><a href="#">Контакты</a></li>
+                                    <li><a href="#">Санатории</a></li>
+                                    <li><a href="#">Отзывы</a></li>
+                                </ul>
+                            </nav>
+
+                            <div class="user-sign-out yellow">
+                                <a href="#"><img src="images/sign_out.svg" alt=""><span>Марк Вельмискин</span></a>
+                            </div>
+                        </div> <!-- end footer-menu -->
+                        <div class="footer-subscribe">
+                            <form action="" class="subscribe-form">
+                                <p class="subscribe-form-title">Хотите получать предложения? Смело Подписывайтесь:)</p>
+
+                                <div class="form-group">
+                                    <input type="text" name="email" placeholder="E-mail" required="">
+                                    <button class="submit"><img src="images/subscribe.svg" alt=""></button>
+                                </div>
+                            </form>
+
+                            <div class="footer-socials">
+                                <a href="#"><img src="images/isq.svg" alt=""></a>
+                                <a href="#"><img src="images/msn.svg" alt=""></a>
+                                <a href="#"><img src="images/skype.svg" alt=""></a>
+                                <a href="#"><img src="images/facebook.svg" alt=""></a>
+                                <a href="#"><img src="images/twitter.svg" alt=""></a>
+                            </div>
+                        </div> <!-- end footer-subscribe -->
+                        <div class="footer-address">
+                            <img src="images/address.png" alt="">
+
+                            <address>Ул. Ак. Гасан Алиев 1061</address>
+
+                            <p><a href="tel:(+994 12) 525 24 25">(+994 12) 525 24 25</a></p>
+                            <p><a href="tel:(+994 50) 555 55 55">(+994 50) 555 55 55</a></p>
+                            <p><a href="mailto:info@kurorti.ru">info@kurorti.ru</a></p>
+                        </div> <!-- end footer-address -->
+                    </div>
+                </div>
+            </div> <!-- end footer-top -->
+
+            <div class="footer-bottom">
+                <div class="wrapper">
+                    <div class="flex-row flex-row-middle">
+                        <div class="copyright">
+                            <p>© 2017 Kurorti.ru. Все права защищены.</p>
+                        </div>
+                        <div class="footer-mini-menu">
+                            <nav>
+                                <ul>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Условия</a></li>
+                                    <li><a href="#">Отзывы</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="studio">
+                            <p>Разработано в: <a href="#">Gamidov Studio</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end footer-bottom -->
+
+        </footer> <!-- end footer -->
+
+
+
+
+
+        <div id="modal-popup" class="fncb-hide popup"></div>
+
+        <div id="modal-popup-ok" class="fncb-hide popup result">
+            <p class="heading">Спасибо!</p>
+            <p class="msg">Ваше сообщение было успешно отправлено. Мы свяжемся с Вами в ближайшее время!</p>
+        </div>
+
+        <div id="modal-popup-error" class="fncb-hide popup result">
+            <p class="heading">Возникла ошибка при отправке Вашего запроса.</p>
+            <p class="msg">Пожалуйста, проверьте правильность внесённых данных и попробуйте снова!</p>
+        </div>
+        
+        <script src="js/plugins.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyB8OI63bD1KAI4MAo0yz7p0Fj-RiPEZYPk"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

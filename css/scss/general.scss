@@ -4,7 +4,7 @@
 @import '01-tools/fonts';
 @import '01-tools/slick';
 @import '01-tools/slick-theme';
-@import '01-tools/ui';
+/*@import '01-tools/ui';*/
 @import '01-tools/fancybox';
 @import '01-tools/smoothDivScroll';
 
@@ -29,4 +29,11 @@
 @import '03-modules/reviews';
 @import '03-modules/numbers';
 @import '03-modules/sanatorium';
+
+@import '03-modules/sticky-menu';
 /*Pages styles*/
+
+
+
+@import '04-pages/page-tour';
+@import '04-pages/page-about';

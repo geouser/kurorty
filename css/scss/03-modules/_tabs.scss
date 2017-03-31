@@ -5,16 +5,14 @@
     }
 }
 
-.tabs.ui-tabs.ui-widget-content {
-    font-family: 'Naste';
-    background: transparent !important;
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
+.sanatorium-tabs {
     padding-bottom: 45px;
+    border-bottom: 1px solid #dddddd;
+    
     @media (max-width: 600px) {
         padding-bottom: 25px;
     }
-    border-bottom: 1px solid #dddddd;
+    
     .flex-row {
         @include flex($alignI: flex-start, $justify: flex-start);
         margin: 0 -10px;
@@ -38,16 +36,19 @@
         }
     }
 }
-.tabs .ui-tabs-nav {
+.sanatorium-tabs .tabs-controls {
     margin-bottom: 40px;
     padding: 4px;
     background-color: $blue;
     -webkit-border-radius: 4px;
             border-radius: 4px;
+    @include flex($alignI: flex-start, $justify: flex-start);
+
     .ui-tabs-tab {
         width: 25%;
         margin: 0;
         background: #FFF;
+        list-style: none;
         border: none !important;
         -webkit-border-radius: 0;
                 border-radius: 0;
@@ -198,7 +199,7 @@
         }
     }
 }
-.ui-widget.ui-widget-content {
+.sanatorium-tabs .ui-widget.ui-widget-content {
     border: none;
     padding: 0;
 }

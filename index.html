@@ -157,8 +157,8 @@
 
         <section class="section sanatoriums">
             <div class="wrapper">
-                <div class="tabs">
-                   <ul>
+                <div class="tabs sanatorium-tabs">
+                   <ul class="tabs-controls">
                       <li><a href="#tabs-1" class="recommendedTours"><span>Рекомендуемые</span></a></li>
                       <li><a href="#tabs-2" class="newTours"><span>Новые Предложения</span></a></li>
                       <li><a href="#tabs-3" class="hotTours"><span>Горящие Предложения</span></a></li>
@@ -740,5 +740,12 @@
         
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+
+
+        <script>
+            if ( $('.blog-page').length() > 0 ) {
+                $('.blog-page .top_site_main').css('background-image', 'url()');
+            }
+        </script>
     </body>
 </html>

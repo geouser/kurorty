@@ -1,0 +1,71 @@
+.sticky-menu-holder {
+    height: 90px;
+    margin-bottom: 80px;
+}
+
+.sticky-menu {
+    background-color: #fff;
+    height: 100%;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4);
+
+    .wrapper {
+        height: 100%;
+
+        ul {
+            border-right: 1px solid #eee;
+            border-left: 1px solid #eee;
+        }
+    }
+
+    ul {
+        height: 100%;
+        @extend .flex-row;
+        margin: 0;
+    }
+
+    &-item {
+        height: 100%;
+        text-align: center;
+        padding: 0;
+        list-style: none;
+        -webkit-transition: border-color 0.3s ease;
+        -o-transition: border-color 0.3s ease;
+        transition: border-color 0.3s ease;
+
+        &:not(:last-child) {
+            border-right: 1px solid #EEEEEE;
+        }
+
+        a {
+            display: block;
+            height: 100%;
+            @extend %vertAlign;
+            font-size: 17px;
+            color: #9a9a9a;
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                max-width: 95%;
+            }
+        }
+
+        &:hover,
+        &.active,
+        &.ui-state-active {
+            border-right-color: $blue;
+
+            a {
+                color: #fff;
+                background-color: $blue;
+            }
+        }
+
+    }
+}
