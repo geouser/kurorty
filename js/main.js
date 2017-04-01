@@ -113,7 +113,18 @@ jQuery(document).ready(function($) {
             } 
         });
     });
-    
+
+
+    /*Accept conditions*/
+    $('#accept-conditions').on('change', function(event) {
+        event.preventDefault();
+        console.log('asd');
+        if ( $(this).is(':checked') ) {
+            $('.accept-button').removeClass('disabled');
+        } else {
+            $('.accept-button').addClass('disabled');
+        }
+    });
 
 
     $('.offer__slider').slick({

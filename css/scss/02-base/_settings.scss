@@ -78,6 +78,12 @@ article {
   }
 }
 
+section {
+  &.has-padding {
+    padding: 80px 0;
+  }
+}
+
 .content-block {
   background-color: #fff;
   padding: 30px;
@@ -90,6 +96,10 @@ article {
 
   &.small-offset-bottom {
     margin-bottom: 5px;
+  }
+
+  &.no-offset-bottom {
+    margin-bottom: 0;
   }
 
   &-title {

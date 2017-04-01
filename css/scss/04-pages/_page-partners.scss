@@ -1,0 +1,115 @@
+.flex-row.partners {
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+
+    .partner {
+        padding: 0;
+        width: -webkit-calc(50% - 20px);
+        width: calc(50% - 20px);
+        margin: 0 10px;
+    }
+}
+
+
+
+.partner {
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
+
+    .content-block {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        margin: 0;
+        padding-top: 20px;
+
+        &-title {
+            margin-bottom: 30px;
+        }
+    }
+
+    .devider {
+        margin: 30px 0;
+    }
+
+    &__image {
+        height: 350px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+}
+
+.included-item {
+    @include flex($alignI: center);
+
+    &__icon {
+        width: 52px;
+        margin-right: 20px;
+    }
+
+    &__text {
+        width: -webkit-calc(100% - 72px);
+        width: calc(100% - 72px);
+        text-align: left;
+        color: #797979;
+    }
+}
+
+
+
+.cooperation {
+    padding-bottom: 10px;
+    text-align: center;
+
+    .accept-conditions {
+        position: absolute;
+        left: 30px;
+        bottom: 65px;
+        -webkit-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+        -o-transform: translateY(50%);
+        transform: translateY(50%);
+
+        input[type=checkbox] {
+            display: none;
+        }
+
+        label {
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                color: #797979;
+
+                &:before {
+                    content: '';
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    border: 2px solid #AAAAAA;
+                    border-radius: 50%;
+                    background-size: 16px;
+                    background-repeat: no-repeat;
+                    background-position: 50% 50%;
+                    margin-right: 15px;
+                    box-sizing: border-box;
+                    cursor: pointer;
+                }
+            }
+
+            input:checked + span:before {
+                background-image: url(../images/check.svg);
+            }
+        }
+    }
+
+    
+    .accept-button.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
