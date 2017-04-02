@@ -184,20 +184,35 @@
 
     .sticky-menu-item {
         width: 100%;
-        padding: 2px;
-        border: 0;
 
-        a {
-            font-size: 14px;
-            padding: 12px 8px;
-            border: 1px solid #3d8eb9;
-            color: #3d8eb9;
+        @media (min-width: 768px) {
+            padding: 2px;
+            border: 0;
+
+            a {
+                font-size: 14px;
+                padding: 12px 8px;
+                border: 1px solid #3d8eb9;
+                color: #3d8eb9;
+            }
+
+            &.active a,
+            &:hover a {
+                color: #fff!important;
+            }    
         }
 
-        &.active a,
-        &:hover a {
-            color: #fff!important;
-        }
+        @media (max-width: 767px) {
+            a {
+                font-size: 13px;
+                padding: 6px 4px;
+            }
+            
+            &.active a,
+            &:hover a {
+                color: #fff!important;
+            } 
+        } 
     }
 
     .sticky-menu-mobile-toggle {

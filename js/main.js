@@ -156,6 +156,17 @@ jQuery(document).ready(function($) {
     });
 
 
+    $('.custom-tab-link').on('click', function(event) {
+        event.preventDefault();
+        var target = $(this).attr('href');
+        if ( exist(target) ) {
+            $('.ui-tabs-anchor[href="'+target+'"]').click();
+            $('html, body').animate({
+                scrollTop: $(target).position().top
+            }, 600)
+        }
+    });
+
 
     $('.offer__slider').slick({
         dots: true,
