@@ -135,11 +135,14 @@ jQuery(document).ready(function($) {
 
     $(window).on('scroll resize', function(event) {
         event.preventDefault();
-        if ( $(window).scrollTop() > ($('.sticky-menu').position().top + $('.sticky-menu').height()) ) {
-            $('.sticky-menu-mobile').addClass('visible');
-        } else {
-            $('.sticky-menu-mobile').removeClass('visible');
+        if ( exist('.sticky-menu') ) {
+            if ( $(window).scrollTop() > ($('.sticky-menu').position().top + $('.sticky-menu').height()) ) {
+                $('.sticky-menu-mobile').addClass('visible');
+            } else {
+                $('.sticky-menu-mobile').removeClass('visible');
+            }    
         }
+        
     });
 
 
