@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="149 -225 512 512" style="enable-background:new 149 -225 512 512;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#FCB941;}
-</style>
-<g>
-	<g id="play-circle-fill">
-		<path class="st0" d="M405-225c-140.8,0-256,115.2-256,256s115.2,256,256,256S661,171.8,661,31S545.8-225,405-225z M353.8,146.2
-			V-84.2L507.4,31L353.8,146.2z"/>
-	</g>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41"><path fill="#fcb941" d="M20.5 0A20.57 20.57 0 0 0 0 20.5C0 31.77 9.23 41 20.5 41 31.78 41 41 31.77 41 20.5S31.78 0 20.5 0zm-2.05 25.63V15.38l8.2 5.12z"/></svg>
