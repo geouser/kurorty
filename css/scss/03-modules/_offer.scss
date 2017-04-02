@@ -1,23 +1,51 @@
 .offer {
-    height: 600px;
+    height: 610px;
     position: relative;
+    padding-bottom: 100px;
     @include flex($direction:column,$alignI:center, $justify:center);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
     @media (max-width: 1000px) {
         height: auto;
         padding: 80px 0 80px;
         min-height: 480px;
     }
     .wrapper {
-        @include flex();
+        @include flex($justify: center);
         position: relative;
         z-index: 10;
-        text-align: left;
+        text-align: center;
         @media (max-width: 1200px) {
             padding: 0 15px;
         }
     }
 
+    &--infoSides {
+        .wrapper {
+            text-align: left;
+            -webkit-justify-content: space-between;
+                    justify-content: space-between;
+            h1,
+            h2 {
+                text-transform: none;
+            }
+        }
+        .offer--text {
+            width: 550px;
+            @media (max-width: 1200px) {
+                width: calc(100% - 400px);
+            }
+            @media (max-width: 760px) {
+                width: 100%;
+            }
+        }
+    }
+
     &--slider {
+        padding-bottom: 0;
         .offer--text {
             padding-bottom: 60px;
             @media (max-width: 1200px) {
@@ -28,13 +56,8 @@
     }
 
     &--text {
-        width: 550px;
         color: #FFF;
-        @media (max-width: 1200px) {
-            width: calc(100% - 400px);
-        }
         @media (max-width: 760px) {
-            width: 100%;
             & + .form {
                 margin-top: 20px;
             }
@@ -47,31 +70,40 @@
         font-size: 40px;
         font-weight: 600;
         line-height: 1;
-        margin-bottom: 25px;
+        text-transform: uppercase;
         @media (max-width: 1500px) {
             font-size: 36px;
         }
         @media (max-width: 1000px) {
             font-size: 34px;
-            margin-bottom: 20px;
         }
         @media (max-width: 600px) {
             font-size: 30px;
-            margin-bottom: 15px;
         }
-        &:after {
-            content: "";
-            display: block;
-            height: 1px;
-            width: 100%;
-            background-color: rgba(255,255,255,.3);
-            margin-top: 25px;
-             @media (max-width: 1000px) {
-                 margin-top: 20px;
-             }
-             @media (max-width: 600px) {
-                 margin-top: 15px;
-             }
+        & + * {
+            margin-top: 35px;
+            @media (max-width: 1000px) {
+                margin-top: 25px;
+            }
+            @media (max-width: 600px) {
+                margin-top: 20px;
+            }
+        }
+        & + p {
+            &:before {
+                content: "";
+                display: block;
+                height: 1px;
+                width: 100%;
+                background-color: rgba(255,255,255,.3);
+                margin-bottom: 25px;
+                 @media (max-width: 1000px) {
+                     margin-top: 20px;
+                 }
+                 @media (max-width: 600px) {
+                     margin-top: 15px;
+                 }
+            }
         }
     }
     p {
@@ -92,8 +124,79 @@
             margin-top: 10px;
         }
     }
+    .scroll-down {
+        margin-top: 100px;
+    }
 }
 
+.scroll-down {
+    display: block;
+    @include transition(all, .2s);
+    &:hover {
+        opacity: .5;
+    }
+}
+
+.breadcrumbs {
+    height: 100px;
+    margin-top: -100px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    z-index: 2;
+    @include flex($alignI:center, $justify:center);
+    list-style-type: none;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    &:before {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: #ffffff;
+        opacity: 0.2;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        a {
+            color: #fff;
+            opacity: .5;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 700;
+            @include transition(all, .2s);
+            &:hover {
+                color: #ffb200;
+                opacity: 1;
+            }
+        }
+        &:after {
+            display: inline-block;
+            vertical-align: middle;
+            width: 6px;
+            height: 9px;
+            margin: 0 16px;
+            content:'';
+            opacity: .5;
+            background-image: url("../images/li-next.svg");
+            -webkit-background-size: 100% 100%;
+                 -o-background-size: 100% 100%;
+                    background-size: 100% 100%;
+        }
+        &:last-of-type {
+            a {
+                color: #ffb200;
+                opacity: 1;
+            }
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
 
 .offer__slider {
     height: 100%;
