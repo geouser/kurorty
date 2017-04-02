@@ -473,6 +473,77 @@
 
 
 
+.tour-gallery {
+    margin-bottom: -20px;
+
+    .gallery-item {
+        margin-bottom: 20px;
+        display: block;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        position: relative;
+
+        &:before {
+            content: '';
+            width: 100%;
+            padding-bottom: 100%;
+            display: block;
+        }
+
+        &:after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0);
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        &:hover {
+            &:after {
+                background-color: rgba(0, 0, 0, .4);
+            }
+        }
+
+        &[href*="www.youtube.com"]:after,
+        &[href*="vimeo.com"]:after {
+            background-image: url(../images/play-rounded-button.svg);
+            background-size: 45px;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+
+        &:hover {
+            &[href*="www.youtube.com"]:after,
+            &[href*="vimeo.com"]:after {
+                background-image: url(../images/play-rounded-button-active.svg);
+            }
+        }
+    }
+
+    .col-3:nth-child(1),
+    .col-3:nth-child(4) {
+        .gallery-item:nth-child(2n):before {
+            padding-bottom: 75%;
+        }
+    }
+
+    .col-3:nth-child(2),
+    .col-3:nth-child(3) {
+        .gallery-item:nth-child(2n-1):before {
+            padding-bottom: 75%;
+        }
+    }
+}
+
+
+
+
 
 .reviews-section {
     .total-reviews {
