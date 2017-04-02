@@ -1,6 +1,10 @@
 .sticky-menu-holder {
     height: 90px;
     margin-bottom: 80px;
+
+    @media (max-width: 1200px) {
+        height: 80px;
+    }
 }
 
 .sticky-menu {
@@ -48,6 +52,15 @@
             -o-transition: all 0.3s ease;
             transition: all 0.3s ease;
             cursor: pointer;
+            padding: 0 5px;
+
+            @media (max-width: 1200px) {
+                font-size: 16px;
+            }
+
+            @media (max-width: 991px) {
+                font-size: 15px;
+            }
 
             span {
                 display: inline-block;
