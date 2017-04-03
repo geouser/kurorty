@@ -21,6 +21,7 @@
              -o-transform: translateY(-100%);
                 transform: translateY(-100%);
         &.active {
+            position: fixed;
             opacity: 1;
             visibility: visible;
             -webkit-transform: translateY(0);
