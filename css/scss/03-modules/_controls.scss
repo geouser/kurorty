@@ -285,6 +285,7 @@ textarea {
        -webkit-appearance:none; /* Safari and Chrome */
         background-repeat: no-repeat;
         background-position: 95% 50%;
+        background-color: #FFF;
         background-image: url("../images/select-down.png");
         @media (max-width: 760px) {
             font-size: 14px;
@@ -308,6 +309,16 @@ textarea {
         height: 100%;
         text-align: right;
         padding: 14px 16px;
+        position: relative;
+        &__pick {
+                width: 105px;
+            height: 24px;
+            position: absolute;
+            right: 16px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
         span {
             font-size: 15px;
             color: #9a9a9a;

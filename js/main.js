@@ -158,6 +158,14 @@ jQuery(document).ready(function($) {
         }
     });
 
+    $('.scroll-down').on('click', function(event) {
+        event.preventDefault();
+        var target = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(target).position().top
+        }, 600)
+    });
+
 
     $('.custom-tab-link').on('click', function(event) {
         event.preventDefault();

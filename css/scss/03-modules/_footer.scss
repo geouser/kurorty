@@ -116,9 +116,17 @@
                     display: inline-block;
                     vertical-align: middle;
                     margin: 0 10px;
-
+                    opacity: .4;
+                    -webkit-transition: all .2s;
+                       -moz-transition: all .2s;
+                        -ms-transition: all .2s;
+                         -o-transition: all .2s;
+                            transition: all .2s;
                     img {
                         display: block;
+                    }
+                    &:hover {
+                        opacity: 1;
                     }
                 }
             }
