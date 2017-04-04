@@ -165,8 +165,24 @@ textarea {
     -webkit-box-shadow: inset 0px 2px 3px 0px rgba(0,0,0,0.2);
     -moz-box-shadow: inset 0px 2px 3px 0px rgba(0,0,0,0.2);
     box-shadow: inset 0px 2px 3px 0px rgba(0,0,0,0.2);
+    color: #444;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color: #9a9a9a;
 }
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #9a9a9a;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #9a9a9a;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #9a9a9a;
+}
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -201,14 +217,24 @@ textarea {
         display: block;
         background-color: transparent;
         border: none;
-        margin: 20px auto;
+        margin: 0px auto;
         padding: 0;
         color: #FFF;
-        border-bottom: 1px dashed #fff;
         font-size: 17px;
         cursor: pointer;
+        width: 100%;
+        border: 20px solid transparent;
         @media (max-width: 760px) {
             margin: 10px auto;
+        }
+        span {
+            border-bottom: 1px dashed #fff;
+            @include transition(all,.2s);
+        }
+        &:hover {
+            span {
+                border-color: transparent;
+            }
         }
     }
     &--filter {

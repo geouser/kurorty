@@ -185,7 +185,8 @@
     vertical-align: middle;
     padding-left: 5px;
 
-    span {
+    span,
+    a {
         display: block;
         border-bottom: 1px dashed $blue;
         color: $blue;

@@ -13,7 +13,8 @@
         width: -webkit-calc(50% - 20px);
         width: calc(50% - 20px);
         margin: 0 10px;
-
+        display: block;
+        color: $text;
         @media (max-width: 1200px) {
             width: 100%;
             margin-left: 0;
@@ -33,7 +34,9 @@
     -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
-
+    &:hover {
+        box-shadow: 0 0 20px 0 rgba(0,0,0,0.27);
+    }
     .content-block {
         -webkit-box-shadow: none;
         box-shadow: none;
