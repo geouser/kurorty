@@ -515,6 +515,13 @@ textarea {
             &:nth-of-type(2n) {
                 padding-right: 0;
             }
+            @media(max-width: 1200px) {
+                width: 50%;
+            }
+            @media(max-width: 767px) {
+                width: 100%;
+                padding-right: 0;
+            }
         }
         &:after {
             content: "";
@@ -539,6 +546,9 @@ textarea {
         &--single {
             input {
                 width: 58%;
+                @media(max-width: 767px) {
+                    width: 100%;
+                }
             }
         }
     }
@@ -578,6 +588,14 @@ textarea {
             margin-right: 12px;
             margin-right: 50px;
             padding-left: 45px;
+            @media(max-width: 767px) {
+                margin-right: 20px;
+            }
+            @media(max-width: 400px) {
+                margin-right: 0px;
+                margin-bottom: 20px;
+                display: block;
+            }
             &:last-child {
                 margin-bottom: 0;
             }
