@@ -17,10 +17,24 @@
 
 .sticky-menu {
     background-color: #fff;
-    height: 100%;
+    height: 90px;
+    z-index: 200!important;
     -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4);
     -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4);
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4);
+
+    @media (max-width: 1200px) {
+        height: 80px;
+    }
+
+    @media (max-width: 991px) {
+        height: 70px;
+    }
+
+    @media (max-width: 767px) {
+        height: auto;
+        position: static!important;
+    }
 
     .wrapper {
         height: 100%;
@@ -165,6 +179,10 @@
 
     opacity: 0;
     visibility: hidden;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
 
     &.active {
         -webkit-transform: translate(0, -50%);
