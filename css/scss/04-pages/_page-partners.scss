@@ -154,19 +154,18 @@
                     height: 30px;
                     display: inline-block;
                     vertical-align: middle;
-                    border: 2px solid #AAAAAA;
-                    border-radius: 50%;
-                    background-size: 16px;
+                    background-size: 100% 100%;
                     background-repeat: no-repeat;
                     background-position: 50% 50%;
                     margin-right: 15px;
                     box-sizing: border-box;
                     cursor: pointer;
+                    background-image: url(../images/check-icon.svg);
                 }
             }
 
             input:checked + span:before {
-                background-image: url(../images/check.svg);
+                background-image: url(../images/check-icon-active.svg);
             }
         }
     }

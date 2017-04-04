@@ -99,6 +99,16 @@ jQuery(document).ready(function($) {
             active: 0
         });
     }
+    $('.about-tabs .ui-tabs-anchor').on('click', function(event) {
+        event.preventDefault();
+        var target = $(this).attr('href');
+        var top_offset = 90;
+        if ( exist(target) ) {
+            $('html, body').animate({
+                scrollTop: $(target).position().top - top_offset
+            }, 600)
+        }
+    });
 
 
     $('.fancybox').fancybox({});
@@ -115,16 +125,6 @@ jQuery(document).ready(function($) {
     });
 
 
-    /*Accept conditions*/
-    $('#accept-conditions').on('change', function(event) {
-        event.preventDefault();
-        console.log('asd');
-        if ( $(this).is(':checked') ) {
-            $('.accept-button').removeClass('disabled');
-        } else {
-            $('.accept-button').addClass('disabled');
-        }
-    });
 
 
     /*Sticky-menu open*/
