@@ -1,0 +1,88 @@
+.content-block--registration {
+    padding-right: 0;
+    padding-bottom: 0;
+    .content-tabs-controls {
+        height: 60px;
+        width: 49%;
+        padding-bottom: 35px;
+        border-bottom: 1px solid #eee;
+        margin: 0;
+        li {
+            margin: 0 40px 0 0;
+            a {
+                font-size: 25px;
+                font-weight: 300;
+                color: #aaaaaa;
+                border-color: #aaaaaa;
+            }
+            &.ui-state-active a {
+                color: #3D8EB9;
+                border-color: #3D8EB9;
+            }
+        }
+    }
+    .flex-row {
+        -webkit-align-items: stretch;
+                align-items: stretch;
+    }
+    .col-6 {
+        position: relative;
+    }
+    .content-tabs-content {
+        padding-top: 60px;
+        @media(max-width: 1500px) {
+            padding-top: 40px;
+        }
+    }
+}
+
+.cabinet-slider {
+    margin-top: -150px;
+    margin-bottom: 0!important;
+    @media(max-width: 1500px) {
+        margin-top: -130px;
+    }
+    .slick-slide {
+        width: 100%;
+        img {
+            display: block;
+            width: 100%;
+        }
+    }
+    .slick-dots {
+        bottom: 40px;
+        text-align: center;
+    }
+}
+
+.forget {
+    border-top: 1px solid #eee;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 98%;
+    @media(max-width: 1500px) {
+        padding: 20px 0;
+    }
+    i {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        color: #888888;
+        font-size: 15px;
+        border-bottom: 1px dashed #888888;
+        @include transition(all, .2s);
+        margin-top: -4px;
+    }
+    a:hover {
+        span {
+            border-color: transparent;
+        }
+    }
+}

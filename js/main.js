@@ -94,9 +94,28 @@ jQuery(document).ready(function($) {
     }
 
 
+
+    $('.content-tabs-content:visible').find('.cabinet-slider').slick({
+        dots: true,
+        arrows: false,
+        fade: true,
+        speed: 900
+    });
+    
     if (exist('.tabs')) {
         $(".tabs").tabs({
-            active: 0
+            active: 0,
+            activate: function( event, ui ) {
+                $('.cabinet-slider.slick-initialized').slick('unslick');
+                if ($('.content-tabs-content:visible').has('.cabinet-slider')) {
+                    $('.content-tabs-content:visible').find('.cabinet-slider').slick({
+                        dots: true,
+                        arrows: false,
+                        fade: true,
+                        speed: 900
+                    });
+                } 
+            }
         });
     }
     $('.about-tabs .ui-tabs-anchor').on('click', function(event) {
@@ -133,6 +152,28 @@ jQuery(document).ready(function($) {
     });
 
 
+
+    $('.room__count__plus').click(function(e){
+        e.preventDefault();
+        fieldName = $(this).attr('field');
+        var currentVal = parseInt($(this).siblings('input[name='+fieldName+']').val());
+        if (!isNaN(currentVal)) {
+            $(this).siblings('input[name='+fieldName+']').val(currentVal + 1);
+        } else {
+            $(this).siblings('input[name='+fieldName+']').val(0);
+        }
+    });
+
+    $(".room__count__minus").click(function(e) {
+        e.preventDefault();
+        fieldName = $(this).attr('field');
+        var currentVal = parseInt($(this).siblings('input[name='+fieldName+']').val());
+        if (!isNaN(currentVal) && currentVal > 0) {
+            $(this).siblings('input[name='+fieldName+']').val(currentVal - 1);
+        } else {
+            $(this).siblings('input[name='+fieldName+']').val(0);
+        }
+    });
 
 
     /*Sticky-menu open*/
@@ -199,6 +240,7 @@ jQuery(document).ready(function($) {
         fade: true,
         speed: 900
     });
+
 
 
     $('.tour-slider-main').on('init', function(event, slick) {
