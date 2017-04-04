@@ -10,7 +10,7 @@ body {
     padding-top: 90px;
     font-family: 'Naste';
     font-size: 15px;
-    @media (max-width: 1200px) {
+    @media (max-width: 1300px) {
       padding-top: 70px;
     }
     @media (max-width: 1000px) {
@@ -21,6 +21,9 @@ body {
     }
 }
 
+p {
+  line-height: 1.45;
+}
 .yellow {
   color: #ffa400;
 }
@@ -105,6 +108,14 @@ section {
   text-align: left;
   margin-bottom: 40px;
   position: relative;
+  
+  &--shortText {
+    article {
+      p {
+        max-width: 80%;
+      }
+    }
+  }
 
   @media (max-width: 1200px) {
     padding: 20px 15px;

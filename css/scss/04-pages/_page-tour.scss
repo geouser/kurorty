@@ -260,6 +260,7 @@
                 font-size: 13px;
                 color: #565656;
                 display: block;
+                margin-bottom: 4px;
 
                 @media (max-width: 360px) {
                     font-size: 12px;
@@ -596,9 +597,8 @@
             border-style: solid;
             border-radius: 50%;
             position: absolute;
-            top: 12px;
+            top: 6px;
             left: 0;
-            margin-top: -4px;
             box-sizing: border-box;
         }
     }
@@ -877,7 +877,7 @@
                 height: 30px;
                 position: absolute;
                 left: 0px;
-                top: 70%;
+                top: 60%;
                 -webkit-transform: translateY(-50%);
                 -ms-transform: translateY(-50%);
                 -o-transform: translateY(-50%);
@@ -1051,7 +1051,7 @@
     }
 
     .button--img {
-        margin-top: 25px;
+        margin-top: 60px;
         margin-bottom: 45px;
     }
 

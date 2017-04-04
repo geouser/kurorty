@@ -40,8 +40,6 @@
     margin-bottom: 40px;
     padding: 4px;
     background-color: $blue;
-    -webkit-border-radius: 4px;
-            border-radius: 4px;
     @include flex($alignI: flex-start, $justify: flex-start);
 
     .ui-tabs-tab {

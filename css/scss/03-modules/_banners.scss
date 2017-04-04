@@ -13,6 +13,7 @@
     .tags-block {
         min-height: 260px;
         height: 100%;
+        display: block;
         @media (max-width: 600px) {
             min-height: 0px;
         }
