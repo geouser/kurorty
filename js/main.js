@@ -125,6 +125,14 @@ jQuery(document).ready(function($) {
     });
 
 
+    $('.start-gallery').on('click', function(event) {
+        event.preventDefault();
+        $collection = $(this).find('a[data-fancybox]')
+        $.fancybox.open( $collection, {}, 0 );
+        return false;
+    });
+
+
 
 
     /*Sticky-menu open*/
