@@ -16,20 +16,8 @@
 .question {
     height: 100%;
     margin-bottom: 0;
-    &__title {
+    .content-block-title  {
         display: block;
-        padding-bottom: 25px;
-        border-bottom: 1px solid #eee;
-        color: #3d8eb9;
-        font-family: "Nexa Script";
-        font-size: 27px;
-        font-weight: 300;
-        line-height: 22px;
-        margin-bottom: 25px;
-        @media (max-width: 600px) {
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
     }
     p {
         margin-bottom: 25px;
@@ -62,5 +50,17 @@
                 padding-left: 0;
             }
         }
+    }
+}
+
+.map {
+    height: 500px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    @media(max-width: 1000px) {
+        height: 300px;
+    }
+    @media(max-width: 600px) {
+        height: 300px;
     }
 }

@@ -315,6 +315,22 @@ jQuery(document).ready(function($) {
     });
     */
 
+    function checkPasswordMatch() {
+        var password = $("#newPassword").val();
+        var confirmPassword = $("#confirmPassword").val();
+
+        if (password != confirmPassword) {
+            $("#divCheckPasswordMatch").html("Passwords do not match!");
+            $("#confirmPassword").removeClass("valid");
+        }
+        else {
+            $("#divCheckPasswordMatch").html("Passwords match.");
+            $("#confirmPassword").addClass("valid");
+        }
+    }
+
+    $("#confirmPassword").keyup(checkPasswordMatch);
+
 
     var map;
     function googleMap_initialize() {
@@ -331,12 +347,12 @@ jQuery(document).ready(function($) {
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-        var markerImage = new google.maps.MarkerImage('images/map-marker.png');
+        var markerImage = new google.maps.MarkerImage('images/marker.svg');
         var marker = new google.maps.Marker({
             icon: markerImage,
             position: mapMarkerCoord,
             map: map,
-            title: "Чисто Строй"
+            title: "Ceylan"
         });
         $(window).resize(function() {
             map.setCenter(mapCenterCoord);
