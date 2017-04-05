@@ -120,6 +120,37 @@ jQuery(document).ready(function($) {
             }
         });
     }
+
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 45000,
+      values: [ 15000, 30000 ],
+      slide: function( event, ui ) {
+        $( "#price-1" ).val(ui.values[ 0 ]);
+        $( "#price-2" ).val(ui.values[ 1 ]);
+      }
+    });
+
+    $( "#amount-1" ).val( $( "#slider-range" ).slider( "values", 0 ));
+    $( "#amount-2" ).val( $( "#slider-range" ).slider( "values", 1 ));
+
+
+    // Show more 
+    var show = 8;
+    $('.filter-list label:lt('+show+')').css('display', 'block');
+
+    $('.showMore').click(function () {
+        $('.filter-list label').css('display', 'block');
+        $(this).css('display', 'none');
+        $(this).parent().children('.showLess').css('display', 'block');
+    });
+    $('.showLess').click(function () {
+        $('.filter-list label').not(':lt('+show+')').hide();
+        $(this).css('display', 'none');
+        $(this).parent().children('.showMore').css('display', 'block');
+    });
+
     $('.about-tabs .ui-tabs-anchor').on('click', function(event) {
         event.preventDefault();
         var target = $(this).attr('href');
