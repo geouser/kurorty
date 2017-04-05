@@ -2,12 +2,6 @@
     border: 10px solid #eeeeee;
     background-color: #FFF;
     padding: 0;
-    height: -webkit-calc(100vh - 110px);
-    height: calc(100vh - 110px);
-
-    .scroll {
-        height: 100%;
-    }
 }
 
 .filter {
@@ -144,7 +138,7 @@
 
 .page-content {
     .button--img {
-        margin-top: 100px;
+        margin-top: 80px;
         margin-bottom: 100px;
     }
 }
