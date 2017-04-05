@@ -149,12 +149,13 @@ jQuery(document).ready(function($) {
 
 
     $('.showMore').click(function () {
-        $('.filter-list label').css('display', 'block');
+        $(this).parent('.filter-list').children('label').css('display', 'block');
         $(this).css('display', 'none');
         $(this).parent().children('.showLess').css('display', 'block');
     });
+
     $('.showLess').click(function () {
-        $('.filter-list label').not(':lt(7)').hide();
+        $(this).parent('.filter-list').children('label').not(':lt(7)').hide();
         $(this).css('display', 'none');
         $(this).parent().children('.showMore').css('display', 'block');
     });
