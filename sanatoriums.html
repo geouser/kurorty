@@ -89,55 +89,104 @@
             <li><a href="">Партнер</a></li>
         </ul>
 
+
+        <div class="sticky-menu-holder" id="anchor">
+            <nav class="sticky-menu sorting-menu">
+                <div class="wrapper">
+                    <ul>
+                        <li class="sticky-menu-item col-3 active"><a href="#description"><img src="images/icon-all.svg" alt=""><span>Все санатории</span></a></li>
+                        <li class="sticky-menu-item col-3"><a href="#rooms"><img src="images/icon-by-price.svg" alt=""><span>По цене</span></a></li>
+                        <li class="sticky-menu-item col-3"><a href="#profile"><img src="images/icon-by-reviews.svg" alt=""><span>По отзывам</span></a></li>
+                        <li class="sticky-menu-item col-3"><a href="#services"><img src="images/icon-by-news.svg" alt=""><span>По новизне</span></a></li>
+                    </ul>      
+                </div>
+            </nav>
+            
+            <!-- Копия меню для удобства на мобильных девайсах -->
+            <div class="sticky-menu-mobile sorting-menu">
+                <button class="sticky-menu-mobile-toggle"></button>
+                <ul>
+                    <li class="sticky-menu-item active"><a href="#description"><img src="images/icon-all.svg" alt=""><span>Все санатории</span></a></li>
+                    <li class="sticky-menu-item"><a href="#rooms"><img src="images/icon-by-price.svg" alt=""><span>По цене</span></a></li>
+                    <li class="sticky-menu-item"><a href="#profile"><img src="images/icon-by-reviews.svg" alt=""><span>По отзывам</span></a></li>
+                    <li class="sticky-menu-item"><a href="#services"><img src="images/icon-by-news.svg" alt=""><span>По новизне</span></a></li>
+                </ul> 
+            </div>
+        </div>
+
         
-        <section class="has-padding questions" id="anchor">
+        <section class="has-sidebar">
             <div class="wrapper">
                 <div class="flex-row">
-                    <div class="col-6">
-                        <div class="question content-block">
-                            <span class="content-block-title blue decorated">Обязательно ли оформлять Курортную карту?</span>
-                            <p>Да, санаторно-курортная карта необходима каждому гостю санатория. Если вы не успеваете оформить её до приезда, в течение одного дня её можно оформить прямо в санатории за дополнительную плату.</p>
 
-                            <p>Однако есть санатории, которые не принимают гостей без заранее оформленной санаторно-курортной карты. Список таких санаториев вы можете уточнить у наших менеджеров.</p>
-                        </div>
-                    </div>
-                    <div class="col-6"> 
-                        <div class="question content-block">
-                            <span class="content-block-title blue decorated">Какие бывают путёвки в санатории?</span>
-                            <ul>
-                                <li>Санаторно-курортные путёвки включают проживание в номере согласно выбранной категории, диетическое питание (3-5 разовое по назначению врача).</li>
-                                <li>Санаторно-курортные путёвки включают проживание в номере согласно выбранной категории, диетическое питание (3-5 разовое по назначению врача).</li>
-                                <li>Санаторно-курортные путёвки включают проживание в номере согласно выбранной категории, диетическое питание (3-5 разовое по назначению врача).</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="question content-block">
-                            <span class="content-block-title blue decorated">Обязательно ли оформлять Курортную карту?</span>
-                            <p>В форме бронирования трансфера кликните в строку «Откуда» и появится ниспадающее меню, в котором вы можете выбрать пункт отъезда. Форма бронирования трансфера расположена на каждой странице курорта в правом нижнем углу.</p>
+                    <aside class="col-3 sidebar"></aside> <!-- end sidebar -->
 
-                            <div class="room">
-                                <div class="room__photo">
-                                    <img src="images/room.jpg" alt="">
-                                </div>
-                                <div class="room__info">
-                                    <a href="#" class="title">Двухкомнатный номер "Люкс Семейный"</a>
-                                    <p class="desc">(максимальная вместимость номера: 4 человека)</p>
-                                </div>
-                            </div>  <!-- end room -->
+                    <main class="col-9 page-content">
+                        <div class="flex-row">
+                            <div class="col-4">
+                                <a href="single-tour.html" class="sanatorium vertical">
+                                    <div class="sanatorium__preview" style="background-image: url(images/sanatorium.jpg);"></div>
+                                    <div class="sanatorium__info">
+                                        <h3 class="sanatorium__info__title">Санаторий "им. М. Ю. Лермонтова"</h3>
+                                        <span class="sanatorium__info__place">Кисловодск</span>
+                                        <div class="sanatorium__info__price">От <span>500<i class="azn azn--red"></i></span> за 1 день</div>
+                                        <div class="sanatorium__info__type">(профиль: Гастроэнтерелогия)</div>
+                                        <div class="sanatorium__info__rating">
+                                            <div class="rating-value star-2"></div>
+                                            <div class="rating-reviews"><span>36 отзывов</span></div>
+                                        </div>
+                                        <!--<div class="sanatorium__info__general-rating">
+                                            <img src="images/raiting.svg" alt="">
+                                            <span class="value">8.4</span>
+                                            <span class="label">Общий<br>рейтинг</span>
+                                        </div>-->
+                                    </div>
+                                </a> <!-- end sanatorium -->
+                            </div>
+                            <div class="col-4">
+                                <a href="single-tour.html" class="sanatorium vertical">
+                                    <div class="sanatorium__preview" style="background-image: url(images/sanatorium.jpg);"></div>
+                                    <div class="sanatorium__info">
+                                        <h3 class="sanatorium__info__title">Санаторий "им. М. Ю. Лермонтова"</h3>
+                                        <span class="sanatorium__info__place">Кисловодск</span>
+                                        <div class="sanatorium__info__price">От <span>500<i class="azn azn--red"></i></span> за 1 день</div>
+                                        <div class="sanatorium__info__type">(профиль: Гастроэнтерелогия)</div>
+                                        <div class="sanatorium__info__rating">
+                                            <div class="rating-value star-2"></div>
+                                            <div class="rating-reviews"><span>36 отзывов</span></div>
+                                        </div>
+                                        <!--<div class="sanatorium__info__general-rating">
+                                            <img src="images/raiting.svg" alt="">
+                                            <span class="value">8.4</span>
+                                            <span class="label">Общий<br>рейтинг</span>
+                                        </div>-->
+                                    </div>
+                                </a> <!-- end sanatorium -->
+                            </div>
+                            <div class="col-4">
+                                <a href="single-tour.html" class="sanatorium vertical">
+                                    <div class="sanatorium__preview" style="background-image: url(images/sanatorium.jpg);"></div>
+                                    <div class="sanatorium__info">
+                                        <h3 class="sanatorium__info__title">Санаторий "им. М. Ю. Лермонтова"</h3>
+                                        <span class="sanatorium__info__place">Кисловодск</span>
+                                        <div class="sanatorium__info__price">От <span>500<i class="azn azn--red"></i></span> за 1 день</div>
+                                        <div class="sanatorium__info__type">(профиль: Гастроэнтерелогия)</div>
+                                        <div class="sanatorium__info__rating">
+                                            <div class="rating-value star-2"></div>
+                                            <div class="rating-reviews"><span>36 отзывов</span></div>
+                                        </div>
+                                        <!--<div class="sanatorium__info__general-rating">
+                                            <img src="images/raiting.svg" alt="">
+                                            <span class="value">8.4</span>
+                                            <span class="label">Общий<br>рейтинг</span>
+                                        </div>-->
+                                    </div>
+                                </a> <!-- end sanatorium -->
+                            </div>
+                        </div> <!-- end flex-row -->
+                    </main> <!-- end page-content -->
 
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="question content-block">
-                            <span class="content-block-title blue decorated">Обязательно ли оформлять Курортную карту?</span>
-                            <p>Разное количество процедур обусловлено условиями конкретного санатория – лечебной специализацией, уровнем лечебной базы, шкалой предлагаемых процедур.</p>
-
-                            <p>Как правило, в программу лечения входят водолечение, грязелечение (если на курорте используется лечебная грязь), газолечение, электролечение, физиотерапия. Но тип лечебно-оздоровительных процедур и их комбинацию в рамках вашего индивидуального лечебного плана назначает только врач в санатории/спа отеле.</p>
-                        </div>
-                    </div>
                 </div>
-                <a href="" class="button button--img"><img src="images/loading.svg" alt=""><span>Загрузить еще</span></a>
             </div>
         </section>
 

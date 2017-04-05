@@ -158,6 +158,8 @@
 
 
 
+
+
 .sticky-menu-mobile {
     position: fixed;
     right: 0;
@@ -267,5 +269,43 @@
         -ms-transform: rotate(180deg);
         -o-transform: rotate(180deg);
         transform: rotate(180deg);
+    }
+}
+
+
+
+
+.sorting-menu {
+    .sticky-menu-item a {
+        -webkit-filter: grayscale(100);
+        -o-filter: grayscale(100);
+        filter: grayscale(100);
+        color: $blue;
+
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 15px;
+        }
+    }
+
+    .sticky-menu-item:hover a,
+    .sticky-menu-item.active a,
+    .sticky-menu-item.ui-state-active a {
+        background-color: transparent;
+        -webkit-filter: grayscale(0);
+        -o-filter: grayscale(0);
+        filter: grayscale(0);
+    }
+
+    .sticky-menu-item:hover,
+    .sticky-menu-item.active,
+    .sticky-menu-item.ui-state-active {
+        border-right-color: #eee;
+    }
+
+    &.sticky-menu-mobile .sticky-menu-item.active a,
+    &.sticky-menu-mobile .sticky-menu-item:hover a {
+        color: $blue!important;
     }
 }
