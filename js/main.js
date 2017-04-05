@@ -15,6 +15,13 @@ function exist(el) {
 }
 jQuery(document).ready(function($) {
 
+    
+    if ( exist('.scroll') ) {
+        $('.scroll').mCustomScrollbar({
+             axis:"y"
+        });
+    }
+
 
     if (exist('.reviews-slider')) {
         $('.reviews-slider').smoothDivScroll({
