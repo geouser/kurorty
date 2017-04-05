@@ -329,7 +329,7 @@ jQuery(document).ready(function($) {
         }
     }
 
-    $("#confirmPassword").keyup(checkPasswordMatch);
+    $("#confirmPassword, #newPassword").keyup(checkPasswordMatch);
 
 
     var map;
