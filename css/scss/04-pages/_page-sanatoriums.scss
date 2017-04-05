@@ -1,0 +1,64 @@
+.sidebar--filters {
+    border: 10px solid #eeeeee;
+    background-color: #FFF;
+    padding: 0;
+}
+
+.filter {
+    padding: 25px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+    &__title {
+        color: #3d8eb9;
+        font-family: "Nexa Script";
+        font-size: 27px;
+        font-weight: 300;
+        line-height: 22px;
+        display: block;
+        margin-bottom: 25px;
+    }
+    &:last-of-type {
+        border: none;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+        color: #444444;
+        position: relative;
+        padding-left: 24px;
+        cursor: pointer;
+        &:before {
+            display: block;
+            content: "";
+            width: 14px;
+            height: 14px;
+            border-radius: 2px;
+            border: 1px solid #dce4e6;
+            background: #FFF;
+            position: absolute;
+            top: 3px;
+            left: 0;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+        &.selected {
+            &:before {
+                background-image: url("../images/selected.svg");
+                background-color: #3d8eb9;
+                border-color: #3d8eb9;
+            }
+        }
+    }
+    input[type="checkbox"] {
+        width: 14px;
+        height: 14px;
+        border-radius: 2px;
+        border: 1px solid #dce4e6;
+        background: #FFF;
+        position: relative;
+        opacity: 0;
+        position: absolute;
+        top: 4px;
+        left: 0;
+    }
+}
