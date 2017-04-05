@@ -99,7 +99,8 @@ jQuery(document).ready(function($) {
         dots: true,
         arrows: false,
         fade: true,
-        speed: 900
+        speed: 900,
+        autoplay: true
     });
     
     if (exist('.tabs')) {
@@ -112,7 +113,8 @@ jQuery(document).ready(function($) {
                         dots: true,
                         arrows: false,
                         fade: true,
-                        speed: 900
+                        speed: 900,
+                        autoplay: true
                     });
                 } 
             }
@@ -330,6 +332,15 @@ jQuery(document).ready(function($) {
     }
 
     $("#confirmPassword, #newPassword").keyup(checkPasswordMatch);
+
+    $('.form-registration .radio-group label').click(function(){
+        var radio = $(this).siblings('input');
+        if (radio.prop("checked") == false ) {
+            radio.prop( "checked", true );
+        } else {
+            radio.prop( "checked", false );
+        }
+    });
 
 
     var map;

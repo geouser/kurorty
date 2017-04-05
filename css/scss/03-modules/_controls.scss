@@ -23,8 +23,11 @@
 
     &--blue {
         background-color: #3d8eb9;
+        height: 60px;
+        -webkit-border-radius: 80px;
+                border-radius: 80px;
         &:hover {
-            background-color: #71BA51;
+            background-color: rgba(61, 142, 185, 0.8);
         }
     }
 
@@ -586,7 +589,9 @@ textarea {
         }
         label {
             color: #666666;
-            margin-top: 4px;
+            margin-top: 2px;
+            border-bottom: 1px dotted  transparent;
+            cursor: pointer;
         }
         .radio-wrap {
             position: relative;
@@ -611,6 +616,7 @@ textarea {
                 position: absolute;
                 left: 0;
                 top: 0;
+                background-repeat: no-repeat;
                 background-image: url("../images/check-grey.svg");
             -webkit-background-size: 100% 100%;
                  -o-background-size: 100% 100%;
@@ -631,7 +637,7 @@ textarea {
             }
             input:checked + i + label {
                 color: #ffa400;
-                border-bottom: 1px dotted  #ffa400;
+                border-color:  #ffa400;
             }
         }
     }
