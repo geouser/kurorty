@@ -103,7 +103,7 @@
     }
 }
 
-.filter-list label {
+.filter-list label:nth-of-type(n+8) {
     display: none;
 }
 

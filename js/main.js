@@ -136,9 +136,6 @@ jQuery(document).ready(function($) {
     $( "#amount-2" ).val( $( "#slider-range" ).slider( "values", 1 ));
 
 
-    // Show more 
-    var show = 8;
-    $('.filter-list label:lt('+show+')').css('display', 'block');
 
     $('.showMore').click(function () {
         $('.filter-list label').css('display', 'block');
@@ -146,7 +143,7 @@ jQuery(document).ready(function($) {
         $(this).parent().children('.showLess').css('display', 'block');
     });
     $('.showLess').click(function () {
-        $('.filter-list label').not(':lt('+show+')').hide();
+        $('.filter-list label').not(':lt(7)').hide();
         $(this).css('display', 'none');
         $(this).parent().children('.showMore').css('display', 'block');
     });
