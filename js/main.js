@@ -15,6 +15,17 @@ function exist(el) {
 }
 jQuery(document).ready(function($) {
 
+    $(window).on('load resize', function(event) {
+        event.preventDefault();
+        $('.js-get-sidebar-height').height( $('.sidebar').height()+20 );
+    });
+    if ( exist('.scroll') ) {
+        $('.scroll').mCustomScrollbar({
+             axis:"y",
+             theme: 'minimal-dark'
+        });
+    }
+
 
     if (exist('.reviews-slider')) {
         $('.reviews-slider').smoothDivScroll({

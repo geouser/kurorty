@@ -62,6 +62,7 @@
         left: 0;
     }
 }
+
 .range {
     @include flex();
     input {
@@ -132,5 +133,12 @@
         display: inline-block;
         vertical-align: middle;
         border-bottom: 1px dotted #ffa400;
+    }
+}
+
+.page-content {
+    .button--img {
+        margin-top: 100px;
+        margin-bottom: 100px;
     }
 }
