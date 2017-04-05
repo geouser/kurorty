@@ -130,7 +130,7 @@
                                     <label><input type="checkbox" name="checkbox" value="value"><span><div class="rating-value star-2"></div></span></label>
                                     <label><input type="checkbox" name="checkbox" value="value"><span><div class="rating-value star-1"></div></span></label>
                                 </div>
-                                <div class="filter">
+                                <div class="filter filter-list">
                                     <span class="filter__title">Профиль лечения:</span>
                                     <label><input type="checkbox" name="checkbox" value="value"><span>Собственный бальнеоцентр</span></label>
                                     <label><input type="checkbox" name="checkbox" value="value"><span>Подведена вода из источника</span></label>
@@ -139,6 +139,18 @@
                                     <label><input type="checkbox" name="checkbox" value="value"><span>Бассейн с термальной водой</span></label>
                                     <label><input type="checkbox" name="checkbox" value="value"><span>Бассейн с минеральной водой</span></label>
                                     <label><input type="checkbox" name="checkbox" value="value"><span>Ванна термальная</span></label>
+                                    <label><input type="checkbox" name="checkbox" value="value"><span>Собственный бальнеоцентр</span></label>
+                                    <label><input type="checkbox" name="checkbox" value="value"><span>Подведена вода из источника</span></label>
+                                    <label><input type="checkbox" name="checkbox" value="value"><span>Анализ крови</span></label>
+                                    <label><input type="checkbox" name="checkbox" value="value"><span>Диетотерапия</span></label>
+                                    <label><input type="checkbox" name="checkbox" value="value"><span>Бассейн с термальной водой</span></label>
+                                    <label><input type="checkbox" name="checkbox" value="value"><span>Бассейн с минеральной водой</span></label>
+                                    <label><input type="checkbox" name="checkbox" value="value"><span>Ванна термальная</span></label>
+                                    <label><input type="checkbox" name="checkbox" value="value"><span>Ванна термальная</span></label>
+                                    <label><input type="checkbox" name="checkbox" value="value"><span>Собственный бальнеоцентр</span></label>
+                                    <label><input type="checkbox" name="checkbox" value="value"><span>Подведена вода из источника</span></label>
+                                    <div class="showMore"><span>Показать все</span></div>
+                                    <div class="showLess"><span>Показать меньше</span></div>
                                 </div>
                                 <div class="filter">
                                     <span class="filter__title">Тип номера:</span>
@@ -149,13 +161,19 @@
                                 </div>
                                 <div class="filter">
                                     <span class="filter__title">По цене в сутки:</span>
+                                    <div class="range">
+                                        <input type="text" id="price-1" readonly placeholder="15 000">
+                                        <span>-</span>
+                                        <input type="text" id="price-2" readonly placeholder="30 000">
+                                        <div id="slider-range"></div>
+                                    </div>
                                 </div>
                                 <div class="filter">
                                     <span class="filter__title">С детьми:</span>
                                     <label><input type="checkbox" name="checkbox" value="value"><span>Да</span></label>
                                 </div>
                                 <div class="filter">
-                                    <span class="filter__title">Услуги и удобства:</span>
+                                    <span class="filter__title filter-list">Услуги и удобства:</span>
                                     <label><input type="checkbox" name="checkbox" value="value"><span>Бассейн</span></label>
                                     <label><input type="checkbox" name="checkbox" value="value"><span>Парковка</span></label>
                                     <label><input type="checkbox" name="checkbox" value="value"><span>Wi-Fi</span></label>
@@ -164,9 +182,10 @@
                                     <label><input type="checkbox" name="checkbox" value="value"><span>Термальный бассейн</span></label>
                                     <label><input type="checkbox" name="checkbox" value="value"><span>Сауна</span></label>
                                     <label><input type="checkbox" name="checkbox" value="value"><span>Оборудование</span></label>
+                                    <div class="showMore"><span>Показать все</span></div>
+                                    <div class="showLess"><span>Показать меньше</span></div>
                                 </div>
-                            </div>
-                        </div>
+                            </div>                       
                     </aside> <!-- end sidebar -->
 
                     <main class="col-9 page-content">
