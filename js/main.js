@@ -15,16 +15,18 @@ function exist(el) {
 }
 jQuery(document).ready(function($) {
 
-    $(window).on('load resize', function(event) {
-        event.preventDefault();
-        $('.js-get-sidebar-height').height( $('.sidebar').height()+20 );
-    });
     if ( exist('.scroll') ) {
         $('.scroll').mCustomScrollbar({
              axis:"y",
              theme: 'minimal-dark'
         });
     }
+
+
+    $(".sticky-sidebar").sticky({
+        topSpacing:100,
+        bottomSpacing: $('.footer').height() + 10
+    });
 
 
     if (exist('.reviews-slider')) {

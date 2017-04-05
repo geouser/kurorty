@@ -2,6 +2,12 @@
     border: 10px solid #eeeeee;
     background-color: #FFF;
     padding: 0;
+    height: -webkit-calc(100vh - 110px);
+    height: calc(100vh - 110px);
+
+    .scroll {
+        height: 100%;
+    }
 }
 
 .filter {
