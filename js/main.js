@@ -25,7 +25,7 @@ jQuery(document).ready(function($) {
 
     $(".sticky-sidebar").sticky({
         topSpacing:100,
-        bottomSpacing: $('.footer').height() + 10
+        bottomSpacing: $('.footer').height() + $('.button--img').height() + 227
     });
 
 
