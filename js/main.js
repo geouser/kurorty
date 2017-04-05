@@ -293,37 +293,6 @@ jQuery(document).ready(function($) {
     }
 
 
-    /*
-    $('.form').on('submit', function(event) {
-        event.preventDefault();
-        var data = new FormData(this);
-        $(this).find('button').prop('disabled', true);
-        $.ajax({
-            url: theme.url + '/forms.php',
-            type: 'POST',
-            data: data,
-            cache: false,
-            contentType: false,
-            processData: false,
-            success: function(result) {
-                if (result.status == 'ok') {
-                    openPopup('#modal-popup-ok')
-                } else {
-                    openPopup('#modal-popup-error')
-                }
-            },
-            error: function(result) {
-                openPopup('#modal-popup-error');
-            }
-        }).always(function() {
-            $('form').each(function(index, el) {
-                $(this)[0].reset();
-                $(this).find('button').prop('disabled', false);
-            });
-        });
-    });
-    */
-
     function checkPasswordMatch() {
         var password = $("#newPassword").val();
         var confirmPassword = $("#confirmPassword").val();
@@ -348,6 +317,16 @@ jQuery(document).ready(function($) {
             radio.prop( "checked", false );
         }
     });
+
+    $('.filter label').click(function(){
+        var check = $(this).children('input');
+        if (check.prop("checked") == false ) {
+            $(this).removeClass('selected');
+        } else {
+            $(this).addClass('selected');
+        }
+    });
+
 
 
     var map;
