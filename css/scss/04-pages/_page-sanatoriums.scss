@@ -42,14 +42,30 @@
     padding: 25px;
     border-bottom: 1px solid #eee;
     text-align: left;
+    @media (max-width: 767px) {
+        padding: 20px;
+        &__info {
+            display: none;
+        }
+    }
     &__title {
         color: #3d8eb9;
+        cursor: pointer;
         font-family: "Nexa Script";
         font-size: 27px;
         font-weight: 300;
         line-height: 22px;
         display: block;
-        margin-bottom: 25px;
+        padding-right: 20px;
+        background-image: url("../images/down-arrow.svg");
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+        @media (max-width: 600px) {
+            font-size: 22px;
+        }
+    }
+    &__info {
+        margin-top: 35px;
     }
     &:last-of-type {
         border: none;
@@ -82,6 +98,9 @@
                 border-color: #3d8eb9;
             }
         }
+        span {
+            line-height: 20px;
+        }
     }
     input[type="checkbox"] {
         width: 14px;
@@ -94,6 +113,16 @@
         position: absolute;
         top: 4px;
         left: 0;
+    }
+    .search {
+        background-image: url("../images/search.svg");
+        background-repeat: no-repeat;
+        background-position: 90% 50%;
+        margin-bottom: 35px;
+        background-color: #FFF;
+        border: 1px solid #dce4e6;
+        -webkit-box-shadow: none;
+                box-shadow: none;
     }
 }
 
@@ -138,7 +167,8 @@
     }
 }
 
-.filter-list label:nth-of-type(n+8) {
+.filter-list label:nth-of-type(n+8),
+.filter__info label:nth-of-type(n+8) {
     display: none;
 }
 
@@ -174,5 +204,27 @@
     .button--img {
         margin-top: 80px;
         margin-bottom: 100px;
+    }
+}
+
+.recommended {
+    position: relative;
+    &:before {
+        position: absolute;
+        width: 160px;
+        height: 42px;
+        text-align: center;
+        color: #FFF;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 600;
+        top: 25px;
+        left: -8px;
+        display: inline-block;
+        content: '';
+        background-image: url("../images/recommend-stripes.png");
+        -webkit-background-size: 100% 100%;
+             -o-background-size: 100% 100%;
+                background-size: 100% 100%;
     }
 }
