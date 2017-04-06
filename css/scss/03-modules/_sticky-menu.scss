@@ -281,6 +281,7 @@
         -o-filter: grayscale(100);
         filter: grayscale(100);
         color: $blue;
+        opacity: 0.4;
 
         img {
             display: inline-block;
@@ -296,6 +297,7 @@
         -webkit-filter: grayscale(0);
         -o-filter: grayscale(0);
         filter: grayscale(0);
+        opacity: 1;
     }
 
     .sticky-menu-item:hover,
