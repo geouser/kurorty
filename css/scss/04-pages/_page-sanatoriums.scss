@@ -1,3 +1,37 @@
+@media (max-width: 1200px) {
+  .sidebar {
+    width: 250px;
+  }
+
+  .page-content {
+    width: -webkit-calc(100% - 250px);
+    width: calc(100% - 250px);
+  }
+}
+
+@media (max-width: 991px) {
+    .page-content {
+        .col-4 {
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .page-content {
+        width: 100%;
+
+        .col-4 {
+            width: 100%;
+        }
+    }
+}
+
 .sidebar--filters {
     border: 10px solid #eeeeee;
     background-color: #FFF;

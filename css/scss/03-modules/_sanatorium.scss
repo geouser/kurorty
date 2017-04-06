@@ -137,15 +137,18 @@
 }
 
 
+
 .sanatorium.vertical {
     margin-bottom: 20px;
-
-    .sanatorium__preview {
-        height: 260px;
-    }
-    .sanatorium__preview,
-    .sanatorium__info {
-        width: 100%;
+    
+    @media (min-width: 768px) {
+        .sanatorium__preview {
+            height: 260px;
+        }
+        .sanatorium__preview,
+        .sanatorium__info {
+            width: 100%;
+        }    
     }
 }
 
