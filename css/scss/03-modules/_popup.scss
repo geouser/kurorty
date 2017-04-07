@@ -1,0 +1,47 @@
+.room-order-popup {
+    display: none;
+    width: 1200px;
+    padding: 35px 30px;
+    &__info {
+        padding-bottom: 40px;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 44px;
+        strong {
+            display: block;
+            color: #ffa400;
+            font-weight: 300;
+            margin-bottom: 15px;
+            font-size: 17px;
+        }
+        small {
+            display: block;
+            color: #3d8eb9;
+            font-size: 17px;
+            margin-top: 30px;
+            font-weight: 300;
+        }
+    }
+    .room {
+        padding: 25px;
+    }
+    .fancybox-close-small {
+        width: 41px;
+        height: 26px;
+        top: 30px;
+        right: 30px;
+        background: url('../images/return-back.svg');
+        -webkit-background-size: 100% 100%;
+             -o-background-size: 100% 100%;
+                background-size: 100% 100%;
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.room-slider-thumbnails {
+    @extend .tour-slider-thumbnails;
+}
+.room-slider-main {
+    @extend .tour-slider-main;
+}

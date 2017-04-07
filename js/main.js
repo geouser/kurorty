@@ -81,14 +81,6 @@ jQuery(document).ready(function($) {
     });
 
 
-    /*$('.mainNav a, .anchor').click(function() {
-        $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top - 50
-        }, 800);
-        return false;
-    });
-    */
-
     $('.menu-button').on('click', function(event) {
         event.preventDefault();
         $(this).toggleClass('active');
@@ -147,7 +139,26 @@ jQuery(document).ready(function($) {
     });
 
 
-    $('.fancybox').fancybox({});
+    $('.fancybox').fancybox({
+        onComplete: function( instance, slide ) {
+            if ($(this).find('.tour-slider-column')) {
+                 $('.room-slider-main').slick({
+                    arrows: false,
+                    fade: true,
+                    asNavFor: '.room-slider-thumbnails'
+                });
+
+                $('.room-slider-thumbnails').slick({
+                    arrows: false,
+                    arrows: false,
+                    slidesToShow: 5,
+                    slidesToScroll: 1,
+                    focusOnSelect: true,
+                    asNavFor: '.room-slider-main'
+                })
+            }
+        }
+    });
 
 
     /*Sertificates horizontal line*/
@@ -260,7 +271,7 @@ jQuery(document).ready(function($) {
 
 
 
-    $('.tour-slider-main').on('init', function(event, slick) {
+    $('.tour-slider-main, .room-slider-main').on('init', function(event, slick) {
         event.preventDefault();
         $(document).on('click', '.fancybox-gallery', function(e) {
             e.preventDefault();
@@ -300,6 +311,7 @@ jQuery(document).ready(function($) {
         });
     }
 
+    // ============= start Form validation / Filters ==============
 
     function checkPasswordMatch() {
         var password = $("#newPassword").val();
@@ -314,19 +326,10 @@ jQuery(document).ready(function($) {
             $("#confirmPassword").addClass("valid");
         }
     }
-
     $("#confirmPassword, #newPassword").keyup(checkPasswordMatch);
 
-    $('.form-registration .radio-group label').click(function(){
-        var radio = $(this).siblings('input');
-        if (radio.prop("checked") == false ) {
-            radio.prop( "checked", true );
-        } else {
-            radio.prop( "checked", false );
-        }
-    });
 
-    $('.filter label').click(function(){
+    $('.filter label').click(function(){ // if checked add class
         var check = $(this).children('input');
         if (check.prop("checked") == false ) {
             $(this).removeClass('selected');
@@ -335,7 +338,7 @@ jQuery(document).ready(function($) {
         }
     });
 
-    $( "#slider-range" ).slider({
+    $( "#slider-range" ).slider({ // range slider
       range: true,
       min: 0,
       max: 45000,
@@ -345,7 +348,6 @@ jQuery(document).ready(function($) {
         $( "#price-2" ).val(ui.values[ 1 ]);
       }
     });
-
     $( "#amount-1" ).val( $( "#slider-range" ).slider( "values", 0 ));
     $( "#amount-2" ).val( $( "#slider-range" ).slider( "values", 1 ));
 
@@ -355,47 +357,54 @@ jQuery(document).ready(function($) {
         $(this).css('display', 'none');
         $(this).parent().parent().find('.showLess').css('display', 'block');
     });
-
     $('.showLess').click(function () {
         $(this).parent().find('label').not(':lt(7)').hide();
         $(this).css('display', 'none');
         $(this).parent().parent().find('.showMore').css('display', 'block');
     });
 
-    $('.filter__title').click(function(){
+    $('.filter__title').click(function(){ // filter slideToggle
         $(this).siblings('.filter__info').slideToggle();
     });
 
+    $('.upload-file input').change(function() { // set name of upload file
+        var filename = $('.upload-file input').val();
+        $('.upload-file label i').html(filename);
+    });
+
+    // =================== end Form validation / filters ==================
 
 
-    var map;
-    function googleMap_initialize() {
-        var lat = $('#map_canvas').data('lat');
-        var long = $('#map_canvas').data('lng');
-        var zoom = $('#map_canvas').data('zoom');
-        var mapCenterCoord = new google.maps.LatLng(lat, long);
-        var mapMarkerCoord = new google.maps.LatLng(lat, long);
-        var mapOptions = {
-            center: mapCenterCoord,
-            zoom: zoom,
-            disableDefaultUI: true,
-            scrollwheel: false,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-        var markerImage = new google.maps.MarkerImage('images/marker.svg');
-        var marker = new google.maps.Marker({
-            icon: markerImage,
-            position: mapMarkerCoord,
-            map: map,
-            title: "Ceylan"
-        });
-        $(window).resize(function() {
-            map.setCenter(mapCenterCoord);
-        });
-    }
+
 
     if (exist('#map_canvas')) {
+        console.log('csdcsd')
+        var map;
+        function googleMap_initialize() {
+            var lat = $('#map_canvas').data('lat');
+            var long = $('#map_canvas').data('lng');
+            var zoom = $('#map_canvas').data('zoom');
+            var mapCenterCoord = new google.maps.LatLng(lat, long);
+            var mapMarkerCoord = new google.maps.LatLng(lat, long);
+            var mapOptions = {
+                center: mapCenterCoord,
+                zoom: zoom,
+                disableDefaultUI: true,
+                scrollwheel: false,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+            var markerImage = new google.maps.MarkerImage('images/marker.svg');
+            var marker = new google.maps.Marker({
+                icon: markerImage,
+                position: mapMarkerCoord,
+                map: map,
+                title: "Ceylan"
+            });
+            $(window).resize(function() {
+                map.setCenter(mapCenterCoord);
+            });
+        }
         googleMap_initialize();
     }
 

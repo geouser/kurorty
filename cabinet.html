@@ -93,7 +93,7 @@
         <section class="has-padding" id="anchor">
             <div class="wrapper">
                 <div class="content-block content-block--registration">
-                    <div class="tabs content-tabs">
+                    <div class="tabs tabs--big content-tabs">
                         <ul class="content-tabs-controls">
                             <li><a href="#registration-tab-1"><span>Войти в аккаунт</span></a></li>
                             <li><a href="#registration-tab-2"><span>Регистрация</span></a></li>
@@ -128,22 +128,14 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div><!-- end tab -->
                         <div id="registration-tab-2" class="content-tabs-content">
                             <div class="flex-row">
                                 <div class="col-6">
                                     <form action="" class="form-registration">
-                                        <div class="radio-group">
-                                            <div class="radio-wrap">
-                                                <input name="role" type="radio" value="Я Пользователь" checked>
-                                                <i></i>
-                                                <label>Я Пользователь</label>
-                                            </div>
-                                            <div class="radio-wrap">
-                                                <input name="role" type="radio" value="Я Партнер">
-                                                <i></i>
-                                                <label>Я Партнер</label>
-                                            </div>
+                                        <div class="radio-group radio-group--big">
+                                            <label><input type="radio" name="gender" value="Мужчина"><i></i><span>Я Пользователь</span></label>
+                                            <label><input type="radio" name="gender" value="Женщина"><i></i><span>Я Партнер</span></label>
                                         </div>
                                         <div class="flex-row">
                                             <div class="input-wrap input-wrap--person col-6">
@@ -152,6 +144,8 @@
                                             <div class="input-wrap input-wrap--person col-6">
                                                 <input type="text" placeholder="Компания" required="requied">
                                             </div>
+                                        </div>
+                                        <div class="flex-row">
                                             <div class="input-wrap input-wrap--key col-6">
                                                 <input type="password" placeholder="Введите пароль" required="requied" id="newPassword">
                                             </div>
@@ -177,10 +171,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </div><!-- end tab -->
+                    </div><!-- end tabs -->
                 </div> <!-- end content-block -->
-            </div>
+            </div><!-- end wrapper -->
         </section>
 
         <!-- Footer start -->
