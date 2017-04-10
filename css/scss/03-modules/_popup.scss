@@ -2,6 +2,10 @@
     width: 1180px;
     max-width: 95%;
 
+    @media (max-width: 1600px) {
+        width: 960px;
+    }
+
     .fancybox-close-small {
         display: none;
     }
