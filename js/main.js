@@ -311,7 +311,23 @@ jQuery(document).ready(function($) {
         });
     }
 
+
+    $('.close-popup').on('click', function(event) {
+        event.preventDefault();
+        $.fancybox.close();
+    });
+
+
+
+    $('.print-invoice-button').on('click', function(event) {
+        event.preventDefault();
+        var image = $(this).parent().siblings('.invoice__screen__image');
+        image.printThis();
+    });
+
+
     // ============= start Form validation / Filters ==============
+
 
     function checkPasswordMatch() {
         var password = $("#newPassword").val();
