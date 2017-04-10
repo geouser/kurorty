@@ -172,6 +172,12 @@
 
         td {
             padding: 3px 2px 4px;
+            span + span {
+                display: block;
+            }
+            span + span + span{
+                display: block;
+            }
         }
 
         td:first-child {
@@ -281,12 +287,12 @@
 
 
 .tour-map {
-    height: 350px;
+    height: 350px !important;
     width: 100%;
     border: 10px solid #EEEEEE;
 
     @media (max-width: 991px) {
-        height: 250px;
+        height: 250px!important;
     }
 
     .gm-style a img,
@@ -635,6 +641,18 @@
 
     &__order {
         width: 150px;
+        &--action {
+            text-align: right;
+            @media (max-width: 560px) {
+                text-align: right !important;
+            }
+            button {
+                background: transparent;
+                border: none;
+                display: inline-block;
+                cursor: pointer;
+            }
+        }
 
         @media (max-width: 991px) {
             width: 25%;
@@ -1307,5 +1325,51 @@
 
     .devider {
         margin: 0;
+    }
+}
+
+.sanatorium-rooms {
+    margin-bottom: 40px;
+    &__name {
+        color: #3d8eb9;        
+        font-size: 17px;
+        margin-bottom: 30px;
+        &:before {
+            display: inline-block;
+            vertical-align: middle;
+            content: "";
+            margin-right: 15px;
+            width: 22px;
+            height: 24px;
+            background-image: url("../images/sanatorium-icon.svg");
+            -webkit-background-size: 100% 100%;
+                 -o-background-size: 100% 100%;
+                    background-size: 100% 100%;
+        }
+    }
+    &__rooms {
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: #FFF;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+        .room {
+            padding-left: 0px;
+            padding-right: 0px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 0;
+            -webkit-box-shadow: none;
+                    box-shadow: none;
+            &:last-of-type {
+                border: none;
+            }
+        }
+    }
+    @media (max-width: 560px) {
+        .room__count {
+            width: 50%;
+        }
+        .room__price {
+            text-align: left;
+        }
     }
 }

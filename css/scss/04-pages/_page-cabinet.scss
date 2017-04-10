@@ -266,3 +266,75 @@
 .cabinet-tabs {
     padding-bottom: 80px;
 }
+
+.basket-actions {
+    @include flex();
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+    > div {
+        text-align: right;
+    }
+    @media (max-width: 600px) {
+        display: block;
+        text-align: center;
+        > div {
+            text-align: center;
+        }
+    }
+    &__continue {
+        color: #888888;
+        display: inline-block;
+        span {
+            border-bottom: 1px dotted #888888;
+        }
+        &:before {
+            display: inline-block;
+            vertical-align: middle;
+            content: "";
+            margin-right: 10px;
+            width: 41px;
+            height: 26px;
+            background-image: url("../images/return-back.svg");
+            -webkit-background-size: 100% 100%;
+                 -o-background-size: 100% 100%;
+                    background-size: 100% 100%;
+        }
+        &:hover {
+            span {
+                border-color: transparent;
+            }
+        }
+        @media (max-width: 600px) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+.basket__sum {
+    @extend .room__price;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    @media (max-width: 1000px) {
+        width: auto;
+    }
+}
+.basket__price {
+    @extend .room__price;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 50px;
+    @media (max-width: 1000px) {
+        margin-right: 0;
+        width: auto;
+    }
+}
+.basket__order {
+    display: inline-block;
+    vertical-align: middle;
+    @media (max-width: 1000px) {
+        display: block;
+        width: auto;
+    }
+}
