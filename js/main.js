@@ -300,6 +300,20 @@ jQuery(document).ready(function($) {
         });
     }
 
+    $('.close-popup').on('click', function(event) {
+        event.preventDefault();
+        $.fancybox.close();
+    });
+
+    openPopup('#modal-popup-invoice');
+
+
+    $('.print-invoice-button').on('click', function(event) {
+        event.preventDefault();
+        var image = $(this).parent().siblings('.invoice__screen__image');
+        image.printThis();
+    });
+
 
     function checkPasswordMatch() {
         var password = $("#newPassword").val();
