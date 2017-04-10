@@ -182,6 +182,12 @@
             display: inline-block;
             vertical-align: middle;
             color: #666666;
+            &:hover {
+                color: $blue;
+                i {
+                    background-image: url("../images/download-blue.svg");
+                }
+            }
         }
         i {
             display: block;

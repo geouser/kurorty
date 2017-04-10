@@ -394,7 +394,7 @@ jQuery(document).ready(function($) {
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
             map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-            var markerImage = new google.maps.MarkerImage('images/marker.svg');
+            var markerImage = new google.maps.MarkerImage('' + THEMEPATH + 'img/marker.svg');
             var marker = new google.maps.Marker({
                 icon: markerImage,
                 position: mapMarkerCoord,

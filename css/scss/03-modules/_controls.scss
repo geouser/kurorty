@@ -527,7 +527,7 @@ textarea {
         margin: 0;
         -webkit-align-items: center;
                 align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         &:last-of-type {
             margin-bottom: 0;
         }
@@ -661,9 +661,10 @@ textarea {
         }
     }
     input[type="radio"] {
-        width: 1px;
+        width: 0px;
         display: inline-block;
         vertical-align: middle;
+        opacity: 0;
         & + i {
             width: 15px;
             height: 15px;
@@ -730,6 +731,15 @@ textarea {
                     font-size: 15px;
                 }
             }
+        }
+    }
+}
+
+.content-block--registration {
+    .flex-row {
+        margin-bottom: 20px;
+         &:last-of-type {
+            margin-bottom: 0;
         }
     }
 }
