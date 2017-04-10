@@ -408,5 +408,18 @@ jQuery(document).ready(function($) {
         googleMap_initialize();
     }
 
+    var count = $(".basket").children('.sanatorium-rooms').length;
+    $('.basket-items-count').text(count);
+
+    $('.room__order--action button').click(function(){
+        $(this).parent().parent('.room').remove();
+        $('.sanatorium-rooms').each(function(){
+            if ($(this).children('.sanatorium-rooms__rooms').children().length == 0) {
+                $(this).remove();
+            }
+        });
+        var count = $(".basket").children('.sanatorium-rooms').length;
+        $('.basket-items-count').text(count);
+    });
 
 });

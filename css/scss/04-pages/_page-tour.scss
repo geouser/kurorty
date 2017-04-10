@@ -651,6 +651,15 @@
                 border: none;
                 display: inline-block;
                 cursor: pointer;
+                width: 20px;
+                height: 20px;
+                background-image: url("../images/delete.svg");
+                -webkit-background-size: 100% 100%;
+                     -o-background-size: 100% 100%;
+                        background-size: 100% 100%;
+                &:hover {
+                    background-image: url("../images/delete-hover.svg");
+                }
             }
         }
 
@@ -1363,6 +1372,10 @@
                 border: none;
             }
         }
+    }
+    .title {
+        color: #444444;
+        border-color: #444;
     }
     @media (max-width: 560px) {
         .room__count {
