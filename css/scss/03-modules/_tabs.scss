@@ -201,3 +201,40 @@
     border: none;
     padding: 0;
 }
+
+.tabs--big {
+    .content-tabs-controls {
+        padding-bottom: 35px;
+        border-bottom: 1px solid #eee;
+        margin: 0;
+        li {
+            margin: 0 40px 0 0;
+            @media (max-width: 767px){
+                margin: 0;
+            }
+            a {
+                font-size: 25px;
+                font-weight: 300;
+                color: #aaaaaa;
+                border-color: #aaaaaa;
+                @media (max-width: 767px){
+                    font-size: 16px;
+                }
+                @media (max-width: 600px){
+                    font-size: 15px;
+                }
+                @media (max-width: 360px){
+                    font-size: 14px;
+                }
+            }
+            &.ui-state-active a {
+                color: #3D8EB9;
+                border-color: #3D8EB9;
+                @media (max-width: 767px){
+                    color: #FFF;
+                    background-color: #3D8EB9;
+                }
+            }
+        }
+    }
+}

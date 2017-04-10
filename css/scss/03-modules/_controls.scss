@@ -16,9 +16,21 @@
     text-transform: uppercase;
     cursor: pointer;
     text-align: center;
-
+    @media(max-width: 600px) {
+        height: 40px;
+        width: 140px;
+        font-size: 11px;
+        line-height: 38px;
+    }
     &:hover {
         background-color: #71BA51;
+    }
+
+    &--yellow {
+        background-color: #ffa400;
+        &:hover {
+            background-color: rgba(255, 164, 0, 0.8);
+        }
     }
 
     &--blue {
@@ -29,6 +41,14 @@
         &:hover {
             background-color: rgba(61, 142, 185, 0.8);
         }
+        @media(max-width: 600px) {
+            height: 50px;
+        }
+    }
+
+    &--center {
+        margin: 0 auto;
+        display: block;
     }
 
     &--img {
@@ -505,11 +525,52 @@ textarea {
 .form-registration {
     .flex-row {
         margin: 0;
+        -webkit-align-items: center;
+                align-items: center;
+        margin-bottom: 30px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        &--center {
+            .input-wrap {
+                padding: 0 !important;
+                margin: 0 10px !important;
+                @media (max-width: 700px) {
+                    margin: 0 0 10px !important;
+                }
+            }
+        }
+        [class*='col-'] {
+            padding-left: 0;
+            padding-right: 20px;
+            position: relative;
+            &:nth-of-type(4n) {
+                padding-right: 0;
+            }
+        }
+        .col-3 {
+            &:nth-of-type(4n) {
+                padding-right: 0;
+            }
+            @media (max-width: 1200px) {
+                width: 50%;
+                margin-bottom: 10px;
+                &:nth-of-type(2n) {
+                    padding-right: 0;
+                }
+            }
+            @media (max-width: 700px) {
+                width: 100%;
+                padding: 0px !important;
+            }
+        }
+    }
+    & > .input-wrap {
+        margin-bottom: 20px;
     }
     .input-wrap {
         position: relative;
         height: 60px;
-        margin-bottom: 20px;
         background: #FFF;
         @include flex();
         &.col-6 {
@@ -524,6 +585,7 @@ textarea {
             @media(max-width: 767px) {
                 width: 100%;
                 padding-right: 0;
+                margin-bottom: 10px;
             }
         }
         &:after {
@@ -546,16 +608,31 @@ textarea {
             background-repeat: no-repeat;
             background-position: 20px 20px;
         }
+        &--date {
+            background-image: url("../images/calend.svg");
+            background-repeat: no-repeat;
+            background-position: 20px 20px;
+        }
+         &--mail {
+            background-image: url("../images/mail-sign.svg");
+            background-repeat: no-repeat;
+            background-position: 20px 20px;
+        }
+        &--phone {
+            background-image: url("../images/phone.svg");
+            background-repeat: no-repeat;
+            background-position: 24px 20px;
+        }
         &--single {
             input {
-                width: 58%;
+                width: 58% !important;
                 @media(max-width: 767px) {
-                    width: 100%;
+                    width: 100%!important;
                 }
             }
         }
     }
-    input {
+    input:not([type="radio"]):not([type="file"]) {
         height: 100%;
         border-radius: 2px 4px 4px 2px;
         border: 2px solid #e9eff1;
@@ -576,74 +653,199 @@ textarea {
             background-repeat: no-repeat;
         }
     }
+    label {
+        position: relative;
+        margin-right: 40px;
+        @media (max-width: 1300px) {
+            margin-right: 20px;
+        }
+    }
+    input[type="radio"] {
+        width: 0px;
+        display: inline-block;
+        vertical-align: middle;
+        opacity: 0;
+        & + i {
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            vertical-align: middle;
+            background-repeat: no-repeat;
+            background-image: url("../images/radio.svg");
+        -webkit-background-size: 100% 100%;
+             -o-background-size: 100% 100%;
+                background-size: 100% 100%;
+        }
+        & + i + span {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+            line-height: 1;
+            color: #888888;
+        }
+        &:checked + i {
+            background-image: url("../images/radio-active.svg");
+        }
+        &:checked + i + span {
+            color: #ffa400;
+            border-color:  #ffa400;
+        }
+    }
     .button {
         display: block;
+        margin-top: 20px;
+        &.centered {
+            margin: 45px auto 0;
+            @media (max-width: 700px) {
+                margin-top: 20px;
+            }
+        }
     }
     .radio-group {
         margin-bottom: 35px;
-        input,
-        label,
-        .radio-wrap {
-            display: inline-block;
-            vertical-align: middle;
-        }
-        label {
-            color: #666666;
-            margin-top: 2px;
-            border-bottom: 1px dotted  transparent;
-            cursor: pointer;
-        }
-        .radio-wrap {
-            position: relative;
-            margin-right: 12px;
-            margin-right: 50px;
-            padding-left: 45px;
-            @media(max-width: 767px) {
-                margin-right: 20px;
-            }
-            @media(max-width: 400px) {
-                margin-right: 0px;
-                margin-bottom: 20px;
-                display: block;
-            }
-            &:last-child {
-                margin-bottom: 0;
-            }
-            i {
-                width: 30px;
-                height: 30px;
-                display: block;
-                position: absolute;
-                left: 0;
-                top: 0;
-                background-repeat: no-repeat;
-                background-image: url("../images/check-grey.svg");
-            -webkit-background-size: 100% 100%;
-                 -o-background-size: 100% 100%;
-                    background-size: 100% 100%;
+        &--big {
+            label {
+                border-bottom: 1px dotted  transparent;
+                margin-right: 12px;
+                margin-right: 50px;
+                @media(max-width: 767px) {
+                    margin-right: 20px;
+                }
+                @media(max-width: 400px) {
+                    margin-right: 0px;
+                    margin-bottom: 20px;
+                    display: block;
+                }
             }
             input {
-                position: absolute;
-                left: 0;
-                top: 0;
-                opacity: 0;
-                width: 30px;
-                height: 30px;
-                z-index: 2;
-                cursor: pointer;
-            }
-            input:checked + i {
-                background-image: url("../images/check-orange.svg");
-            }
-            input:checked + i + label {
-                color: #ffa400;
-                border-color:  #ffa400;
+                & + i {
+                    width: 30px;
+                    height: 30px;
+                    background-image: url("../images/check-grey.svg");
+                }
+                &:checked + i {
+                    background-image: url("../images/check-orange.svg");
+                }
+                & + i + span {
+                    margin-left: 14px;
+                    font-size: 15px;
+                }
             }
         }
+    }
+}
+
+.content-block--registration {
+    .flex-row {
+        margin-bottom: 20px;
+         &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.upload-file {
+    height: 60px;
+    padding-left: 70px;
+    background-image: url("../images/smile.svg");
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    @media (max-width: 1200px) {
+        margin-bottom: 20px;
+    }
+    @media (max-width: 700px) {
+        margin: 10px 0;
+    }
+    input[type="file"] {
+        width: 1px;
+        opacity: 0;
+    }
+    label {
+        font-size: 13px;
+        color: #3d8eb9;
+        border-bottom: 1px dotted #3d8eb9;
+        top: -2px;
+        cursor: pointer;
+        i {
+            font-style: normal;
+            cursor: pointer;
+        }
+    }
+    span {
+        color: #444444;
+        font-size: 13px;
+        display: block;
+    }
+    &:before {
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        content: "";
+        max-width: 98%;
+    }
+    div {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 98%;
     }
 }
 
 #divCheckPasswordMatch {
     margin-bottom: 15px;
     color: #AAA;
+}
+
+.form-search {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    @media(max-width: 500px) {
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    input {
+        height: 100%;
+        padding: 35px 30px;
+        width: 100%;
+        font-size: 25px;
+        font-weight: 300;
+        background: #FFF;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        @media(max-width: 760px) {
+            padding: 20px 20px;
+            font-size: 22px;
+        }
+         @media(max-width: 500px) {
+             text-align: center;
+         }
+    }
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            color: #ffa400;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+           color: #ffa400;
+           opacity:  1;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+           color: #ffa400;
+           opacity:  1;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+           color: #ffa400;
+        }
+    .button {
+        position: absolute;
+        right: 30px;
+        top: 0;
+        bottom:0;
+        margin: auto;
+        @media(max-width: 760px) {
+            right: 20px;
+        }
+        @media(max-width: 500px) {
+            position: static;
+            display: block;
+            margin: 0px auto;
+        }
+    }
 }

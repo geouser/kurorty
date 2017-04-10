@@ -172,6 +172,12 @@
 
         td {
             padding: 3px 2px 4px;
+            span + span {
+                display: block;
+            }
+            span + span + span{
+                display: block;
+            }
         }
 
         td:first-child {
@@ -281,12 +287,12 @@
 
 
 .tour-map {
-    height: 350px;
+    height: 350px !important;
     width: 100%;
     border: 10px solid #EEEEEE;
 
     @media (max-width: 991px) {
-        height: 250px;
+        height: 250px!important;
     }
 
     .gm-style a img,
@@ -499,6 +505,30 @@
         .desc {
             font-size: 13px;
             color: #9a9a9a;
+            &.status {
+                &:before {
+                    content: "";
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-top: -2px;
+                    width: 8px;
+                    height: 8px;
+                    margin-right: 10px;
+                    background-color: #ffa400;
+                    -webkit-border-radius: 50%;
+                            border-radius: 50%;
+                }
+                &.finished {
+                    &:before {
+                        background-color: $green;
+                    }
+                }
+                &.canceled {
+                    &:before {
+                        background-color:  #fc6042;
+                    }
+                }
+            }
 
             @media (max-width: 560px) {
                 font-size: 10px;
@@ -602,10 +632,36 @@
                 margin: 0 6px !important;
             }
         }
+        span {
+            width: 80px;
+            display: inline-block;
+            vertical-align: middle;
+        }
     }
 
     &__order {
         width: 150px;
+        &--action {
+            text-align: right;
+            @media (max-width: 560px) {
+                text-align: right !important;
+            }
+            button {
+                background: transparent;
+                border: none;
+                display: inline-block;
+                cursor: pointer;
+                width: 20px;
+                height: 20px;
+                background-image: url("../images/delete.svg");
+                -webkit-background-size: 100% 100%;
+                     -o-background-size: 100% 100%;
+                        background-size: 100% 100%;
+                &:hover {
+                    background-image: url("../images/delete-hover.svg");
+                }
+            }
+        }
 
         @media (max-width: 991px) {
             width: 25%;
@@ -628,8 +684,180 @@
             }
         }
     }
+
+
+    &--ordered {
+        @include flex();
+         -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+        .left {
+            width: 60%;
+            @media (max-width: 1000px) {
+                width: 100%;
+                padding-bottom: 10px;
+            }
+        }
+        .right {
+            width: 40%;
+            @media (max-width: 1000px) {
+                width: 100%;
+                text-align: left;
+                padding-bottom: 10px;
+            }
+        }
+        .left,
+        .right {
+            & > div {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        .room__info {
+            width: 400px;
+            max-width: 100%;
+            @media (max-width: 1000px) {
+                margin-bottom: 0;
+            }
+            @media (max-width: 700px) {
+                display: block !important;
+                padding-left: 0;
+            }
+        }
+        .room__sum {
+            margin-right: 135px;
+            font-size: 15px;
+            color: #222;
+            span {
+                text-align: left;
+            }
+            @media (max-width: 1200px) {
+                margin-right: 105px;
+            }
+            @media (max-width: 1000px) {
+                width: auto;
+                margin-right: 10px;
+            }
+        }
+        .room__count {
+            margin-right: 90px;
+            @media (max-width: 1200px) {
+                margin-right: 70px;
+            }
+            @media (max-width: 1000px) {
+                width: auto;
+                margin-right: 10px;
+            }
+            span {
+                text-align: left;
+            }
+        }
+        .room__price {
+            padding-right: 10px;
+            color: #222222;
+            font-size: 15px;
+            @media (max-width: 1000px) {
+                width: auto;
+                padding-right: 0;
+            }
+        }
+    }
+    & .room__result {
+        @include flex();
+        width: 100%;
+        padding: 20px 0;
+        color: #888888;
+        font-size: 13px;
+        @media (max-width: 1000px) {
+            padding: 10px 0;
+        }
+        &__date {
+            margin-left: -18px;
+            margin-right: 25px;
+            position: relative;
+            top: -4px;
+            @media (max-width: 700px) {
+                display: block !important;
+                margin-bottom: 10px;
+            }
+        }
+        &__info {
+            margin-right: 20px;
+            color: #888888;
+            display: inline-block;
+            vertical-align: middle;
+            @include transition(all,.2s);
+            @media (max-width: 1200px) {
+                margin-right: 6px;
+            }
+            @media (max-width: 700px) {
+                margin: 5px;
+            }
+            img {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 10px;
+                -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+                filter: grayscale(100%);
+                opacity: .4;
+                @include transition(all,.2s);
+            }
+            span {
+                width: 80px;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 13px;
+                @include transition(all,.2s);
+            }
+            &:hover {
+                color: #3d8eb9;
+                img {
+                    opacity: 1;
+                    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+                    filter: grayscale(0%);
+                }
+            }
+        }
+        &__price {
+            font-weight: 400;
+            color: #222;
+        }
+        .right {
+            @media (max-width: 1000px) {
+                padding-bottom: 0;
+            }
+        }
+    }
+    & .room__room {
+        @include flex();
+        width: 100%;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+    }
 }
 
+#orders {
+    .room {
+        margin-bottom: 20px;
+    }
+}
+
+
+.stripe {
+    width: 140px;
+    height: 42px;
+    background-image: url("../images/stripe.svg");
+    text-align: center;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 600;
+    -webkit-background-size: 100% 100%;
+         -o-background-size: 100% 100%;
+            background-size: 100% 100%;
+}
 
 .list {
     li {
@@ -1106,5 +1334,55 @@
 
     .devider {
         margin: 0;
+    }
+}
+
+.sanatorium-rooms {
+    margin-bottom: 40px;
+    &__name {
+        color: #3d8eb9;        
+        font-size: 17px;
+        margin-bottom: 30px;
+        &:before {
+            display: inline-block;
+            vertical-align: middle;
+            content: "";
+            margin-right: 15px;
+            width: 22px;
+            height: 24px;
+            background-image: url("../images/sanatorium-icon.svg");
+            -webkit-background-size: 100% 100%;
+                 -o-background-size: 100% 100%;
+                    background-size: 100% 100%;
+        }
+    }
+    &__rooms {
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: #FFF;
+        box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+        .room {
+            padding-left: 0px;
+            padding-right: 0px;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 0;
+            -webkit-box-shadow: none;
+                    box-shadow: none;
+            &:last-of-type {
+                border: none;
+            }
+        }
+    }
+    .title {
+        color: #444444;
+        border-color: #444;
+    }
+    @media (max-width: 560px) {
+        .room__count {
+            width: 50%;
+        }
+        .room__price {
+            text-align: left;
+        }
     }
 }

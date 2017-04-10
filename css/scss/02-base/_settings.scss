@@ -232,6 +232,10 @@ section {
         -ms-flex-align: center;
         align-items: center;
     }
+    &--center {
+      -webkit-justify-content: center;
+              justify-content: center;
+    }
 }
 [class*='col-'] {
     padding: 0 10px;

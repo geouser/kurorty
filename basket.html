@@ -72,11 +72,11 @@
         <!--=================================================================================================-->
                                                     <!-- OFFER SECTION -->
 
-        <section class="offer" style="background-image: url(images/offer-cabinet.jpg);">
+        <section class="offer" style="background-image: url(images/offer-basket.jpg);">
             <div class="wrapper">
             
                 <div class="offer--text">
-                    <h1>личный кабинет</h1>  
+                    <h1>Корзина</h1>  
                     <a href="#anchor" class="scroll-down"><img src="images/scroll-down.svg" alt=""></a>
                 </div>
 
@@ -86,93 +86,123 @@
         <ul class="breadcrumbs">
             <li><a href="index.html">Главная</a></li>
             <li><a href="partners.html">Партнеры</a></li>
-            <li><a href="">Партнер</a></li>
         </ul>
 
         
         <section class="has-padding" id="anchor">
             <div class="wrapper">
-                <div class="content-block content-block--registration">
-                    <div class="tabs tabs--big content-tabs">
-                        <ul class="content-tabs-controls">
-                            <li><a href="#registration-tab-1"><span>Войти в аккаунт</span></a></li>
-                            <li><a href="#registration-tab-2"><span>Регистрация</span></a></li>
-                        </ul>
-                        <div id="registration-tab-1" class="content-tabs-content">
-                            <div class="flex-row">
-                                <div class="col-6">
-                                    <form action="" class="form-registration">
-                                        <div class="input-wrap input-wrap--person input-wrap--single">
-                                            <input type="email" placeholder="Введите почту" required="requied">
-                                        </div>
-                                        <div class="input-wrap input-wrap--key input-wrap--single">
-                                            <input type="password" placeholder="Введите пароль" required="requied">
-                                        </div>
-                                        <button class="button button--blue" type="submit">Ввойти</button>
-                                    </form>
-                                    <div class="forget">
-                                        <a href=""><i><img src="images/question.svg" alt=""></i><span>Забыли пароль?</span></a>
-                                    </div>
+                <div class="content-block basket">
+                    <p class="content-block-title blue">
+                        В Корзине (<span class="basket-items-count">4</span>)
+                    </p>
+                    <div class="sanatorium-rooms">
+                        <div class="sanatorium-rooms__name">
+                            <i></i><span>Санаторий им. Лермонтова</span>
+                        </div>
+                        <div class="sanatorium-rooms__rooms">
+                            <div class="room">
+                                <div class="room__photo">
+                                    <img src="images/room.jpg" alt="">
                                 </div>
-                                <div class="col-6">
-                                    <div class="cabinet-slider">
-                                        <div>
-                                            <img src="images/cabinet-1.jpg" alt="">
-                                        </div>
-                                        <div>
-                                            <img src="images/cabinet-1.jpg" alt="">
-                                        </div>
-                                        <div>
-                                            <img src="images/cabinet-1.jpg" alt="">
-                                        </div>
-                                    </div>
+                                <div class="room__info">
+                                    <a href="#" class="title">Двухкомнатный номер "Люкс Семейный"</a>
+                                    <p class="desc">(максимальная вместимость номера: 4 человека)</p>
+                                    <input type="text" name="room__info"><!-- input info -->
                                 </div>
+                                <div class="room__capacity">
+                                    <div class="capacity man-3"></div>
+                                    <input type="text" name="room__capacity"><!-- input capacity-->
+                                </div>
+                               <div class="room__count">
+                                    <i class="room__count__minus" field='quantity'><img src="images/minus.svg" alt=""></i>
+                                    <input type="text" name="quantity" class="room__count__num" value='1'><!-- input count-->
+                                    <i class="room__count__plus" field='quantity'><img src="images/plus.svg" alt=""></i>
+                                </div>
+                                 <div class="room__price">
+                                    <p><span class="price red">50 <i class="azn azn--red"></i></span> за день</p>
+                                    <input type="text" name="room__price"><!-- input price-->
+                                </div>
+                                <div class="room__order room__order--action">
+                                    <button></button>
+                                </div>
+                            </div>  <!-- end room -->
+                            <div class="room">
+                                <div class="room__photo">
+                                    <img src="images/room.jpg" alt="">
+                                </div>
+                                <div class="room__info">
+                                    <a href="#" class="title">Двухкомнатный номер "Люкс Семейный"</a>
+                                    <p class="desc">(максимальная вместимость номера: 4 человека)</p>
+                                    <input type="text" name="room__info"><!-- input info -->
+                                </div>
+                                <div class="room__capacity">
+                                    <div class="capacity man-3"></div>
+                                    <input type="text" name="room__capacity"><!-- input capacity-->
+                                </div>
+                                <div class="room__count">
+                                    <i class="room__count__minus" field='quantity'><img src="images/minus.svg" alt=""></i>
+                                    <input type="text" name="quantity" class="room__count__num" value='1'><!-- input count-->
+                                    <i class="room__count__plus" field='quantity'><img src="images/plus.svg" alt=""></i>
+                                </div>
+                                 <div class="room__price">
+                                    <p><span class="price red">50 <i class="azn azn--red"></i></span> за день</p>
+                                    <input type="text" name="room__price"><!-- input price-->
+                                </div>
+                                <div class="room__order room__order--action">
+                                    <button></button>
+                                </div>
+                            </div>  <!-- end room -->
+                        </div>
+                    </div>
+                     <div class="sanatorium-rooms">
+                        <div class="sanatorium-rooms__name">
+                            <i></i><span>Санаторий им. Лермонтова</span>
+                        </div>
+                        <div class="sanatorium-rooms__rooms">
+                            <div class="room">
+                                <div class="room__photo">
+                                    <img src="images/room.jpg" alt="">
+                                </div>
+                                <div class="room__info">
+                                    <a href="#" class="title">Двухкомнатный номер "Люкс Семейный"</a>
+                                    <p class="desc">(максимальная вместимость номера: 4 человека)</p>
+                                    <input type="text" name="room__info"><!-- input info -->
+                                </div>
+                                <div class="room__capacity">
+                                    <div class="capacity man-3"></div>
+                                    <input type="text" name="room__capacity"><!-- input capacity-->
+                                </div>
+                                <div class="room__count">
+                                    <i class="room__count__minus" field='quantity'><img src="images/minus.svg" alt=""></i>
+                                    <input type="text" name="quantity" class="room__count__num" value='1'><!-- input count-->
+                                    <i class="room__count__plus" field='quantity'><img src="images/plus.svg" alt=""></i>
+                                </div>
+                                 <div class="room__price">
+                                    <p><span class="price red">50 <i class="azn azn--red"></i></span> за день</p>
+                                    <input type="text" name="room__price"><!-- input price-->
+                                </div>
+                                <div class="room__order room__order--action">
+                                    <button></button>
+                                </div>
+                            </div>  <!-- end room -->
+                        </div>
+                    </div>
+                    <div class="basket-actions">
+                       <a href="" class="basket-actions__continue">
+                           <span>Продолжить покупки</span>
+                       </a>
+                       <div>
+                            <div class="basket__sum">
+                                <span>Общая сумма:</span>
                             </div>
-                        </div><!-- end tab -->
-                        <div id="registration-tab-2" class="content-tabs-content">
-                            <div class="flex-row">
-                                <div class="col-6">
-                                    <form action="" class="form-registration">
-                                        <div class="radio-group radio-group--big">
-                                            <label><input type="radio" name="gender" value="Мужчина"><i></i><span>Я Пользователь</span></label>
-                                            <label><input type="radio" name="gender" value="Женщина"><i></i><span>Я Партнер</span></label>
-                                        </div>
-                                        <div class="flex-row">
-                                            <div class="input-wrap input-wrap--person col-6">
-                                                <input type="email" placeholder="Введите почту" required="requied">
-                                            </div>
-                                            <div class="input-wrap input-wrap--person col-6">
-                                                <input type="text" placeholder="Компания" required="requied">
-                                            </div>
-                                        </div>
-                                        <div class="flex-row">
-                                            <div class="input-wrap input-wrap--key col-6">
-                                                <input type="password" placeholder="Введите пароль" required="requied" id="newPassword">
-                                            </div>
-                                            <div class="input-wrap input-wrap--key col-6">
-                                                <input type="password" placeholder="Повторный пароль" required="requied" id="confirmPassword">
-                                            </div>
-                                            <p id="divCheckPasswordMatch"></p>
-                                        </div>
-                                        <button class="button button--blue" type="submit">Создать</button>
-                                    </form>
-                                </div>
-                                <div class="col-6">
-                                    <div class="cabinet-slider">
-                                        <div>
-                                            <img src="images/cabinet-2.jpg" alt="">
-                                        </div>
-                                        <div>
-                                            <img src="images/cabinet-2.jpg" alt="">
-                                        </div>
-                                        <div>
-                                            <img src="images/cabinet-2.jpg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="basket__price">
+                                <p><span class="price red">350 <i class="azn azn--red"></i></span></p>
                             </div>
-                        </div><!-- end tab -->
-                    </div><!-- end tabs -->
+                            <div class="basket__order">
+                                <button class="button green" type="submit">Заказать</button>
+                            </div>
+                        </div>
+                    </div>  <!-- end room -->
                 </div> <!-- end content-block -->
             </div><!-- end wrapper -->
         </section>

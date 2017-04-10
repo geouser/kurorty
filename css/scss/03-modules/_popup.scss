@@ -107,3 +107,94 @@
         color: $blue;
     }
 }
+
+
+.room-order-popup {
+    display: none;
+    width: 1200px;
+    padding: 35px 30px;
+    max-width: 100%;
+    @media (max-width: 600px) {
+        padding: 30px 15px;
+    }
+    @media (max-width: 900px) {
+        .content-block-title  {
+            padding-right: 60px;
+        }
+        .col-7,
+        .col-5 {
+            width: 100%;
+        }
+        .col-7 {
+            padding-bottom: 10px;
+        }
+    }
+    &__info {
+        padding-bottom: 40px;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 44px;
+        @media (max-width: 1100px) {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+        strong {
+            display: block;
+            color: #ffa400;
+            font-weight: 300;
+            margin-bottom: 15px;
+            font-size: 17px;
+        }
+        small {
+            display: block;
+            color: #3d8eb9;
+            font-size: 17px;
+            margin-top: 30px;
+            font-weight: 300;
+            @media (max-width: 1100px) {
+                margin-top: 20px;
+            }
+        }
+    }
+    .room {
+        padding: 25px;
+        @media (max-width: 991px) {
+            display: block;
+            text-align: center;
+            padding: 20px 15px;
+            .room__price,
+            .room__count,
+            .room__order {
+                width: auto;
+                margin: 0 10px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+        @media (max-width: 560px) {
+            .room__order {
+                width: 100%;
+                margin: 10px auto;
+            }
+        }
+    }
+    .fancybox-close-small {
+        width: 41px;
+        height: 26px;
+        top: 30px;
+        right: 30px;
+        background: url('../images/return-back.svg');
+        -webkit-background-size: 100% 100%;
+             -o-background-size: 100% 100%;
+                background-size: 100% 100%;
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.room-slider-thumbnails {
+    @extend .tour-slider-thumbnails;
+}
+.room-slider-main {
+    @extend .tour-slider-main;
+}
