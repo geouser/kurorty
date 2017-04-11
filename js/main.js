@@ -141,14 +141,13 @@ jQuery(document).ready(function($) {
 
     $('.fancybox').fancybox({
         onComplete: function( instance, slide ) {
-            if ($(this).find('.tour-slider-column')) {
-                 $('.room-slider-main').slick({
+            if ($('' + slide.src + '').find('.tour-slider-column')) {
+                $('' + slide.src + '').find('.room-slider-main').slick({
                     arrows: false,
                     fade: true,
                     asNavFor: '.room-slider-thumbnails'
                 });
-
-                $('.room-slider-thumbnails').slick({
+                $('' + slide.src + '').find('.room-slider-thumbnails').slick({
                     arrows: false,
                     arrows: false,
                     slidesToShow: 5,
@@ -157,6 +156,11 @@ jQuery(document).ready(function($) {
                     asNavFor: '.room-slider-main'
                 })
             }
+        },
+        afterClose: function(instance, slide){
+            if ($('' + slide.src + '').find('.slick-slider')) {
+                $('' + slide.src + '').find('.slick-slider').slick('unslick');
+            };
         }
     });
 
