@@ -1,0 +1,135 @@
+body.print {
+    background-color: #fff!important;
+    background-image: none!important;
+    background: #fff!important;
+    background-size: 0;
+    padding: 50px 0;
+    height: auto;
+}
+@media print {
+    body.print {
+        background-color: #fff!important;
+        background-image: none!important;
+        background: #fff!important;
+        background-size: 0;
+    }
+}
+
+.print-container {
+    width: 840px;
+    margin: 0 auto;
+    color: #222;
+
+    table {
+        width: 100%;
+        /*table-layout: fixed;*/
+        border-collapse: collapse;
+        margin-bottom: 50px;
+        font-size: 13px;
+
+        td {
+            padding: 9px 15px;
+            background-color: #f0f2f3!important;
+            border: 1px solid #d7d7d7!important;
+
+            &:first-child {
+                width: 33.33%;
+            }
+            
+            p {
+                font-size: 14px;
+            }
+            p:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+
+        thead {
+            background-color: $green!important;
+            font-family: Arial;
+            font-size: 15px;
+            font-weight: 700;
+            color: #fff;
+
+            td {
+                background-color: transparent!important;
+                border: 0;
+            }
+        }
+    }
+
+    .header-table {
+        margin-bottom: 50px!important;
+
+        td {
+            width: 50%;
+            padding: 0;
+            border: none!important;
+            background-color: transparent!important;
+            padding-left: 0!important;
+            padding-right: 0!important;
+        }
+        td:first-child {
+            text-align: left;
+        }
+        td:nth-child(2) {
+            text-align: right;
+        }
+
+        .invoice-number {
+            color: $green;
+            font-family: Arial;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .invoice-date {
+            font-family: Arial;
+            font-size: 13px;
+            font-weight: 700;
+        }
+    }
+
+
+    .persons-table {
+        td {
+            width: auto!important;
+            font-weight: normal!important;
+        }
+    }
+
+    .additional-info {
+        margin-bottom: 50px;
+        font-size: 13px;
+
+        strong {
+            display: block;
+            color: $green;
+            font-weight: normal;
+        }
+
+        p:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+
+
+    .sign {
+        font-size: 16px;
+
+        p:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        strong,
+        img {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        img {
+            margin-left: 15px;
+        }
+    }
+}
