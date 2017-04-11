@@ -1,3 +1,8 @@
+.sidebar,
+.page-content {
+    margin-bottom: 60px;
+}
+
 @media (max-width: 1200px) {
   .sidebar {
     width: 250px;
@@ -13,6 +18,34 @@
     .page-content {
         .col-4 {
             width: 50%;
+        }
+    }
+}
+
+
+.sanatoriums-grid {
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+
+    .sanatorium.vertical {
+        width: -webkit-calc(33.33% - 20px);
+        width: calc(33.33% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+
+        @media (min-width: 768px) {
+            display: block;
+        }
+
+        @media (max-width: 991px) {
+            width: -webkit-calc(50% - 20px);
+            width: calc(50% - 20px);
+        }
+
+        @media (max-width: 767px) {
+            width: -webkit-calc(100% - 20px);
+            width: calc(100% - 20px);
         }
     }
 }

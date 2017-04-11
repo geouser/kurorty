@@ -1309,6 +1309,20 @@
         }
     }
 
+    .input-captcha {
+        @include flex($alignI: center);
+
+        img {
+            width: 110px;
+            margin-right: 20px;
+        }
+
+        input {
+            width: -webkit-calc(100% - 130px);
+            width: calc(100% - 130px);
+        }
+    }
+
     .button-group {
         text-align: right;
     }

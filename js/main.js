@@ -270,7 +270,8 @@ jQuery(document).ready(function($) {
         dots: true,
         arrows: false,
         fade: true,
-        speed: 900
+        speed: 900,
+        autoplay: true
     });
 
 
