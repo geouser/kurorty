@@ -338,3 +338,99 @@
         width: auto;
     }
 }
+
+.order {
+    .content-block {
+        margin-bottom: 10px;
+    }
+    .sanatorium-rooms {
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        .title {
+            color: #3d8eb9;
+        }
+    }
+    .radio-inputs {
+        text-align: center;
+        label {
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+    .room__capacity,
+    .room__count,
+    .room__price {
+        text-align: center;
+    }
+    .room__capacity div {
+        display: inline-block;
+    }
+    @media (max-width: 560px) {
+        .room__count span {
+            width: 100%;
+        }
+    }
+    @media (max-width: 991px) {
+        .room__capacity,
+        .room__count,
+        .room__price {
+            width: 33.3%;
+        }
+    }
+    @media (max-width: 560px) {
+        .room__capacity,
+        .room__count,
+        .room__price {
+            width: 50%;
+        }
+    }
+}
+
+i.info {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/info-sign.svg");
+    -webkit-background-size: 100% 100%;
+         -o-background-size: 100% 100%;
+            background-size: 100% 100%;
+    margin-right: 15px;
+}
+
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+
+.counter-list {
+    counter-reset: counter-list 1;
+    &__position {
+        display: block;
+        font-size: 17px;
+        color: #444;
+        &:before {
+            display: inline-block;
+            vertical-align: middle;
+            width: 18px;
+            height: 20px;
+            border-radius: 1px;
+            border: 2px solid #3d8eb9;
+            text-align: center;
+            line-height: 20px;
+            color: #3d8eb9;
+            margin-right: 15px;            
+            content: counter(counter-list);
+        }
+    }
+}
+.counter-list__item {
+    counter-increment: counter-list;     
+}

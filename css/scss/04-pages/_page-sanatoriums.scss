@@ -176,7 +176,8 @@
     display: none;
 }
 .showMore,
-.showLess {
+.showLess,
+.action-button {
     margin-top: 25px;
     font-size: 13px;
     color: #ffa400;
@@ -197,6 +198,12 @@
         display: inline-block;
         vertical-align: middle;
         border-bottom: 1px dotted #ffa400;
+        @include transition(all, .2s);
+    }
+    &:hover {
+        span {
+            border-color: transparent;
+        }
     }
 }
 
