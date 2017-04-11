@@ -115,6 +115,7 @@
             content: "";
             width: 14px;
             height: 14px;
+            box-sizing: border-box;
             border-radius: 2px;
             border: 1px solid #dce4e6;
             background: #FFF;
@@ -135,6 +136,10 @@
             line-height: 20px;
         }
     }
+    .rating-value {
+        margin-top: -6px;
+    }
+    
     input[type="checkbox"] {
         width: 14px;
         height: 14px;
