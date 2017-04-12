@@ -19,10 +19,11 @@ body.print {
     width: 840px;
     margin: 0 auto;
     color: #222;
+    font-family: Arial;
+    letter-spacing: normal;
 
     table {
         width: 100%;
-        /*table-layout: fixed;*/
         border-collapse: collapse;
         margin-bottom: 50px;
         font-size: 13px;
@@ -31,10 +32,6 @@ body.print {
             padding: 9px 15px;
             background-color: #f0f2f3!important;
             border: 1px solid #d7d7d7!important;
-
-            &:first-child {
-                width: 33.33%;
-            }
             
             p {
                 font-size: 14px;
@@ -91,11 +88,19 @@ body.print {
         }
     }
 
+    .footer-table {
+        table-layout: fixed;
+        font-size: 13px;
 
-    .persons-table {
         td {
-            width: auto!important;
-            font-weight: normal!important;
+            width: 50%;
+            padding: 0;
+            border: 0!important;
+            background-color: transparent!important;
+
+            p {
+                font-size: 13px;
+            }
         }
     }
 
@@ -106,7 +111,7 @@ body.print {
         strong {
             display: block;
             color: $green;
-            font-weight: normal;
+            font-weight: 700;
         }
 
         p:not(:last-child) {
@@ -130,6 +135,31 @@ body.print {
 
         img {
             margin-left: 15px;
+        }
+    }
+
+
+
+
+    .total-bill {
+        text-align: right;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 50px;
+
+        strong {
+            color: $green;
+        }
+    }
+
+
+    .bill-details {
+        font-weight: 700;
+        font-size: 16px;
+
+        strong {
+            color: $green;
+            display: block;
         }
     }
 }
