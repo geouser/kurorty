@@ -271,7 +271,9 @@ jQuery(document).ready(function($) {
         arrows: false,
         fade: true,
         speed: 900,
-        autoplay: true
+        autoplay: true,
+        pauseOnHover: false,
+        pauseOnFocus: false
     });
 
 

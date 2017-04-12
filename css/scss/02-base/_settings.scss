@@ -275,7 +275,10 @@ section {
   opacity: 1;
 }
 
-.azn {
+.azn,
+.rub,
+.usd,
+.eur {
   display: inline-block;
   vertical-align: text-bottom;
   line-height: inherit;
@@ -287,12 +290,32 @@ section {
   -webkit-background-size: 100% 100%;
        -o-background-size: 100% 100%;
           background-size: 100% 100%;
-  &--red {
-    background-image: url("../images/azn-red.svg");
-  }
-
   &--small {
     width: 16px;
     height: 16px;
   }
+}
+
+.azn {
+    &--red {
+      background-image: url("../images/azn-red.svg");
+    }
+}
+.rub {
+  background-image: url("../images/rouble-w.svg");
+    &--red {
+      background-image: url("../images/rub.svg");
+    }
+}
+.usd {
+    background-image: url("../images/dollar-w.svg");
+    &--red {
+      background-image: url("../images/usd.svg");
+    }
+}
+.eur {
+   background-image: url("../images/euro-w.svg");
+    &--red {
+      background-image: url("../images/eur.svg");
+    }
 }

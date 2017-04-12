@@ -313,14 +313,14 @@ textarea {
         @media (max-width: 400px) {
             font-size: 13px;
         }
-        &[name="in"],
-        &[name="out"] {
+        &[name="check_in"],
+        &[name="check_out"] {
             background-image: url("../images/calendar.svg");
             -webkit-background-size: 18px 16px;
                  -o-background-size: 18px 16px;
                     background-size: 18px 16px;
         }
-        &[name="place"] {
+        &[name="search"] {
             background-image: url("../images/pin.svg");
             -webkit-background-size: 13px 20px;
                  -o-background-size: 13px 20px;
