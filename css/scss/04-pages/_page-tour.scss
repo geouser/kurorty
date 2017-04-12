@@ -1015,6 +1015,12 @@
 
 .tour-gallery {
     margin-bottom: -20px;
+    
+    .col-3 {
+        &:nth-child(n + 5) {
+            display: none;
+        }
+    }
 
     @media (max-width: 991px) {
         margin: 0 -5px -10px -5px;
@@ -1332,6 +1338,14 @@
 
 .related-sanatoriums {
     margin-bottom: 80px;
+    
+    .flex-row {
+        -webkit-align-items: stretch;
+            align-items: stretch;
+        .col-6 {
+            margin-bottom: 20px;
+        }
+    }
 
     @media (max-width: 1000px) {
         .col-6 {
@@ -1340,7 +1354,7 @@
     }
 
     .sanatorium {
-        margin-bottom: 20px;
+        height: 100%;
     }
 
     .button--img {
