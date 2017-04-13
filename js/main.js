@@ -352,7 +352,7 @@ jQuery(document).ready(function($) {
     $("#confirmPassword, #newPassword").keyup(checkPasswordMatch);
 
 
-    $('.filter label').click(function(){ // if checked add class
+    $('.filter label, .checkbox').click(function(){ // if checked add class
         var check = $(this).children('input');
         if (check.prop("checked") == false ) {
             $(this).removeClass('selected');
