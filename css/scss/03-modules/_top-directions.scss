@@ -1,5 +1,5 @@
 .top-directions {
-    padding: 195px 0 140px;
+    padding: 100px 0 100px;
     background-size: cover;
     background-position: 50% 50%;
     position: relative;
@@ -7,11 +7,11 @@
     z-index: 1;
 
     @media (max-width: 1200px) {
-        padding: 100px 0;
+        padding: 80px 0;
     }
 
     @media (max-width: 850px) {
-        padding: 75px 0;
+        padding: 65px 0;
     }
 
     &:before {
@@ -70,7 +70,7 @@
 
     .directions-list {
         text-align: left;
-        margin-top: 150px;
+        margin-top: 100px;
         position: relative;
         z-index: 3;
 
