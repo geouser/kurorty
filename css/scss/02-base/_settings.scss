@@ -43,6 +43,10 @@ p {
 }
 .section {
   padding: 75px 0;
+
+  &.no-padding-bottom {
+    padding-bottom: 0;
+  }
   @media (max-width: 600px) {
       padding: 45px 0;
   }
