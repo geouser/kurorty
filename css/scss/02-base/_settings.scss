@@ -145,6 +145,9 @@ section {
   &.no-offset-bottom {
     margin-bottom: 0;
   }
+  &.no-padding-bottom {
+    padding-bottom: 0;
+  }
 
   &-title {
     font-weight: 300;
@@ -161,6 +164,18 @@ section {
 
     @media (max-width: 767px) {
       font-size: 18px;
+    }
+
+    &.small {
+      font-size: 15px;
+      color: #666666;
+      margin-bottom: 30px;
+    }
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 20px;
     }
 
     &:after {
@@ -221,12 +236,18 @@ section {
   border: 1px solid #EEEEEE;
   padding: 10px;
   background-image: url(../images/pattern_.png);
+  &.solid {
+    background: #eee;
+  }
 
   .inner {
     background-color: #fff;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  }
+  .content-block {
+    margin-bottom: 0 !important;
   }
 }
 
@@ -322,4 +343,57 @@ section {
     &--red {
       background-image: url("../images/eur.svg");
     }
+}
+
+.underline-block {
+  border-top: 1px solid #eee;
+  padding: 20px 0 30px;
+  color: #222;
+  font-weight: 300;
+  > p {
+    font-size: 25px;
+  }
+  &.flex-row {
+    -webkit-align-items: flex-end;
+            align-items: flex-end;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+  }
+  small {
+    color: #888888;
+    font-size: 15px;
+  }
+}
+
+.price {
+  color: #ff7753 !important;
+    font-size: 27px;
+    font-weight: 300;
+    margin: 0 3px;
+    span {
+      color: #ff7753 !important;
+      line-height: 1;
+      vertical-align: text-bottom;
+      display: inline-block;
+      margin-right: 2px;
+    }
+}
+
+.info-text {
+  position: relative;
+  padding-left: 35px;
+  color: #444444;
+  text-align: left;
+  margin: 24px 0 25px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/info-sign.svg);
+    background-size: 100% 100%;
+  }
 }

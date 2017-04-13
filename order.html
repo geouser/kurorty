@@ -151,7 +151,7 @@
                         Въезд / Выезд
                     </p>
                     <form action="" class="form-registration">
-                        <div class="flex-row">
+                        <div class="flex-row flex-row-middle">
                             <div class="input-wrap input-wrap--date col-3">
                                 <input type="text" placeholder="30 Ноябрь 1990" class="datepicker" required="required">
                             </div>
@@ -169,7 +169,7 @@
                         Контактные данные
                     </p>
                     <form action="" class="form-registration">
-                        <div class="flex-row">
+                        <div class="flex-row flex-row-middle">
                             <div class="input-wrap input-wrap--mail col-3">
                                 <input type="email" placeholder="art@gamidov.com" required="required">
                             </div>
@@ -191,7 +191,7 @@
                     </p>
                     <form action="" class="form-registration counter-list">
                         <span class="counter-list__position">Отдыхающий</span>
-                        <div class="flex-row counter-list__item">
+                        <div class="flex-row flex-row-middle counter-list__item">
                             <div class="input-wrap input-wrap--person col-3">
                                 <input type="text" placeholder="Имя" required="required">
                             </div>
@@ -201,14 +201,14 @@
                             <div class="input-wrap input-wrap--date col-3">
                                 <input type="text" placeholder="Дата рождения" class="datepicker" required="required">
                             </div>
-                            <div class="col-3 radio-inputs">
+                            <div class="col-3 radio-group center">
                                 <label><input type="radio" name="gender" value="Мужчина" checked="checked"><i></i><span>Мужчина</span></label>
                                 <label><input type="radio" name="gender" value="Женщина"><i></i><span>Женщина</span></label>
                             </div>
                         </div>
                         
                         <span class="counter-list__position">Отдыхающий</span>
-                        <div class="flex-row counter-list__item">
+                        <div class="flex-row flex-row-middle counter-list__item">
                             <div class="input-wrap input-wrap--person col-3">
                                 <input type="text" placeholder="Имя" required="required">
                             </div>
@@ -218,7 +218,7 @@
                             <div class="input-wrap input-wrap--date col-3">
                                 <input type="text" placeholder="Дата рождения" class="datepicker" required="required">
                             </div>
-                            <div class="col-3 radio-inputs">
+                            <div class="col-3 radio-group center">
                                 <label><input type="radio" name="gender-2" value="Мужчина" checked="checked"><i></i><span>Мужчина</span></label>
                                 <label><input type="radio" name="gender-2" value="Женщина"><i></i><span>Женщина</span></label>
                             </div>
@@ -234,7 +234,87 @@
                     </p>
                     <div class="action-button"><span>Добавить</span></div>
                 </div> <!-- end content-block -->
+                <br>
+                <form class="flex-row form-registration">
+                    <div class="col-8">
+                        <div class="bordered-block solid">
+
+                            <div class="content-block no-padding-bottom ">
+                                <div class="flex-row">
+
+                                    <div class="col-6">
+                                        <p class="content-block-title small">
+                                            <img src="images/car.svg" alt="">
+                                            Услуги Трансфера
+                                        </p>
+                                        <div class="input-wrap input-wrap--date">
+                                            <input type="text" required="required">
+                                            <select name="from" id="">
+                                                <option value="" disabled selected="selected">Откуда</option>
+                                                <option value="Курорты">Баку</option>
+                                            </select>
+                                        </div>
+                                        <div class="radio-group center">
+                                            <label><img src="images/sedan.svg" alt=""><input type="radio" name="car" value="Седан" checked="checked"><i></i><span>Седан</span></label>
+                                            <label><img src="images/minivan.svg" alt=""><input type="radio" name="car" value="Минивен"><i></i><span>Минивен</span></label>
+                                            <label><img src="images/bus.svg" alt=""><input type="radio" name="car" value="Автобус"><i></i><span>Автобус</span></label>
+                                        </div>
+                                        <div class="underline-block flex-row">
+                                            <div>
+                                                <label class="checkbox selected"><input type="checkbox" name="checkbox" value="value"><span>Туда</span></label>
+                                                <label class="checkbox"><input type="checkbox" name="checkbox" value="value"><span>Обратно</span></label>
+                                            </div>
+                                            <p class="price"><span>0</span><i class="azn azn--red"></i></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <p class="content-block-title small">
+                                            <img src="images/umbrella.svg" alt="">
+                                            Услуги Страховки
+                                        </p>
+                                        <div class="input-wrap input-wrap--date">
+                                            <input type="text" required="required">
+                                            <select name="from" id="">
+                                                <option value="" disabled selected="selected">Тип страховки</option>
+                                                <option value="Курорты">Баку</option>
+                                            </select>
+                                        </div>
+                                        <p class="info-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                                        <div class="underline-block flex-row">
+                                            <small>Ничего не выбранно</small>
+                                            <p class="price"><span>0</span><i class="azn azn--red"></i></p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div> <!-- end content-block -->
+                        </div><!-- end bordered-block-->
+                    </div><!-- end col-->
+
+                    <div class="col-4">
+                       <div class="bordered-block solid">
+
+                            <div class="content-block no-padding-bottom ">
+                                <div class="underline-block flex-row flex-row-middle">
+                                    <p>
+                                       Итоговая цена:
+                                    </p>
+                                     <p class="price"><span>0</span><i class="azn azn--red"></i></p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+
             </div><!-- end wrapper -->
+        </section>
+
+        <section class="has-padding">
+            <div class="wrapper">
+                
+            </div>
         </section>
 
         <!-- Footer start -->
