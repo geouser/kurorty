@@ -445,4 +445,9 @@ jQuery(document).ready(function($) {
         $('.basket-items-count').text(count);
     });
 
+    $('#addChild').click(function(){
+        var child = $('#child-mask').children().clone();
+        child.insertBefore('#child-mask');
+    });
+
 });

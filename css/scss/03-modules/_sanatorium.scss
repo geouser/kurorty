@@ -83,9 +83,12 @@
                 font-weight: 300;
                 margin: 0 3px;
                 vertical-align: text-bottom;
-
+                span {
+                    display: inline-block;
+                    vertical-align: text-bottom;
+                    line-height: .9;
+                }
                 .azn {
-                    margin-bottom: 4px;
                     margin-left: 5px;
                 }
             }

@@ -26,6 +26,17 @@
         background-color: #71BA51;
     }
 
+    &--big {
+        font-size: 14px;
+         height: 60px;
+        -webkit-border-radius: 80px;
+                border-radius: 80px;
+        @media(max-width: 600px) {
+            height: 50px;
+            font-weight: 12px;
+        }
+    }
+
     &--yellow {
         background-color: #ffa400;
         &:hover {
@@ -33,16 +44,11 @@
         }
     }
 
+
     &--blue {
         background-color: #3d8eb9;
-        height: 60px;
-        -webkit-border-radius: 80px;
-                border-radius: 80px;
         &:hover {
             background-color: rgba(61, 142, 185, 0.8);
-        }
-        @media(max-width: 600px) {
-            height: 50px;
         }
     }
 
@@ -574,6 +580,37 @@ textarea {
             }
         }
     }
+    .col-8 {
+        @media (max-width: 1200px) {
+            width: 100%;
+            margin-bottom: 10px;
+            &:nth-of-type(2n) {
+                padding-right: 0;
+            }
+            .divided-sides {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+        .col-6 {
+            @media (max-width: 760px) {
+                width: 100%;
+                margin-bottom: 10px;
+                padding-right: 0 !important;
+                padding-left: 0 !important;
+            }
+        }
+        & + .col-4 {
+            @media (max-width: 1200px) {
+                width: 100%;
+                margin-bottom: 10px;
+                &:nth-of-type(2n) {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
     & > .input-wrap {
         margin-bottom: 20px;
     }
@@ -699,6 +736,11 @@ textarea {
         @media (max-width: 1300px) {
             margin-right: 20px;
         }
+        @media(max-width: 400px) {
+                    margin-right: 0px;
+                    margin-bottom: 20px;
+                    display: block !important;
+                }
     }
     input[type="radio"] {
         width: 0px;
@@ -751,6 +793,9 @@ textarea {
             display: block;
             text-align: center;
             margin: 35px auto 10px;
+            @media (max-width: 700px) {
+                margin: 20px auto 10px !important;
+            }
         }
         label {
             display: inline-block;
@@ -765,6 +810,9 @@ textarea {
             vertical-align: middle;
             height: 60px;
             margin-right: -2px;
+            @media(max-width: 400px) {
+                display: none;
+            }
         }
         &.center {
             text-align: center;

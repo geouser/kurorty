@@ -169,6 +169,7 @@ section {
     &.small {
       font-size: 15px;
       color: #666666;
+      font-weight: 400;
       margin-bottom: 30px;
     }
 
@@ -310,7 +311,6 @@ section {
   width: 21px;
   height: 20px;
   position: relative;
-  top: -2px;
   background-image: url("../images/azn-w.svg");
   -webkit-background-size: 100% 100%;
        -o-background-size: 100% 100%;
@@ -349,8 +349,8 @@ section {
   border-top: 1px solid #eee;
   padding: 20px 0 30px;
   color: #222;
-  font-weight: 300;
   > p {
+    font-weight: 300;
     font-size: 25px;
   }
   &.flex-row {
@@ -372,11 +372,19 @@ section {
     margin: 0 3px;
     span {
       color: #ff7753 !important;
-      line-height: 1;
+      line-height: .9;
       vertical-align: text-bottom;
       display: inline-block;
       margin-right: 2px;
+      span {
+        display: inline-block;
+        vertical-align: text-bottom;
+      }
     }
+  &.small {
+    font-size: 15px;
+    font-weight: 300;
+  }
 }
 
 .info-text {
@@ -395,5 +403,41 @@ section {
     height: 24px;
     background-image: url(../images/info-sign.svg);
     background-size: 100% 100%;
+  }
+}
+
+.divided-sides {
+  position: relative;
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 1px;
+    margin: auto;
+    background-color: #eee;
+  }
+  .col-6 {
+    &:first-of-type {
+      padding: 0 !important;
+      padding-right: 25px !important;
+    }
+    &:last-of-type {
+      padding: 0 !important;
+      padding-left: 25px !important;
+    }
+  }
+}
+
+.blue-text {
+  color: #3d8eb9;
+  font-size: 15px;
+  margin-bottom: 20px;
+  span {
+    display: block;
+    color: #3d8eb9 !important;
   }
 }

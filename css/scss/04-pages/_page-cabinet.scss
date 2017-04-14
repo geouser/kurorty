@@ -386,6 +386,22 @@
             width: 50%;
         }
     }
+    .tour-features table td:last-child {
+        width: 15%;
+        text-align: right;
+    }
+    .tour-features {
+        padding-top: 0;
+        margin-bottom: 20px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #eee;
+    }
+    .order-controls {
+        margin-top: 55px;
+        .button {
+            margin: 15px;
+        }
+    }
 }
 
 i.info {
@@ -433,4 +449,8 @@ i.info {
 }
 .counter-list__item {
     counter-increment: counter-list;     
+}
+
+#child-mask {
+    display: none;
 }

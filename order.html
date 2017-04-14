@@ -97,7 +97,7 @@
                         <p class="content-block-title blue">
                             Санаторно-курортный комплекс “Русь”
                         </p>
-                        <div class="sanatorium-rooms__rooms">
+                        <form action="" class="sanatorium-rooms__rooms">  <!-- form rooms  -->
                             <div class="room">
                                 <div class="room__photo">
                                     <img src="images/room.jpg" alt="">
@@ -144,13 +144,14 @@
                             </div>  <!-- end room -->
                         </div>
                         <div class="action-button"><span>Добавить еще номер</span></div>
-                    </div>
+                    </form>
                 </div> <!-- end content-block -->
+
                 <div class="content-block">
                     <p class="content-block-title blue">
                         Въезд / Выезд
                     </p>
-                    <form action="" class="form-registration">
+                    <form action="" class="form-registration">  <!-- form in/out  -->
                         <div class="flex-row flex-row-middle">
                             <div class="input-wrap input-wrap--date col-3">
                                 <input type="text" placeholder="30 Ноябрь 1990" class="datepicker" required="required">
@@ -164,11 +165,12 @@
                         </div>
                     </form>
                 </div> <!-- end content-block -->
+
                 <div class="content-block">
                     <p class="content-block-title blue">
                         Контактные данные
                     </p>
-                    <form action="" class="form-registration">
+                    <form action="" class="form-registration"> <!-- form contacts info  -->
                         <div class="flex-row flex-row-middle">
                             <div class="input-wrap input-wrap--mail col-3">
                                 <input type="email" placeholder="art@gamidov.com" required="required">
@@ -185,11 +187,12 @@
                         </div>
                     </form>
                 </div> <!-- end content-block -->
+
                 <div class="content-block">
                     <p class="content-block-title blue">
                         Данные отдыхающих
                     </p>
-                    <form action="" class="form-registration counter-list">
+                    <form action="" class="form-registration counter-list"> <!-- form info about tourists  -->
                         <span class="counter-list__position">Отдыхающий</span>
                         <div class="flex-row flex-row-middle counter-list__item">
                             <div class="input-wrap input-wrap--person col-3">
@@ -224,8 +227,26 @@
                             </div>
                         </div>
 
+                        <div id="child-mask">
+                            <span class="counter-list__position">Ребенок</span>
+                            <div class="flex-row flex-row-middle counter-list__item">
+                                <div class="input-wrap input-wrap--person col-3">
+                                    <input type="text" placeholder="Имя" required="required">
+                                </div>
+                                <div class="input-wrap input-wrap--person col-3">
+                                    <input type="text" placeholder="Фамилия" required="required">
+                                </div>
+                                <div class="input-wrap input-wrap--date col-3">
+                                    <input type="text" placeholder="Дата рождения" class="datepicker" required="required">
+                                </div>
+                                <div class="col-3 radio-group center">
+                                    <label><input type="radio" name="gender-2" value="Мужчина" checked="checked"><i></i><span>Мужчина</span></label>
+                                    <label><input type="radio" name="gender-2" value="Женщина"><i></i><span>Женщина</span></label>
+                                </div>
+                            </div>
+                        </div>
                     </form>
-                    <div class="action-button"><span>Добавить ребенка</span></div>
+                    <div class="action-button" id="addChild"><span>Добавить ребенка</span></div>
                 </div> <!-- end content-block -->
 
                 <div class="content-block">
@@ -235,11 +256,13 @@
                     <div class="action-button"><span>Добавить</span></div>
                 </div> <!-- end content-block -->
                 <br>
-                <form class="flex-row form-registration">
+
+
+                <form class="flex-row form-registration">  <!-- form transfer/ insurance / results   -->
                     <div class="col-8">
                         <div class="bordered-block solid">
 
-                            <div class="content-block no-padding-bottom ">
+                            <div class="content-block no-padding-bottom divided-sides">
                                 <div class="flex-row">
 
                                     <div class="col-6">
@@ -296,6 +319,28 @@
                        <div class="bordered-block solid">
 
                             <div class="content-block no-padding-bottom ">
+                                <div class="tour-features">
+                                    <table>
+                                        <tr>
+                                            <td><span>1-й взрослый</span></td>
+                                            <td><span class="price red small"><span>500</span> <i class="azn azn--red azn--small"></i></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>1 ребенок</span></td>
+                                            <td><span class="price red small"><span>500</span> <i class="azn azn--red azn--small"></i></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>Трансфер</span></td>
+                                            <td><span class="price red small"><span>500</span> <i class="azn azn--red azn--small"></i></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>Страховка</span></td>
+                                            <td><span class="price red small"><span>500</span> <i class="azn azn--red azn--small"></i></span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <p class="blue-text">Lesní 345, 35301 Марианские Лазни Чехия</p>
+                                <p class="blue-text">04.09.2017 - 11.09.2017 <span>(7 ночей)</span></p>
                                 <div class="underline-block flex-row flex-row-middle">
                                     <p>
                                        Итоговая цена:
@@ -307,15 +352,15 @@
                         </div>
                     </div>
                 </form>
+    
+                    <div class="order-controls">
+                        <button class="button button--big button--yellow">В корзину</button>
+                        <button class="button button--big">Оформить</button>
+                    </div>
 
             </div><!-- end wrapper -->
         </section>
 
-        <section class="has-padding">
-            <div class="wrapper">
-                
-            </div>
-        </section>
 
         <!-- Footer start -->
         <footer class="footer">
