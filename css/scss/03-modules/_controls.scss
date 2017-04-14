@@ -141,17 +141,21 @@
 }
 
 .slick-dots {
-    bottom: 126px;
+    @extend .wrapper;
+
+    pointer-events: none;
+    display: block!important;
+    bottom: 210px;
     text-align: left;
-    padding-left: calc((100% - 1420px) / 2);
-    z-index: 100;
-    @media (max-width: 1500px) {
-        padding-left: calc((100% - 1180px) / 2);
+    z-index: 10 !important;
+
+    * {
+        pointer-events: initial;
     }
+
     @media (max-width: 1200px) {
-        padding: 0;
-        width: 100%;
-        text-align: center;
+        position: absolute!important;
+        text-align: center!important;
         bottom: 20px;
     }
     li {

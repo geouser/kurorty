@@ -172,6 +172,8 @@
 
         td {
             padding: 3px 2px 4px;
+            vertical-align: bottom;
+            
             span + span {
                 display: block;
             }
@@ -1291,9 +1293,7 @@
     }
 
     &.has-border {
-        border-bottom: 1px solid #eee;
         margin-bottom: 40px;
-        padding-bottom: 28px;
     }
 }
 

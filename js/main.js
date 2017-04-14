@@ -138,6 +138,8 @@ jQuery(document).ready(function($) {
         }
     });
 
+    
+
 
     $('.fancybox').fancybox({
         onComplete: function( instance, slide ) {
@@ -221,10 +223,20 @@ jQuery(document).ready(function($) {
         if ( exist('.sticky-menu') ) {
             if ( $(window).scrollTop() > ($('.sticky-menu').position().top + $('.sticky-menu').height()) ) {
                 $('.sticky-menu-mobile').addClass('visible');
+                $('.js-scroll-top').addClass('visible');
             } else {
                 $('.sticky-menu-mobile').removeClass('visible');
+                $('.js-scroll-top').removeClass('visible');
             }    
         }
+    });
+
+    /*Scroll top*/
+    $('.js-scroll-top').on('click', function(event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, 600)
     });
 
 
@@ -401,12 +413,12 @@ jQuery(document).ready(function($) {
 
 
     if (exist('#map_canvas')) {
-        console.log('csdcsd')
         var map;
         function googleMap_initialize() {
             var lat = $('#map_canvas').data('lat');
             var long = $('#map_canvas').data('lng');
             var zoom = $('#map_canvas').data('zoom');
+            var marker = $('#map_canvas').data('marker');
             var mapCenterCoord = new google.maps.LatLng(lat, long);
             var mapMarkerCoord = new google.maps.LatLng(lat, long);
             var mapOptions = {
@@ -416,13 +428,120 @@ jQuery(document).ready(function($) {
                 scrollwheel: false,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };
+            var styles = [
+                {
+                    "featureType": "landscape",
+                    "stylers": [
+                        {
+                            "hue": "#FFBB00"
+                        },
+                        {
+                            "saturation": 43.400000000000006
+                        },
+                        {
+                            "lightness": 37.599999999999994
+                        },
+                        {
+                            "gamma": 1
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "stylers": [
+                        {
+                            "hue": "#FFC200"
+                        },
+                        {
+                            "saturation": -61.8
+                        },
+                        {
+                            "lightness": 45.599999999999994
+                        },
+                        {
+                            "gamma": 1
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.arterial",
+                    "stylers": [
+                        {
+                            "hue": "#FF0300"
+                        },
+                        {
+                            "saturation": -100
+                        },
+                        {
+                            "lightness": 51.19999999999999
+                        },
+                        {
+                            "gamma": 1
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.local",
+                    "stylers": [
+                        {
+                            "hue": "#FF0300"
+                        },
+                        {
+                            "saturation": -100
+                        },
+                        {
+                            "lightness": 52
+                        },
+                        {
+                            "gamma": 1
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "stylers": [
+                        {
+                            "hue": "#0078FF"
+                        },
+                        {
+                            "saturation": -13.200000000000003
+                        },
+                        {
+                            "lightness": 2.4000000000000057
+                        },
+                        {
+                            "gamma": 1
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "stylers": [
+                        {
+                            "hue": "#00FF6A"
+                        },
+                        {
+                            "saturation": -1.0989010989011234
+                        },
+                        {
+                            "lightness": 11.200000000000017
+                        },
+                        {
+                            "gamma": 1
+                        }
+                    ]
+                }
+            ];
             map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-            var markerImage = new google.maps.MarkerImage('' + THEMEPATH + 'img/marker.svg');
+            var styledMapType=new google.maps.StyledMapType(styles,{name:'Styled'});
+            map.mapTypes.set('Styled',styledMapType);
+            map.setMapTypeId('Styled');
+            var markerImage = new google.maps.MarkerImage( marker );
             var marker = new google.maps.Marker({
                 icon: markerImage,
                 position: mapMarkerCoord,
                 map: map,
-                title: "Ceylan"
+                title: "Kurorty"
             });
             $(window).resize(function() {
                 map.setCenter(mapCenterCoord);

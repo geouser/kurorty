@@ -134,10 +134,23 @@
         }
         span {
             line-height: 20px;
+            display: block;
         }
     }
     .rating-value {
-        margin-top: -6px;
+        display: block;
+        height: 20px;
+        padding: 4px 0;
+
+        &:before {
+            height: 12px;
+        }
+
+        &:after {
+            height: 12px;
+            top: 4px;
+            bottom: 4px;
+        }
     }
     
     input[type="checkbox"] {
@@ -151,6 +164,7 @@
         position: absolute;
         top: 4px;
         left: 0;
+        display: none;
     }
     .search {
         background-image: url("../images/search.svg");
