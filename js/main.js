@@ -138,6 +138,8 @@ jQuery(document).ready(function($) {
         }
     });
 
+    
+
 
     $('.fancybox').fancybox({
         onComplete: function( instance, slide ) {
@@ -221,10 +223,20 @@ jQuery(document).ready(function($) {
         if ( exist('.sticky-menu') ) {
             if ( $(window).scrollTop() > ($('.sticky-menu').position().top + $('.sticky-menu').height()) ) {
                 $('.sticky-menu-mobile').addClass('visible');
+                $('.js-scroll-top').addClass('visible');
             } else {
                 $('.sticky-menu-mobile').removeClass('visible');
+                $('.js-scroll-top').removeClass('visible');
             }    
         }
+    });
+
+    /*Scroll top*/
+    $('.js-scroll-top').on('click', function(event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, 600)
     });
 
 

@@ -1,5 +1,50 @@
 .footer {
 
+    .js-scroll-top {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        z-index: 10;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $green;
+        padding: 0;
+        border: 0;
+        cursor: pointer;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+
+        @media (max-width: 1200px) {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        &.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &:hover {
+            -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+        }
+
+        img {
+            display: block;
+            width: 12px;
+            margin: 0 auto;
+            
+        }
+    }
+
     &-top {
         background-color: #252525;
         border-top: 1px solid #333333;
