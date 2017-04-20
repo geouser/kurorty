@@ -389,6 +389,9 @@
     .tour-features table td:last-child {
         width: 15%;
         text-align: right;
+        @media (max-width: 360px) {
+            width: 20%;
+        }
     }
     .tour-features {
         padding-top: 0;
@@ -451,6 +454,7 @@ i.info {
     counter-increment: counter-list;     
 }
 
-#child-mask {
+.child-mask,
+.place-mask {
     display: none;
 }

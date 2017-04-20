@@ -1,9 +1,9 @@
 .main-content-column {
-    width: 62.5%;
+    width: 68%;
     padding: 0 10px;
 
     @media (max-width: 1500px) {
-        width: 66.66%;
+        width: 70%;
     }
 
     @media (max-width: 991px) {
@@ -14,13 +14,13 @@
 }
 
 .aside-column {
-    width: 37.5%;
+    width: 32%;
     padding: 0 10px;
-    padding-left: 50px;
+    padding-left: 20px;
 
     @media (max-width: 1500px) {
         padding-left: 10px;
-        width: 33.33%;
+        width: 30%;
     }
 
     @media (max-width: 991px) {
@@ -158,7 +158,7 @@
 
 
 .tour-features {
-    padding: 26px 0 38px;
+    padding: 16px 0 38px;
 
     @media (max-width: 1500px) {
         padding: 25px 0;
@@ -169,22 +169,35 @@
         width: 100%;
         font-size: 15px;
         color: #2d2d2d;
+        
+        .price {
+            i {
+                margin-left: -4px;
+            }
+        }
 
         td {
             padding: 3px 2px 4px;
             vertical-align: bottom;
             
-            span + span {
-                display: block;
-            }
-            span + span + span{
-                display: block;
+            > span:not(.price) {
+                display: inline-block;
+                &:after {
+                    content: ",";
+                    display: inline-block;
+                    margin-right: 2px;
+                }
+                &:last-of-type {
+                    &:after {
+                        content: '.';
+                    }
+                }
             }
         }
 
         td:first-child {
             position: relative;
-            width: 60%;
+            width: 55%;
             z-index: 1;
 
             span {
@@ -208,7 +221,7 @@
         }
 
         td:last-child {
-            width: 40%;
+            width: 45%;
         }
     }
 }
@@ -586,12 +599,9 @@
             font-size: 27px;
             margin-right: 4px;
             display: inline-block;
-            @media (max-width: 1100px) {
+            @media (max-width: 1500px) {
                 display: block;
             }
-             @media (max-width: 991px) {
-                 display: inline-block;
-             }
 
             .azn {
                 margin-bottom: 3px;
@@ -1427,6 +1437,46 @@
         }
         .room__price {
             text-align: left;
+        }
+    }
+}
+
+.delete {
+    background: transparent;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/delete.svg");
+    -webkit-background-size: 100% 100%;
+         -o-background-size: 100% 100%;
+            background-size: 100% 100%;
+    &:hover {
+        background-image: url("../images/delete-hover.svg");
+    }
+}
+
+.form-registration .flex-row {
+    position: relative;
+    .delete {
+        position: absolute;
+        right: 15px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        @media (max-width: 1500px) {
+            right: 0;
+            top: 4px;
+        }
+        @media (max-width: 1200px) {
+            top: auto;
+            bottom: 24px;
+        }
+        @media (max-width: 700px) {
+            position: static;
+            margin: 0 auto;
+            display: block;
         }
     }
 }

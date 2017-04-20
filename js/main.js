@@ -143,13 +143,13 @@ jQuery(document).ready(function($) {
 
     $('.fancybox').fancybox({
         onComplete: function( instance, slide ) {
-            if ($('' + slide.src + '').find('.tour-slider-column')) {
-                $('' + slide.src + '').find('.room-slider-main').slick({
+            if ($('.fancybox-slide').find('.tour-slider-column')) {
+                $('.room-slider-main').slick({
                     arrows: false,
                     fade: true,
                     asNavFor: '.room-slider-thumbnails'
                 });
-                $('' + slide.src + '').find('.room-slider-thumbnails').slick({
+                $('.room-slider-thumbnails').slick({
                     arrows: false,
                     arrows: false,
                     slidesToShow: 5,
@@ -159,9 +159,9 @@ jQuery(document).ready(function($) {
                 })
             }
         },
-        afterClose: function(instance, slide){
-            if ($('' + slide.src + '').find('.slick-slider')) {
-                $('' + slide.src + '').find('.slick-slider').slick('unslick');
+        beforeClose: function(instance, slide){
+            if ($('.fancybox-slide').find('.tour-slider-column')) {
+                $('.fancybox-slide').find('.slick-slider').slick('unslick');
             };
         }
     });
@@ -565,8 +565,13 @@ jQuery(document).ready(function($) {
     });
 
     $('#addChild').click(function(){
-        var child = $('#child-mask').children().clone();
-        child.insertBefore('#child-mask');
+        var children = $('#child-mask').children().clone();
+        var element = $(this);
+        if (childContent.has('.datepicker')) {
+            childContent.find('.datepicker').removeAttr('id').removeClass('hasDatepicker').datepicker();
+        }
+        children.insertBefore(element);
+
     });
 
 });

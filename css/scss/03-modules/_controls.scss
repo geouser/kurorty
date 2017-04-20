@@ -737,7 +737,7 @@ textarea {
     label {
         position: relative;
         margin-right: 40px;
-        @media (max-width: 1300px) {
+        @media (max-width: 1500px) {
             margin-right: 20px;
         }
         @media(max-width: 400px) {
@@ -798,12 +798,18 @@ textarea {
             text-align: center;
             margin: 35px auto 10px;
             @media (max-width: 700px) {
-                margin: 20px auto 10px !important;
+                
+            }
+            @media (max-width: 700px) {
+                margin: 20px 0 10px 25px !important;
             }
         }
         label {
             display: inline-block;
             vertical-align: middle;
+            @media (max-width: 700px) {
+                text-align: left;
+            }
             &:last-of-type {
                 margin-right: 0;
             }

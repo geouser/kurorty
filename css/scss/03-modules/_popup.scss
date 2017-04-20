@@ -112,12 +112,14 @@
     }
 }
 
-
+.fancybox-slide .room-order-popup  {
+    display: inline-block;
+}
 .room-order-popup {
-    display: none;
     width: 1200px;
     padding: 35px 30px;
     max-width: 100%;
+    display: none;
     @media (max-width: 600px) {
         padding: 30px 15px;
     }

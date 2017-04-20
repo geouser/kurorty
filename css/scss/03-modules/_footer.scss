@@ -261,12 +261,29 @@
 
         .studio {
             text-align: right;
+            span,
+            img {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            img {
+                 -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+                filter: grayscale(100%);
+                opacity: .8;
+                margin-left: 4px;
+                @include transition(all, .2s);
+            }
 
             a {
                 color: $text;
 
                 &:hover {
                     text-decoration: underline;
+                    img {
+                        opacity: 1;
+                         -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+                            filter: grayscale(0%);
+                    }
                 }
             }
         }
