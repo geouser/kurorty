@@ -85,8 +85,8 @@ article {
 }
 
 .error {
-        border-color: red !important;
-    }
+    border: 2px solid red !important;
+}
 
 // lAYOUT
 // ---------------------------
@@ -206,6 +206,10 @@ section {
         position: absolute;
         right: 0;
         top: 0;
+        img {
+          display: block;
+          margin: 0;
+        }
       }
 
       &:after {
@@ -488,6 +492,22 @@ section {
     @media (max-width: 700px) {
       margin-top: 40px;
     }
+  }
+}
+
+.cooperate--popup {
+  padding: 40px 30px;  
+  @media (max-width: 400px) {
+    padding: 40px 15px;
+  }
+  form {
+    .flex-row {
+      -webkit-justify-content: center;
+              justify-content: center;
+    }
+  }
+  .button {
+    margin-top: 40px;
   }
 }
 

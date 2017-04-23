@@ -2,7 +2,6 @@
     height: 610px;
     position: relative;
     z-index: 1;
-    padding-bottom: 100px;
     @include flex($direction:column,$alignI:center, $justify:center);
     background-position: 50% 50%;
     background-repeat: no-repeat;
