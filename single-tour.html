@@ -179,9 +179,20 @@
                                             </tr>
                                             <tr>
                                                 <td><span>Цена от:</span></td>
-                                                <td><span class="price red">500 <i class="azn azn--red azn--small"></i></span></td>
+                                                <td><span class="price red"><span>1700</span> <i class="azn azn--red azn--small"></i></span> за день</td>
+                                            </tr>
+                                            <tr class="partners-row">
+                                                <td><span>Для партнера:</span></td>
+                                                <td>(-35%) <span class="price"><span>1500</span> <i class="azn azn--red azn--small"></i></span></td>
                                             </tr>
                                         </table>
+                                        <div class="filter partners-features-control">
+                                            <label class="selected">
+                                                <input type="checkbox" name="checkbox" value="value" class="show-partners-features" checked="true">
+                                                <span class="checked">Убрать Партнерскую цену</span>
+                                                <span class="not-checked">Показать Партнерскую цену</span>
+                                            </label>
+                                        </div>
                                     </div>
 
                                     <div class="bordered-block tour-rating">
@@ -283,7 +294,11 @@
                         <input type="number" name="room__capacity"><!-- input capacity-->
                     </div>
                     <div class="room__price">
-                        <p><span class="price red">50 <i class="azn azn--red"></i></span> за день</p>
+                        <div class="price-values">
+                            <p><span class="price red"><span>100</span></span></p>
+                            <p><span class="discount">(-35%)</span> <span class="price"><span>75</span></span></p>
+                        </div>
+                        <span> <i class="azn azn--red azn--small"></i> в день</span>
                         <input type="text" name="room__price"><!-- input price-->
                     </div>
                     <div class="room__count">
@@ -292,7 +307,7 @@
                         <i class="room__count__plus" field='quantity'><img src="images/plus.svg" alt=""></i>
                     </div>
                     <div class="room__order">
-                        <button  data-fancybox data-type="ajax" data-src="popup.html" data-selector="#two" href="javascript:;">Заказать</button>
+                        <button class="button green"  data-fancybox data-type="ajax" data-src="popup.html" data-selector="#two" href="javascript:;">Заказать</button>
                     </div>
                 </form>  <!-- end room -->
 

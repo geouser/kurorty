@@ -140,10 +140,11 @@
     .rating-value {
         display: block;
         height: 20px;
-        padding: 4px 0;
+        padding: 3px 0;
+        width: 86px;
 
         &:before {
-            height: 12px;
+            height: 14px;
         }
 
         &:after {

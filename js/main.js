@@ -240,6 +240,17 @@ jQuery(document).ready(function($) {
     });
 
 
+    /*Display partners features*/
+    $('.show-partners-features').on('change', function(event) {
+        event.preventDefault();
+        if ( $(this).is(":checked") ) {
+            $('.partners-row').css('display', 'table-row');
+        } else {
+            $('.partners-row').css('display', 'none');
+        }
+    });
+
+
 
 
 

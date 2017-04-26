@@ -128,7 +128,7 @@
     }
 
     .rating-value {
-        width: 98px;
+        width: 110px;
 
         &:before,
         &:after {
@@ -158,10 +158,10 @@
 
 
 .tour-features {
-    padding: 16px 0 38px;
+    padding: 0 0 20px;
 
     @media (max-width: 1500px) {
-        padding: 25px 0;
+        padding: 0 0 15px 0;
     }
 
     table {
@@ -169,6 +169,10 @@
         width: 100%;
         font-size: 15px;
         color: #2d2d2d;
+
+        @media (max-width: 1500px) {
+            font-size: 13px;
+        }
         
         .price {
             i {
@@ -200,6 +204,10 @@
             width: 55%;
             z-index: 1;
 
+            @media (max-width: 1500px) {
+                width: 45%;
+            }
+
             span {
                 display: inline-block;
                 background-color: #fff;
@@ -222,6 +230,44 @@
 
         td:last-child {
             width: 45%;
+
+            @media (max-width: 1500px) {
+                width: 55%;
+            }
+        }
+    }
+
+    .price {
+        vertical-align: baseline;
+        display: inline-block;
+
+        span {
+            color: $text !important;
+            font-size: 18px;
+        }
+
+        &.red span {
+            color: $red!important;
+        }
+    }
+
+
+
+    .partners-features-control {
+        padding: 15px 0 0;
+
+        .checked {
+            display: none;
+        }
+        .not-checked {
+            display: inline-block;
+        }
+
+        input:checked ~ .checked {
+            display: inline-block;
+        }
+        input:checked ~ .not-checked {
+            display: none;
         }
     }
 }
@@ -490,7 +536,8 @@
         padding-left: 30px;
 
         @media (max-width: 1500px) {
-            width: 40%;
+            width: 32%;
+            padding-left: 10px;
         }
 
         @media (max-width: 991px) {
@@ -512,6 +559,13 @@
             border-bottom: 1px dotted $blue;
             margin-bottom: 8px;
 
+            @media (max-width: 1500px) {
+                font-size: 15px;
+                border-bottom: none;
+                text-decoration: underline;
+                margin-bottom: 3px;
+            }
+
             @media (max-width: 560px) {
                 font-size: 15px;
                 margin-bottom: 4px;
@@ -522,6 +576,11 @@
         .desc {
             font-size: 13px;
             color: #9a9a9a;
+
+            @media  (max-width: 1500px) {
+                font-size: 12px;
+            }
+
             &.status {
                 &:before {
                     content: "";
@@ -585,6 +644,7 @@
     }
 
     &__price {
+        text-align: left;
         @media (max-width: 991px) {
             width: 25%;
             text-align: center;
@@ -594,22 +654,68 @@
             width: 50%;
             text-align: right;
         }
+
+        .price-values p {
+            position: relative;
+            text-align: center;
+        }
+
+        .discount {
+            top: 8px;
+            font-size: 16px;
+            position: absolute;
+            -webkit-transform: translateX(-100%);
+            -ms-transform: translateX(-100%);
+            -o-transform: translateX(-100%);
+            transform: translateX(-100%);
+
+            @media (max-width: 1500px) {
+                font-size: 12px;
+                top: 5px;
+            }
+
+            & + .price span {
+                color: $text!important;
+            }
+        }
+
+        .price-values {
+            display: inline-block;
+            vertical-align: middle;
+
+            & + span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+
         .price {
             font-weight: 300;
             font-size: 27px;
             margin-right: 4px;
             display: inline-block;
+            position: relative;
             @media (max-width: 1500px) {
-                display: block;
+                /*display: block;*/
+                font-size: 20px;
             }
 
+            
+
             .azn {
-                margin-bottom: 3px;
+                @media (max-width: 1500px) {
+                    width: 16px;
+                    height: 16px;
+                }
             }
         }
     }
 
     &__count {
+        width: 140px;
+        text-align: center;
+
         @media (max-width: 991px) {
             width: 25%;
         }
@@ -622,9 +728,34 @@
             display: inline-block;
             vertical-align: middle;
             cursor: pointer;
-            img {
-                display: block;
+            width: 16px;
+            height: 16px;
+            position: relative;
+            background-color: $yellow;
+            border-radius: 50%;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            background-size: 8px;
+
+            @media (max-width: 560px) {
+                width: 30px;
+                height: 30px;
+                background-size: 12px;
             }
+
+            img {
+                display: none;
+            }
+        }
+
+        &__minus {
+            background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQyIDQyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0MiA0MjsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+CjxwYXRoIGQ9Ik0zNy4wNTksMTZIMjZIMTZINC45NDFDMi4yMjQsMTYsMCwxOC4yODIsMCwyMXMyLjIyNCw1LDQuOTQxLDVIMTZoMTBoMTEuMDU5QzM5Ljc3NiwyNiw0MiwyMy43MTgsNDIsMjEgIFMzOS43NzYsMTYsMzcuMDU5LDE2eiIgZmlsbD0iI0ZGRkZGRiIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+
+        }
+
+        &__plus {
+            background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQyIDQyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0MiA0MjsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+CjxwYXRoIGQ9Ik0zNy4wNTksMTZIMjZWNC45NDFDMjYsMi4yMjQsMjMuNzE4LDAsMjEsMHMtNSwyLjIyNC01LDQuOTQxVjE2SDQuOTQxQzIuMjI0LDE2LDAsMTguMjgyLDAsMjFzMi4yMjQsNSw0Ljk0MSw1SDE2djExLjA1OSAgQzE2LDM5Ljc3NiwxOC4yODIsNDIsMjEsNDJzNS0yLjIyNCw1LTQuOTQxVjI2aDExLjA1OUMzOS43NzYsMjYsNDIsMjMuNzE4LDQyLDIxUzM5Ljc3NiwxNiwzNy4wNTksMTZ6IiBmaWxsPSIjRkZGRkZGIi8+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=)
+
         }
         &__num {
             display: inline-block !important;

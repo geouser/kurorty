@@ -183,40 +183,30 @@
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    width: 64px;
-    &:after,
+    width: 67px;
     &:before {
         content: "";
         display: block;
-        background-image: url(../images/star.svg);
-        background-repeat: space;
-        background-position: left top;
+        background-repeat: no-repeat;
+        background-position: left center;
         background-size: auto 100%;
         height: 11px;
     }
 
-    &:after {
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-image: url(../images/star-gold.svg);
+    &.star-1:before {
+        background-image: url(../images/stars-1.svg);
     }
-
-    &.star-1:after {
-        width: 19%;
+    &.star-2:before {
+        background-image: url(../images/stars-2.svg);
     }
-    &.star-2:after {
-        width: 39%;
+    &.star-3:before {
+        background-image: url(../images/stars-3.svg);
     }
-    &.star-3:after {
-        width: 59%;
+    &.star-4:before {
+        background-image: url(../images/stars-4.svg);
     }
-    &.star-4:after {
-        width: 79%;
-    }
-    &.star-5:after {
-        width: 100%;
+    &.star-5:before {
+        background-image: url(../images/stars-5.svg);
     }
 }
 
