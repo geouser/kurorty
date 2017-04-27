@@ -320,16 +320,16 @@ section {
   vertical-align: baseline;
   line-height: inherit;
   width: 21px;
-  height: 20px;
+  height: 18px;
   position: relative;
   background-image: url("../images/azn-w.svg");
   background-repeat: no-repeat;
-  -webkit-background-size: 100% auto;
-       -o-background-size: 100% auto;
-          background-size: 100% auto;
+  -webkit-background-size: contain;
+       -o-background-size: contain;
+          background-size: contain;
   background-position: 50% 100%;
   &--small {
-    width: 16px;
+    width: 14px;
     height: 16px;
   }
 }

@@ -158,10 +158,14 @@
 
 
 .tour-features {
-    padding: 0 0 20px;
+    padding: 0 0 10px;
 
     @media (max-width: 1500px) {
         padding: 0 0 15px 0;
+    }
+
+    @media (max-width: 767px) {
+        padding: 20px 0;
     }
 
     table {
@@ -183,6 +187,10 @@
         td {
             padding: 3px 2px 4px;
             vertical-align: bottom;
+
+            @media (max-width: 1500px) {
+                padding: 2px 2px;
+            }
             
             > span:not(.price) {
                 display: inline-block;
@@ -256,6 +264,14 @@
     .partners-features-control {
         padding: 15px 0 0;
 
+        @media (max-width: 1500px) {
+            padding-top: 10px;
+        }
+
+        label {
+            margin-bottom: 0;
+        }
+
         .checked {
             display: none;
         }
@@ -275,12 +291,12 @@
 
 .order-tour {
     &-item {
-        height: 110px;
+        height: 121px;
         text-align: center;
         @extend %vertAlign;
 
         @media (max-width: 1500px) {
-            height: 100px;
+            height: 105.5px;
         }
 
         &:not(:last-child) {
@@ -534,6 +550,7 @@
     &__info {
         width: 40%;
         padding-left: 30px;
+        padding-right: 10px;
 
         @media (max-width: 1500px) {
             width: 32%;
@@ -548,6 +565,7 @@
 
         @media (max-width: 560px) {
             padding-left: 10px;
+            padding-right: 10px;
             width: -webkit-calc(100% - 100px);
             width: calc(100% - 100px);
         }
@@ -703,10 +721,13 @@
 
             
 
-            .azn {
+            .azn,
+            .rub,
+            .usd,
+            .eur {
                 @media (max-width: 1500px) {
                     width: 16px;
-                    height: 16px;
+                    height: 14px;
                 }
             }
         }
